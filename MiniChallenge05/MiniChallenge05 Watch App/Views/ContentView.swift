@@ -6,19 +6,24 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
+    
+    var alpha: [ModelNew] = []
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        NavigationStack{
+            VStack {
+                
+                    Text("Teste")
+            }
+            .padding()
+            
         }
-        .padding()
     }
 }
 
-#Preview {
-    ContentView()
-}
+
+

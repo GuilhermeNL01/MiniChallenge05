@@ -9,15 +9,15 @@ import Foundation
 import SwiftData
 
 @Model
-public class Model {
-    @Published var itemAlpha: Int
-    @Published var itemBravo: Int
-    @Published var itemCharlie: Int
-    @Published var itemDelta: Int
-    @Published var totalSteps: Int
-    @Published var dailySteps: Int
-    @Published var totalItems: Int
-    @Published var totalMissions: Int
+public class ModelNew {
+    var itemAlpha: Int
+    var itemBravo: Int
+    var itemCharlie: Int
+    var itemDelta: Int
+    var totalSteps: Int
+    var dailySteps: Int
+    var totalItems: Int
+    var totalMissions: Int
     
     init(itemAlpha: Int = 0, itemBravo: Int = 0, itemCharlie: Int = 0, itemDelta: Int = 0, totalSteps: Int = 0, dailySteps: Int = 0, totalItems: Int = 0, totalMissions: Int = 0) {
         self.itemAlpha = itemAlpha
