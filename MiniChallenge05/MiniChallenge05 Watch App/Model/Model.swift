@@ -9,20 +9,24 @@ import Foundation
 import SwiftData
 
 @Model
-public class ModelTest {
-    
+public class ModelNew {
+    var itemAlpha: Int
+    var itemBravo: Int
+    var itemCharlie: Int
+    var itemDelta: Int
     var totalSteps: Int
     var dailySteps: Int
-    var inventoryItems: [Int]
-    var totalItems: [Int]
+    var totalItems: Int
     var totalMissions: Int
     
-    init(totalSteps: Int = 0, dailySteps: Int = 0, inventoryItems: [Int] = [0, 0, 0, 0], totalItems: [Int] = [0, 0, 0, 0], totalMissions: Int = 0) {
+    init(itemAlpha: Int = 0, itemBravo: Int = 0, itemCharlie: Int = 0, itemDelta: Int = 0, totalSteps: Int = 0, dailySteps: Int = 0, totalItems: Int = 0, totalMissions: Int = 0) {
+        self.itemAlpha = itemAlpha
+        self.itemBravo = itemBravo
+        self.itemCharlie = itemCharlie
+        self.itemDelta = itemDelta
         self.totalSteps = totalSteps
         self.dailySteps = dailySteps
-        self.inventoryItems = inventoryItems
         self.totalItems = totalItems
         self.totalMissions = totalMissions
     }
 }
-

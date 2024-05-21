@@ -372,8 +372,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MiniChallenge05-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = MiniChallenge05;
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "We need ypur authorization to track your steps and BPM";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "We need ypur authorization to track your steps and BPM";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,8 +406,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MiniChallenge05-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = MiniChallenge05;
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "We need ypur authorization to track your steps and BPM";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "We need ypur authorization to track your steps and BPM";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
