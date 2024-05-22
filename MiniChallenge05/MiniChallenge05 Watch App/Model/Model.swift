@@ -10,6 +10,7 @@ import SwiftData
 
 @Model
 public class ModelNew {
+    var date: String
     var itemAlpha: Int
     var itemBravo: Int
     var itemCharlie: Int
@@ -20,7 +21,8 @@ public class ModelNew {
     var totalMissions: Int
     var dailyMission: DailyMission
     
-    init(itemAlpha: Int = 0, itemBravo: Int = 0, itemCharlie: Int = 0, itemDelta: Int = 0, totalSteps: Int = 0, dailySteps: Int = 0, totalItems: Int = 0, totalMissions: Int = 0, dailyMission: DailyMission) {
+    init(date: String = "teste", itemAlpha: Int = 0, itemBravo: Int = 0, itemCharlie: Int = 0, itemDelta: Int = 0, totalSteps: Int = 0, dailySteps: Int = 0, totalItems: Int = 0, totalMissions: Int = 0, dailyMission: DailyMission) {
+        self.date = date
         self.itemAlpha = itemAlpha
         self.itemBravo = itemBravo
         self.itemCharlie = itemCharlie
