@@ -18,8 +18,9 @@ public class ModelNew {
     var dailySteps: Int
     var totalItems: Int
     var totalMissions: Int
+    var dailyMission: DailyMission
     
-    init(itemAlpha: Int = 0, itemBravo: Int = 0, itemCharlie: Int = 0, itemDelta: Int = 0, totalSteps: Int = 0, dailySteps: Int = 0, totalItems: Int = 0, totalMissions: Int = 0) {
+    init(itemAlpha: Int = 0, itemBravo: Int = 0, itemCharlie: Int = 0, itemDelta: Int = 0, totalSteps: Int = 0, dailySteps: Int = 0, totalItems: Int = 0, totalMissions: Int = 0, dailyMission: DailyMission) {
         self.itemAlpha = itemAlpha
         self.itemBravo = itemBravo
         self.itemCharlie = itemCharlie
@@ -28,5 +29,6 @@ public class ModelNew {
         self.dailySteps = dailySteps
         self.totalItems = totalItems
         self.totalMissions = totalMissions
+        self.dailyMission = dailyMission
     }
 }
