@@ -4,13 +4,12 @@
 //
 //  Created by Guilherme Nunes Lobo on 22/05/24.
 //
-
-import Foundation
+import SwiftUI
+import SwiftData
 
 class RewardManager {
-    private var lastRewardDistances: [Double] = [0, 0, 0, 0]
-    private var nextRewardDistances: [Double] = [500, 700, 1000, 1200]
     
+    @Environment(\.modelContext) var context: ModelContext
     var model: ModelNew
     
     init(model: ModelNew) {
@@ -39,12 +38,12 @@ class RewardManager {
     // Verifica se a distância percorrida atinge a próxima recompensa
     func checkForReward(with distance: Double, completion: @escaping (Bool) -> Void) {
         var rewarded = false
-        for index in 0..<nextRewardDistances.count {
-            if distance >= nextRewardDistances[index] {
-                lastRewardDistances[index] = nextRewardDistances[index]
-                nextRewardDistances[index] += generateNextRewardDistance(for: index)
+        for index in 0..<model.nextRewardDistances.count {
+            if distance >= model.nextRewardDistances[index] {
+                model.lastRewardDistances[index] = model.nextRewardDistances[index]
+                model.nextRewardDistances[index] += generateNextRewardDistance(for: index)
                 
-                // Incrementa o item correspondente no modelo
+                // Increment the corresponding item in the model
                 switch index {
                 case 0:
                     model.itemAlpha += 1
@@ -61,6 +60,13 @@ class RewardManager {
                 rewarded = true
             }
         }
+        
+        do {
+            try context.save()
+        } catch {
+            print("Failed to save context: \(error)")
+        }
+        
         completion(rewarded)
     }
 }
