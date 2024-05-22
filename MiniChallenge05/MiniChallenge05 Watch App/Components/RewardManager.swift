@@ -2,7 +2,7 @@
 //  RewardManager.swift
 //  MiniChallenge05 Watch App
 //
-//  Created by ChatGPT on 22/05/24.
+//  Created by Guilherme Nunes Lobo on 22/05/24.
 //
 
 import Foundation
