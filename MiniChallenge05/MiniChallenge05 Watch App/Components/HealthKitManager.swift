@@ -4,15 +4,19 @@
 //
 //  Created by Guilherme Nunes Lobo on 21/05/24.
 //
-
 import HealthKit
 
 class HealthKitManager {
     let healthStore = HKHealthStore()
+    let rewardManager: RewardManager
+    
+    init(model: ModelNew) {
+        self.rewardManager = RewardManager(model: model)
+    }
     
     // Auth do HealthKit
     func requestAuthorization(completion: @escaping (Bool) -> Void) {
-        // Tipos de dados 
+        // Tipos de dados
         guard let distanceType = HKObjectType.quantityType(forIdentifier: .distanceWalkingRunning) else {
             completion(false)
             return
@@ -26,7 +30,7 @@ class HealthKitManager {
         }
     }
     
-    //  Distância percorrida em metros
+    // Distância percorrida em metros
     func fetchWalkingRunningDistance(completion: @escaping (Double) -> Void) {
         guard let distanceType = HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning) else {
             completion(0.0)
@@ -47,6 +51,13 @@ class HealthKitManager {
             }
             
             DispatchQueue.main.async {
+                print("Distância percorrida: \(distance) metros")
+                self.rewardManager.checkForReward(with: distance) { rewarded in
+                    if rewarded {
+                        // Código para conceder o item ao usuário
+                        print("Usuário recebeu um item!")
+                    }
+                }
                 completion(distance)
             }
         }
