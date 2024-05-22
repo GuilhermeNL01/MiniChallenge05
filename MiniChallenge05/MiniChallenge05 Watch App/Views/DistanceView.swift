@@ -52,7 +52,7 @@ struct ProgressBar: View {
 
 class ContentViewModel: ObservableObject {
     @Published var distance: Double?
-    private var healthKitManager = HealthKitManager()
+    private var healthKitManager = HealthKitManager(model: ModelNew())
     let dailyGoal: Double = 1000 // Definindo a meta diária para 1000 metros (altere conforme necessário)
     
     var progressPercentage: Double {
