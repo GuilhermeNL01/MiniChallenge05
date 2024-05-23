@@ -6,6 +6,7 @@
 //
 
 // 22 de Maio: 9 5 3 4
+// 23 de Maio: 7 0 0 4
 
 
 import SwiftUI
@@ -20,7 +21,6 @@ struct DailyMission: Codable {
 }
 
 struct DailyMissionComponent: View {
-    
     @Environment(\.modelContext) var context
     @Query var dailyMissionList: [ModelNew]
     
@@ -67,7 +67,6 @@ struct DailyMissionComponent: View {
     }
     
     func generateNewMission() {
-            
             dailyMissionCurrent = DailyMission(
                 missionDescription: missionDescriptions.randomElement() ?? "No mission today",
                 missionItemAlpha: Int.random(in: 0...10),
