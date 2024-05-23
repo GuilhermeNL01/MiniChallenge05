@@ -5,10 +5,6 @@
 //  Created by Luca on 22/05/24.
 //
 
-// 22 de Maio: 9 5 3 4
-// 23 de Maio: 7 0 0 4
-
-
 import SwiftUI
 import SwiftData
 
@@ -21,6 +17,7 @@ struct DailyMission: Codable {
 }
 
 struct DailyMissionComponent: View {
+    
     @Environment(\.modelContext) var context
     @Query var dailyMissionList: [ModelNew]
     
@@ -31,8 +28,6 @@ struct DailyMissionComponent: View {
         missionItemCharlie: 0,
         missionItemDelta: 0
     )
-    
-    @State private var date: Date = Date()
     
     private let missionDescriptions = [
         "Collect 10 apples",
@@ -62,44 +57,33 @@ struct DailyMissionComponent: View {
                     .foregroundColor(.white)
                     .cornerRadius(8)
             }
-        } 
-        .onAppear(perform: generateNewMission)
+        }
+//        .onAppear(perform: generateNewMission)
     }
     
-    func generateNewMission() {
-            dailyMissionCurrent = DailyMission(
-                missionDescription: missionDescriptions.randomElement() ?? "No mission today",
-                missionItemAlpha: Int.random(in: 0...10),
-                missionItemBravo: Int.random(in: 0...7),
-                missionItemCharlie: Int.random(in: 0...5),
-                missionItemDelta: Int.random(in: 1...4)
-            )
-            
-            if let existingMission = dailyMissionList.first {
+    private func generateNewMission() {
+        dailyMissionCurrent = DailyMission(
+            missionDescription: missionDescriptions.randomElement() ?? "No mission today",
+            missionItemAlpha: Int.random(in: 0...10),
+            missionItemBravo: Int.random(in: 0...7),
+            missionItemCharlie: Int.random(in: 0...5),
+            missionItemDelta: Int.random(in: 1...4)
+        )
+        
+        if let existingMission = dailyMissionList.first {
             // Update the existing mission
-                if dateFormatter() != dailyMissionList.first?.date {
-                    existingMission.dailyMission = dailyMissionCurrent
-                    existingMission.date = dateFormatter()
-                }
+            existingMission.dailyMission = dailyMissionCurrent
         } else {
             // Create a new mission if none exists
-            let modelDailyMission = ModelNew(date: dateFormatter(), dailyMission: dailyMissionCurrent)
+            let modelDailyMission = ModelNew(dailyMission: dailyMissionCurrent)
             context.insert(modelDailyMission)
         }
         
         // Save changes to the context
         try? context.save()
-    
     }
-    
-    func dateFormatter() -> String{
-        let format = DateFormatter()
-        format.dateFormat = "yyyy-MM-dd"
-        
-        let todaysDate = format.string(from: date)
-        
-        return todaysDate
-    }
-    
 }
 
+#Preview {
+    DailyMissionComponent()
+}
