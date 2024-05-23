@@ -13,7 +13,7 @@ struct MiniChallenge05_Watch_AppApp: App {
     
     var body: some Scene {
         WindowGroup {
-            DailyMissionComponent()
+            InventoryComponent()
         }
         .modelContainer(for: ModelNew.self)
     }
