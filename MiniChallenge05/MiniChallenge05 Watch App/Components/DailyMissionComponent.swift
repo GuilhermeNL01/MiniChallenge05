@@ -50,19 +50,35 @@ struct DailyMissionComponent: View {
             HStack {
                 VStack{
                     Text("A: \(dailyMissionList.first?.dailyMission.missionItemAlpha ?? 0)")
-                    Text("A: \(dailyMissionList.first?.itemAlpha ?? 0)")
+                    if dailyMissionList.first?.missionCompletion == true{
+                        Text("A: \(dailyMissionList.first?.dailyMission.missionItemAlpha ?? 0)")
+                    } else {
+                        Text("A: \(dailyMissionList.first?.itemAlpha ?? 0)")
+                    }
                 }
                 VStack{
                     Text("B: \(dailyMissionList.first?.dailyMission.missionItemBravo ?? 0)")
-                    Text("B: \(dailyMissionList.first?.itemBravo ?? 0)")
+                    if dailyMissionList.first?.missionCompletion == true{
+                        Text("A: \(dailyMissionList.first?.dailyMission.missionItemBravo ?? 0)")
+                    } else {
+                        Text("A: \(dailyMissionList.first?.itemBravo ?? 0)")
+                    }
                 }
                 VStack{
                     Text("C: \(dailyMissionList.first?.dailyMission.missionItemCharlie ?? 0)")
-                    Text("C: \(dailyMissionList.first?.itemCharlie ?? 0)")
+                    if dailyMissionList.first?.missionCompletion == true{
+                        Text("A: \(dailyMissionList.first?.dailyMission.missionItemCharlie ?? 0)")
+                    } else {
+                        Text("A: \(dailyMissionList.first?.itemCharlie ?? 0)")
+                    }
                 }
                 VStack{
                     Text("D: \(dailyMissionList.first?.dailyMission.missionItemDelta ?? 0)")
-                    Text("D: \(dailyMissionList.first?.itemDelta ?? 0)")
+                    if dailyMissionList.first?.missionCompletion == true{
+                        Text("A: \(dailyMissionList.first?.dailyMission.missionItemDelta ?? 0)")
+                    } else {
+                        Text("A: \(dailyMissionList.first?.itemDelta ?? 0)")
+                    }
                 }
             }
             .padding()
@@ -87,6 +103,7 @@ struct DailyMissionComponent: View {
                 if dateFormatter() != dailyMissionList.first?.date {
                     existingMission.dailyMission = dailyMissionCurrent
                     existingMission.date = dateFormatter()
+                    existingMission.missionCompletion = false
                 }
         } else {
             // Create a new mission if none exists
@@ -96,6 +113,8 @@ struct DailyMissionComponent: View {
         
         // Save changes to the context
         try? context.save()
+        
+        completeMission()
     
     }
     
@@ -106,6 +125,28 @@ struct DailyMissionComponent: View {
         let todaysDate = format.string(from: date)
         
         return todaysDate
+    }
+    
+    func completeMission() {
+        if let existingMission = dailyMissionList.first {
+            if existingMission.missionCompletion == false {
+                // Update the existing mission
+                if existingMission.itemAlpha >= existingMission.dailyMission.missionItemAlpha &&
+                    existingMission.itemBravo >= existingMission.dailyMission.missionItemBravo &&
+                    existingMission.itemCharlie >= existingMission.dailyMission.missionItemCharlie &&
+                    existingMission.itemDelta >= existingMission.dailyMission.missionItemDelta {
+                    
+                    existingMission.itemAlpha -= existingMission.dailyMission.missionItemAlpha
+                    existingMission.itemBravo -= existingMission.dailyMission.missionItemBravo
+                    existingMission.itemCharlie -= existingMission.dailyMission.missionItemCharlie
+                    existingMission.itemDelta -= existingMission.dailyMission.missionItemDelta
+                    
+                    existingMission.missionCompletion = true
+                }
+                
+                try? context.save()
+            }
+        }
     }
     
 }
