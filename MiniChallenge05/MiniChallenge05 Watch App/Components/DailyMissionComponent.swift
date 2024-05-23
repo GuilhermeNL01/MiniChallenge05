@@ -46,22 +46,29 @@ struct DailyMissionComponent: View {
             Text(dailyMissionList.first?.dailyMission.missionDescription ?? "No mission today")
                 .font(.headline)
                 .padding()
-            
+            Text("Itens da Missão")
             HStack {
-                Text("A: \(dailyMissionList.first?.dailyMission.missionItemAlpha ?? 0)")
-                Text("B: \(dailyMissionList.first?.dailyMission.missionItemBravo ?? 0)")
-                Text("C: \(dailyMissionList.first?.dailyMission.missionItemCharlie ?? 0)")
-                Text("D: \(dailyMissionList.first?.dailyMission.missionItemDelta ?? 0)")
+                VStack{
+                    Text("A: \(dailyMissionList.first?.dailyMission.missionItemAlpha ?? 0)")
+                    Text("A: \(dailyMissionList.first?.itemAlpha ?? 0)")
+                }
+                VStack{
+                    Text("B: \(dailyMissionList.first?.dailyMission.missionItemBravo ?? 0)")
+                    Text("B: \(dailyMissionList.first?.itemBravo ?? 0)")
+                }
+                VStack{
+                    Text("C: \(dailyMissionList.first?.dailyMission.missionItemCharlie ?? 0)")
+                    Text("C: \(dailyMissionList.first?.itemCharlie ?? 0)")
+                }
+                VStack{
+                    Text("D: \(dailyMissionList.first?.dailyMission.missionItemDelta ?? 0)")
+                    Text("D: \(dailyMissionList.first?.itemDelta ?? 0)")
+                }
             }
             .padding()
             
-            Button(action: generateNewMission) {
-                Text("Generate New Mission")
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(8)
-            }
+            Text("Itens do Inventário")
+            
         }
         .onAppear(perform: generateNewMission)
     }
