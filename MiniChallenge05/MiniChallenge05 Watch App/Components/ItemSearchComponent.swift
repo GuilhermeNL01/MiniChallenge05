@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ItemSearchComponent: View {
-    
     var body: some View {
         VStack{
             CircularProgressView()
@@ -28,7 +27,7 @@ struct CircularProgressView: View {
                 .foregroundColor(.blue)
             
             Circle()
-                .trim(from: 0.0, to: min(content.progressPercentage, 1.0))
+                .trim(from: 0.0, to: min(content.progressPercentage, content.dailyGoal))
                 .stroke(style: StrokeStyle(lineWidth: 20, lineCap: .round, lineJoin: .round))
                 .foregroundColor(.blue)
                 .rotationEffect(Angle(degrees: 270.0))
