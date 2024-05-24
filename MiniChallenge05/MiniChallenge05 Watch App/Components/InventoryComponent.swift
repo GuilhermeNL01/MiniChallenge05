@@ -14,22 +14,25 @@ struct InventoryComponent: View {
     
     var body: some View {
         VStack {
-            
             HStack {
-                Text("Missão do Dia")
+                Text("Inventário")
+                    .padding(.leading, 15)
                     .font(.title3)
                     .bold()
                 Spacer()
             }
+            .padding(.bottom)
+            
             
             HStack{
+                Spacer()
                 VStack {
                     Image(systemName: "graduationcap.circle.fill")
                         .resizable()
                         .frame(width: 30, height: 30)
                     Text("\(inventory.first?.itemAlpha ?? 0)")
                 }
-                .padding(.horizontal)
+                Spacer()
                 
                 VStack {
                     Image(systemName: "backpack.circle.fill")
@@ -37,7 +40,7 @@ struct InventoryComponent: View {
                         .frame(width: 30, height: 30)
                     Text("\(inventory.first?.itemAlpha ?? 0)")
                 }
-                .padding(.horizontal)
+                Spacer()
                 
                 VStack {
                     Image(systemName: "paperclip.circle.fill")
@@ -45,7 +48,7 @@ struct InventoryComponent: View {
                         .frame(width: 30, height: 30)
                     Text("\(inventory.first?.itemAlpha ?? 0)")
                 }
-                .padding(.horizontal)
+                Spacer()
                 
                 VStack {
                     Image(systemName: "person.2.circle.fill")
@@ -53,9 +56,12 @@ struct InventoryComponent: View {
                         .frame(width: 30, height: 30)
                     Text("\(inventory.first?.itemAlpha ?? 0)")
                 }
-                .padding(.horizontal)
+                Spacer()
             }
         }
+        .padding(4)
+        .background(.gray)
+        .clipShape(.rect(cornerRadius: 20))
     }
 }
 
