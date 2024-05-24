@@ -45,56 +45,77 @@ struct DailyMissionComponent: View {
     
     var body: some View {
         VStack {
-            HStack{
-                Text("MISSÃO DO DIA")
-                    .font(.headline)
-                    .padding(.horizontal)
+            HStack {
+                Text("Missão do Dia")
+                    .padding(.leading, 15)
+                    .font(.title3)
+                    .bold()
                 Spacer()
             }
+            .padding(.bottom)
              
             // Mission Items
             HStack {
+                Spacer()
                 VStack{
-                    Text("A: \(dailyMissionList.first?.dailyMission.missionItemAlpha ?? 0)")
-                        .font(.system(size: 10))
+                    Image(systemName: "graduationcap.circle.fill")
+                        .resizable()
+                        .frame(width: 30, height: 30)
                     if dailyMissionList.first?.missionCompletion == true{
-                        Text("A: \(dailyMissionList.first?.dailyMission.missionItemAlpha ?? 0)")
+                        Text("\(dailyMissionList.first?.dailyMission.missionItemAlpha ?? 0)/\(dailyMissionList.first?.dailyMission.missionItemAlpha ?? 0)")
                     } else {
-                        Text("A: \(dailyMissionList.first?.itemAlpha ?? 0)")
+                        Text("\(dailyMissionList.first?.dailyMission.missionItemAlpha ?? 0)/\(dailyMissionList.first?.itemAlpha ?? 0)")
                     }
                 }
+                
+                Spacer()
+                
                 VStack{
-                    Text("B: \(dailyMissionList.first?.dailyMission.missionItemBravo ?? 0)")
+                    Image(systemName: "backpack.circle.fill")
+                        .resizable()
+                        .frame(width: 30, height: 30)
                     if dailyMissionList.first?.missionCompletion == true{
-                        Text("B: \(dailyMissionList.first?.dailyMission.missionItemBravo ?? 0)")
+                        Text("\(dailyMissionList.first?.dailyMission.missionItemBravo ?? 0)/\(dailyMissionList.first?.dailyMission.missionItemBravo ?? 0)")
                     } else {
-                        Text("B: \(dailyMissionList.first?.itemBravo ?? 0)")
+                        Text("\(dailyMissionList.first?.dailyMission.missionItemBravo ?? 0)/\(dailyMissionList.first?.itemBravo ?? 0)")
                     }
                 }
+                
+                Spacer()
+                
                 VStack{
-                    Text("C: \(dailyMissionList.first?.dailyMission.missionItemCharlie ?? 0)")
+                    Image(systemName: "paperclip.circle.fill")
+                        .resizable()
+                        .frame(width: 30, height: 30)
                     if dailyMissionList.first?.missionCompletion == true{
-                        Text("C: \(dailyMissionList.first?.dailyMission.missionItemCharlie ?? 0)")
+                        Text("\(dailyMissionList.first?.dailyMission.missionItemCharlie ?? 0)/\(dailyMissionList.first?.dailyMission.missionItemCharlie ?? 0)")
                     } else {
-                        Text("C: \(dailyMissionList.first?.itemCharlie ?? 0)")
+                        Text("\(dailyMissionList.first?.dailyMission.missionItemCharlie ?? 0)/\(dailyMissionList.first?.itemCharlie ?? 0)")
                     }
                 }
+                
+                Spacer()
+                
                 VStack{
-                    Text("D: \(dailyMissionList.first?.dailyMission.missionItemDelta ?? 0)")
+                    Image(systemName: "person.2.circle.fill")
+                        .resizable()
+                        .frame(width: 30, height: 30)
                     if dailyMissionList.first?.missionCompletion == true{
-                        Text("D: \(dailyMissionList.first?.dailyMission.missionItemDelta ?? 0)")
+                        Text("\(dailyMissionList.first?.dailyMission.missionItemDelta ?? 0)/\(dailyMissionList.first?.dailyMission.missionItemDelta ?? 0)")
                     } else {
-                        Text("D: \(dailyMissionList.first?.itemDelta ?? 0)")
+                        Text("\(dailyMissionList.first?.dailyMission.missionItemDelta ?? 0)/\(dailyMissionList.first?.itemDelta ?? 0)")
                     }
                 }
+                
+                Spacer()
             }
             // Inventory Items
             
         }
         .onAppear(perform: generateNewMission)
-        .padding()
-        .background(.red)
-        .cornerRadius(10)
+        .padding(4)
+        .background(.gray)
+        .clipShape(.rect(cornerRadius: 20))
     }
     
     func generateNewMission() {
