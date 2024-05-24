@@ -6,7 +6,7 @@
 //
 import HealthKit
 
-class HealthKitManager : ObservableObject {
+class HealthKitManager: ObservableObject {
     let healthStore = HKHealthStore()
     let rewardManager: RewardManager
     
