@@ -66,25 +66,25 @@ struct DailyMissionComponent: View {
                 VStack{
                     Text("B: \(dailyMissionList.first?.dailyMission.missionItemBravo ?? 0)")
                     if dailyMissionList.first?.missionCompletion == true{
-                        Text("A: \(dailyMissionList.first?.dailyMission.missionItemBravo ?? 0)")
+                        Text("B: \(dailyMissionList.first?.dailyMission.missionItemBravo ?? 0)")
                     } else {
-                        Text("A: \(dailyMissionList.first?.itemBravo ?? 0)")
+                        Text("B: \(dailyMissionList.first?.itemBravo ?? 0)")
                     }
                 }
                 VStack{
                     Text("C: \(dailyMissionList.first?.dailyMission.missionItemCharlie ?? 0)")
                     if dailyMissionList.first?.missionCompletion == true{
-                        Text("A: \(dailyMissionList.first?.dailyMission.missionItemCharlie ?? 0)")
+                        Text("C: \(dailyMissionList.first?.dailyMission.missionItemCharlie ?? 0)")
                     } else {
-                        Text("A: \(dailyMissionList.first?.itemCharlie ?? 0)")
+                        Text("C: \(dailyMissionList.first?.itemCharlie ?? 0)")
                     }
                 }
                 VStack{
                     Text("D: \(dailyMissionList.first?.dailyMission.missionItemDelta ?? 0)")
                     if dailyMissionList.first?.missionCompletion == true{
-                        Text("A: \(dailyMissionList.first?.dailyMission.missionItemDelta ?? 0)")
+                        Text("D: \(dailyMissionList.first?.dailyMission.missionItemDelta ?? 0)")
                     } else {
-                        Text("A: \(dailyMissionList.first?.itemDelta ?? 0)")
+                        Text("D: \(dailyMissionList.first?.itemDelta ?? 0)")
                     }
                 }
             }
