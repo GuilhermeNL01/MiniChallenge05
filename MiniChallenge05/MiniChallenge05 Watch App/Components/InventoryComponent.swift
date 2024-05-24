@@ -13,67 +13,49 @@ struct InventoryComponent: View {
     @Query private var inventory: [ModelNew]
     
     var body: some View {
-        HStack {
-            VStack {
-                HStack {
-                    Text("Inventário")
-                    
-                    Spacer()
+        VStack {
+            
+            HStack {
+                Text("Missão do Dia")
+                    .font(.title3)
+                    .bold()
+                Spacer()
+            }
+            
+            HStack{
+                VStack {
+                    Image(systemName: "graduationcap.circle.fill")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                    Text("\(inventory.first?.itemAlpha ?? 0)")
                 }
-                ForEach (inventory) { item in
-                    
-                    HStack {
-                        HStack {
-                            Image(systemName: "square.and.arrow.up.circle.fill")
-                                .resizable()
-                                .frame(width: 15, height: 15)
-                            Text("\(item.itemAlpha)")
-                                .fontWidth(.compressed)
-                                .font(.footnote)
-                                .padding(.top)
-                        }
-                        .padding(.horizontal)
-                        
-                        HStack {
-                            Image(systemName: "square.and.arrow.up.circle.fill")
-                                .resizable()
-                                .frame(width: 15, height: 15)
-                            Text("\(item.itemBravo)")
-                                .fontWidth(.compressed)
-                                .font(.footnote)
-                                .padding(.top)
-                        }
-                        .padding(.horizontal)
-                        
-                        HStack {
-                            Image(systemName: "square.and.arrow.up.circle.fill")
-                                .resizable()
-                                .frame(width: 15, height: 15)
-                            Text("\(item.itemCharlie)")
-                                .fontWidth(.compressed)
-                                .font(.footnote)
-                                .padding(.top)
-                        }
-                        .padding(.horizontal)
-                        
-                        
-                        HStack {
-                            Image(systemName: "square.and.arrow.up.circle.fill")
-                                .resizable()
-                                .frame(width: 15, height: 15)
-                            VStack{
-                                Text("\(item.itemDelta)")
-                                    .fontWidth(.compressed)
-                                    .font(.footnote)
-                                    .padding(.top)
-                            }
-                        }
-                        .padding(.horizontal)
-                    }
+                .padding(.horizontal)
+                
+                VStack {
+                    Image(systemName: "backpack.circle.fill")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                    Text("\(inventory.first?.itemAlpha ?? 0)")
                 }
+                .padding(.horizontal)
+                
+                VStack {
+                    Image(systemName: "paperclip.circle.fill")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                    Text("\(inventory.first?.itemAlpha ?? 0)")
+                }
+                .padding(.horizontal)
+                
+                VStack {
+                    Image(systemName: "person.2.circle.fill")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                    Text("\(inventory.first?.itemAlpha ?? 0)")
+                }
+                .padding(.horizontal)
             }
         }
-        .background(.blue)
     }
 }
 
