@@ -19,6 +19,7 @@
 		4099E10B2BF7EC57002A9440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4099E10A2BF7EC57002A9440 /* Assets.xcassets */; };
 		4099E10E2BF7EC57002A9440 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4099E10D2BF7EC57002A9440 /* Preview Assets.xcassets */; };
 		40A502112BFE6BA0000B1D57 /* RewardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A502102BFE6BA0000B1D57 /* RewardManager.swift */; };
+		43A9F8A32BFFC24D005AEE82 /* ItemSearchComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A9F8A22BFFC24D005AEE82 /* ItemSearchComponent.swift */; };
 		81AED6122BFE689E005F471D /* DailyMissionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6112BFE689E005F471D /* DailyMissionComponent.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		4099E10A2BF7EC57002A9440 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4099E10D2BF7EC57002A9440 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		40A502102BFE6BA0000B1D57 /* RewardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardManager.swift; sourceTree = "<group>"; };
+		43A9F8A22BFFC24D005AEE82 /* ItemSearchComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSearchComponent.swift; sourceTree = "<group>"; };
 		81AED60F2BFBBD71005F471D /* MiniChallenge05 Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MiniChallenge05 Watch App.entitlements"; sourceTree = "<group>"; };
 		81AED6102BFBBDAF005F471D /* MiniChallenge05-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MiniChallenge05-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		81AED6112BFE689E005F471D /* DailyMissionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMissionComponent.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				4095670B2BFD1B0A00B9A506 /* HealthKitManager.swift */,
 				40A502102BFE6BA0000B1D57 /* RewardManager.swift */,
 				81AED6112BFE689E005F471D /* DailyMissionComponent.swift */,
+				43A9F8A22BFFC24D005AEE82 /* ItemSearchComponent.swift */,
 				2EE53CAF2BFFC3A50071559A /* InventoryComponent.swift */,
 				2ED1E4B22C010D7F0073AF9A /* RankComponent.swift */,
 			);
@@ -252,6 +255,7 @@
 				409567102BFD25D600B9A506 /* DistanceView.swift in Sources */,
 				4099E1072BF7EC56002A9440 /* MiniChallenge05App.swift in Sources */,
 				81AED6122BFE689E005F471D /* DailyMissionComponent.swift in Sources */,
+				43A9F8A32BFFC24D005AEE82 /* ItemSearchComponent.swift in Sources */,
 				4095670C2BFD1B0A00B9A506 /* HealthKitManager.swift in Sources */,
 				4019DD8A2BFBD41100AA61D9 /* BPMComponent.swift in Sources */,
 			);
