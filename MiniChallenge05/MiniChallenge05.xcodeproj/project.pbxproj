@@ -105,6 +105,7 @@
 				43A9F8A22BFFC24D005AEE82 /* ItemSearchComponent.swift */,
 				2EE53CAF2BFFC3A50071559A /* InventoryComponent.swift */,
 				2ED1E4B22C010D7F0073AF9A /* RankComponent.swift */,
+				43A9F8A22BFFC24D005AEE82 /* ItemSearchComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
