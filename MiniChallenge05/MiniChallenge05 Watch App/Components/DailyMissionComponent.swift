@@ -12,6 +12,7 @@
 import SwiftUI
 import SwiftData
 
+// Struct defining basic Daily Mission properties
 struct DailyMission: Codable {
     var missionDescription: String
     var missionItemAlpha: Int
@@ -34,6 +35,7 @@ struct DailyMissionComponent: View {
     
     @State private var date: Date = Date()
     
+    // Descriptions for the Daily Mission Component. NOT CURRENTLY USED
     private let missionDescriptions = [
         "Collect 10 apples",
         "Defeat 5 enemies",
@@ -43,13 +45,18 @@ struct DailyMissionComponent: View {
     
     var body: some View {
         VStack {
-            Text(dailyMissionList.first?.dailyMission.missionDescription ?? "No mission today")
-                .font(.headline)
-                .padding()
-            Text("Itens da Missão")
+            HStack{
+                Text("MISSÃO DO DIA")
+                    .font(.headline)
+                    .padding(.horizontal)
+                Spacer()
+            }
+             
+            // Mission Items
             HStack {
                 VStack{
                     Text("A: \(dailyMissionList.first?.dailyMission.missionItemAlpha ?? 0)")
+                        .font(.system(size: 10))
                     if dailyMissionList.first?.missionCompletion == true{
                         Text("A: \(dailyMissionList.first?.dailyMission.missionItemAlpha ?? 0)")
                     } else {
@@ -59,39 +66,40 @@ struct DailyMissionComponent: View {
                 VStack{
                     Text("B: \(dailyMissionList.first?.dailyMission.missionItemBravo ?? 0)")
                     if dailyMissionList.first?.missionCompletion == true{
-                        Text("A: \(dailyMissionList.first?.dailyMission.missionItemBravo ?? 0)")
+                        Text("B: \(dailyMissionList.first?.dailyMission.missionItemBravo ?? 0)")
                     } else {
-                        Text("A: \(dailyMissionList.first?.itemBravo ?? 0)")
+                        Text("B: \(dailyMissionList.first?.itemBravo ?? 0)")
                     }
                 }
                 VStack{
                     Text("C: \(dailyMissionList.first?.dailyMission.missionItemCharlie ?? 0)")
                     if dailyMissionList.first?.missionCompletion == true{
-                        Text("A: \(dailyMissionList.first?.dailyMission.missionItemCharlie ?? 0)")
+                        Text("C: \(dailyMissionList.first?.dailyMission.missionItemCharlie ?? 0)")
                     } else {
-                        Text("A: \(dailyMissionList.first?.itemCharlie ?? 0)")
+                        Text("C: \(dailyMissionList.first?.itemCharlie ?? 0)")
                     }
                 }
                 VStack{
                     Text("D: \(dailyMissionList.first?.dailyMission.missionItemDelta ?? 0)")
                     if dailyMissionList.first?.missionCompletion == true{
-                        Text("A: \(dailyMissionList.first?.dailyMission.missionItemDelta ?? 0)")
+                        Text("D: \(dailyMissionList.first?.dailyMission.missionItemDelta ?? 0)")
                     } else {
-                        Text("A: \(dailyMissionList.first?.itemDelta ?? 0)")
+                        Text("D: \(dailyMissionList.first?.itemDelta ?? 0)")
                     }
                 }
             }
-            .padding()
-            
-            Text("Itens do Inventário")
+            // Inventory Items
             
         }
         .onAppear(perform: generateNewMission)
+        .padding()
+        .background(.red)
+        .cornerRadius(10)
     }
     
     func generateNewMission() {
             dailyMissionCurrent = DailyMission(
-                missionDescription: missionDescriptions.randomElement() ?? "No mission today",
+                missionDescription: missionDescriptions.randomElement() ?? "No mission today", // Isn't currently used
                 missionItemAlpha: Int.random(in: 0...10),
                 missionItemBravo: Int.random(in: 0...7),
                 missionItemCharlie: Int.random(in: 0...5),
@@ -136,11 +144,16 @@ struct DailyMissionComponent: View {
                     existingMission.itemCharlie >= existingMission.dailyMission.missionItemCharlie &&
                     existingMission.itemDelta >= existingMission.dailyMission.missionItemDelta {
                     
+                    // Remove items from inventory once all necessary mission items are acquired
                     existingMission.itemAlpha -= existingMission.dailyMission.missionItemAlpha
                     existingMission.itemBravo -= existingMission.dailyMission.missionItemBravo
                     existingMission.itemCharlie -= existingMission.dailyMission.missionItemCharlie
                     existingMission.itemDelta -= existingMission.dailyMission.missionItemDelta
                     
+                    // Increment the total mission counter for the rank logic
+                    existingMission.totalMissions += 1
+                    
+                    // Mark the mision as completed
                     existingMission.missionCompletion = true
                 }
                 
