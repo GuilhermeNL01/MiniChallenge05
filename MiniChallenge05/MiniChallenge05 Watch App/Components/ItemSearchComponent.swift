@@ -33,5 +33,8 @@ struct CircularProgressView: View {
                 .rotationEffect(Angle(degrees: 270.0))
                 .animation(.linear, value: content.progressPercentage)
         }
+        .onAppear {
+            content.requestAuthorization()
+        }
     }
 }
