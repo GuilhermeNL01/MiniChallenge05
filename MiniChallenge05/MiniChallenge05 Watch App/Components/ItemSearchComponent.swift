@@ -9,10 +9,12 @@ import SwiftUI
 
 struct ItemSearchComponent: View {
     var body: some View {
-        VStack{
+    HStack{
             CircularProgressView()
-                .frame(width: 100, height: 100)
+                .frame(width: 50, height: 50)
+            CircularProgressViewInformation()
         }
+        .frame(width: 164, height: 66)
     }
 }
 
@@ -25,7 +27,6 @@ struct CircularProgressView: View {
                 .stroke(lineWidth: 20)
                 .opacity(0.1)
                 .foregroundColor(.blue)
-            
             Circle()
                 .trim(from: 0.0, to: min(content.progressPercentage, content.dailyGoal))
                 .stroke(style: StrokeStyle(lineWidth: 20, lineCap: .round, lineJoin: .round))
@@ -35,6 +36,20 @@ struct CircularProgressView: View {
         }
         .onAppear {
             content.requestAuthorization()
+        }
+    }
+}
+
+struct CircularProgressViewInformation: View {
+    @ObservedObject var content = ContentViewModel()
+    
+    var body: some View {
+        VStack{
+            Text("Item 01")
+            HStack{
+                Image(systemName: "figure.walk")
+                Text("\(content.progressPercentage) M/ \(content.dailyGoal) M")
+            }
         }
     }
 }
