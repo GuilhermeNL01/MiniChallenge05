@@ -6,7 +6,7 @@
 //
 import HealthKit
 
-class HealthKitManager : ObservableObject{
+class HealthKitManager : ObservableObject {
     let healthStore = HKHealthStore()
     let rewardManager: RewardManager
     
@@ -73,12 +73,7 @@ class HealthKitManager : ObservableObject{
             return
         }
 
-        let userDefaults = UserDefaults.standard
-        guard let startDate = userDefaults.object(forKey: "startDate") as? Date else {
-            completion(0.0)
-            return
-        }
-
+        let startDate = Date.distantPast 
         let endDate = Date()
         let predicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: .strictStartDate)
 
