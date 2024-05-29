@@ -17,6 +17,7 @@
 		2EE53CB02BFFC3A50071559A /* InventoryComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE53CAF2BFFC3A50071559A /* InventoryComponent.swift */; };
 		4019DD862BFBD09700AA61D9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4019DD852BFBD09700AA61D9 /* Model.swift */; };
 		4019DD8A2BFBD41100AA61D9 /* BPMComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4019DD892BFBD41100AA61D9 /* BPMComponent.swift */; };
+		406954A42C0007D500105FF3 /* TotalDistanceComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406954A32C0007D500105FF3 /* TotalDistanceComponent.swift */; };
 		4095670C2BFD1B0A00B9A506 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095670B2BFD1B0A00B9A506 /* HealthKitManager.swift */; };
 		409567102BFD25D600B9A506 /* DistanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095670F2BFD25D600B9A506 /* DistanceView.swift */; };
 		4099E1022BF7EC56002A9440 /* MiniChallenge05 Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4099E1012BF7EC56002A9440 /* MiniChallenge05 Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -27,6 +28,7 @@
 		40A502112BFE6BA0000B1D57 /* RewardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A502102BFE6BA0000B1D57 /* RewardManager.swift */; };
 		43A9F8A32BFFC24D005AEE82 /* ItemSearchComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A9F8A22BFFC24D005AEE82 /* ItemSearchComponent.swift */; };
 		81AED6122BFE689E005F471D /* DailyMissionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6112BFE689E005F471D /* DailyMissionComponent.swift */; };
+		81AED6162C05001C005F471D /* MissionCounterComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6152C05001C005F471D /* MissionCounterComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,7 @@
 		2EE53CAF2BFFC3A50071559A /* InventoryComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryComponent.swift; sourceTree = "<group>"; };
 		4019DD852BFBD09700AA61D9 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		4019DD892BFBD41100AA61D9 /* BPMComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPMComponent.swift; sourceTree = "<group>"; };
+		406954A32C0007D500105FF3 /* TotalDistanceComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalDistanceComponent.swift; sourceTree = "<group>"; };
 		4095670B2BFD1B0A00B9A506 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		4095670F2BFD25D600B9A506 /* DistanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceView.swift; sourceTree = "<group>"; };
 		4099E0FB2BF7EC56002A9440 /* MiniChallenge05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallenge05.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +80,7 @@
 		81AED60F2BFBBD71005F471D /* MiniChallenge05 Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MiniChallenge05 Watch App.entitlements"; sourceTree = "<group>"; };
 		81AED6102BFBBDAF005F471D /* MiniChallenge05-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MiniChallenge05-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		81AED6112BFE689E005F471D /* DailyMissionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMissionComponent.swift; sourceTree = "<group>"; };
+		81AED6152C05001C005F471D /* MissionCounterComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionCounterComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,9 +119,11 @@
 				4095670B2BFD1B0A00B9A506 /* HealthKitManager.swift */,
 				40A502102BFE6BA0000B1D57 /* RewardManager.swift */,
 				81AED6112BFE689E005F471D /* DailyMissionComponent.swift */,
+				406954A32C0007D500105FF3 /* TotalDistanceComponent.swift */,
 				2EE53CAF2BFFC3A50071559A /* InventoryComponent.swift */,
 				2ED1E4B22C010D7F0073AF9A /* RankComponent.swift */,
 				43A9F8A22BFFC24D005AEE82 /* ItemSearchComponent.swift */,
+				81AED6152C05001C005F471D /* MissionCounterComponent.swift */,
 				2ED1E4B72C0524210073AF9A /* RankRecruit.swift */,
 				2ED1E4B92C0524B10073AF9A /* RankNoob.swift */,
 				2ED1E4BB2C0524DE0073AF9A /* RankTactical.swift */,
@@ -269,6 +275,7 @@
 				2ED1E4B82C0524210073AF9A /* RankRecruit.swift in Sources */,
 				2ED1E4B32C010D7F0073AF9A /* RankComponent.swift in Sources */,
 				40A502112BFE6BA0000B1D57 /* RewardManager.swift in Sources */,
+				81AED6162C05001C005F471D /* MissionCounterComponent.swift in Sources */,
 				4099E1092BF7EC56002A9440 /* ContentView.swift in Sources */,
 				2ED1E4C02C0525060073AF9A /* RankMaster.swift in Sources */,
 				2ED1E4B52C0119210073AF9A /* RankView.swift in Sources */,
@@ -281,6 +288,7 @@
 				43A9F8A32BFFC24D005AEE82 /* ItemSearchComponent.swift in Sources */,
 				4095670C2BFD1B0A00B9A506 /* HealthKitManager.swift in Sources */,
 				2ED1E4BC2C0524DE0073AF9A /* RankTactical.swift in Sources */,
+				406954A42C0007D500105FF3 /* TotalDistanceComponent.swift in Sources */,
 				4019DD8A2BFBD41100AA61D9 /* BPMComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
