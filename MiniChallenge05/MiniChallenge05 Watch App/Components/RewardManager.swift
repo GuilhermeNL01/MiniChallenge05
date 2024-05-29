@@ -66,6 +66,16 @@ class RewardManager {
     }
 }
 
+//
+//  RewardCheckView.swift
+//  MiniChallenge05 Watch App
+//
+//  Created by Guilherme Nunes Lobo on 22/05/24.
+//
+import SwiftUI
+import HealthKit
+import SwiftData
+
 struct RewardCheckView: View {
     @Environment(\.modelContext) private var context: ModelContext
     @Query private var model: [ModelNew]
@@ -81,26 +91,11 @@ struct RewardCheckView: View {
 
     var body: some View {
         VStack {
-            Button("Check for Reward") {
-                healthKitManager?.fetchWalkingRunningDistance { distance in
-                    self.distance = distance
-                    healthKitManager?.rewardManager.checkForReward(with: distance) { rewarded in
-                        rewardMessage = rewarded ? "You've earned a reward!" : "No reward this time."
-                        itemAlpha = healthKitManager?.rewardManager.model.itemAlpha ?? 0
-                        itemBravo = healthKitManager?.rewardManager.model.itemBravo ?? 0
-                        itemCharlie = healthKitManager?.rewardManager.model.itemCharlie ?? 0
-                        itemDelta = healthKitManager?.rewardManager.model.itemDelta ?? 0
-                        saveChanges()
-                    }
-                }
-            }
-            .padding()
-            
             Text(rewardMessage)
                 .padding()
             
             VStack {
-                Text("Rewards Summary")
+                Text("Rewards")
                     .font(.headline)
                 Text("Item Alpha: \(itemAlpha)")
                 Text("Item Bravo: \(itemBravo)")
@@ -121,9 +116,25 @@ struct RewardCheckView: View {
             }
             
             healthKitManager?.requestAuthorization { success in
-                if !success {
+                if success {
+                    fetchAndCheckRewards()
+                } else {
                     print("HealthKit authorization failed")
                 }
+            }
+        }
+    }
+
+    private func fetchAndCheckRewards() {
+        healthKitManager?.fetchWalkingRunningDistance { distance in
+            self.distance = distance
+            healthKitManager?.rewardManager.checkForReward(with: distance) { rewarded in
+                rewardMessage = rewarded ? "You've earned a reward!" : "No reward this time."
+                itemAlpha = healthKitManager?.rewardManager.model.itemAlpha ?? 0
+                itemBravo = healthKitManager?.rewardManager.model.itemBravo ?? 0
+                itemCharlie = healthKitManager?.rewardManager.model.itemCharlie ?? 0
+                itemDelta = healthKitManager?.rewardManager.model.itemDelta ?? 0
+                saveChanges()
             }
         }
     }
@@ -136,5 +147,4 @@ struct RewardCheckView: View {
         }
     }
 }
-
 
