@@ -10,7 +10,7 @@ import SwiftData
 
 struct RankComponent: View {
     
-    var dataModel: [ModelNew]
+    @Query var dataModel: [ModelNew]
     var body: some View {
         
         VStack {

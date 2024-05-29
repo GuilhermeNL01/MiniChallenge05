@@ -9,18 +9,12 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    
-    var dataModel: [ModelNew] = []
-    
     var body: some View {
-        
-        NavigationStack{
-            VStack {
-                    RankComponent(dataModel: dataModel)
-            }
-            .padding()
-            
+        TabView {
+            MainView()
+            AgentProgressView()
         }
+        .tabViewStyle(.automatic)
     }
 }
 
