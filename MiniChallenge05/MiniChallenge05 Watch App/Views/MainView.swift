@@ -9,9 +9,13 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        VStack {
-            DailyMissionComponent()
-            InventoryComponent()
+        NavigationStack {
+            ScrollView {
+                VStack {
+                    DailyMissionComponent()
+                    InventoryComponent()
+                }
+            }.navigationTitle("Missão Atual")
         }
     }
 }

@@ -16,14 +16,22 @@ struct TotalDistanceComponent: View {
             HStack {
                 Image(systemName: "figure.walk")
                     .font(.system(size: 30))
-                Text("0,\(Int(totalDistance * 10) % 10) KM")
-                    .font(.system(size: 30, weight: .regular, design: .default))
+                VStack{
+                    HStack{
+                        Text("Total Percorrido")
+                            .font(.callout)
+                        Spacer()
+                    }
+                    HStack{
+                        Text("0,\(Int(totalDistance * 10) % 10) KM")
+                            .font(.system(size: 25, weight: .regular, design: .default))
+                            .foregroundColor(.primary)
+                        Spacer()
+                    }
+                }
             }
             .padding(.bottom)
 
-            Text("CAMINHADOS")
-                .font(.system(size: 25, weight: .regular, design: .default))
-                .foregroundColor(.primary)
 
             Spacer()
         }

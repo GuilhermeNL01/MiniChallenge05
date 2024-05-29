@@ -9,10 +9,17 @@ import SwiftUI
 
 struct AgentProgressView: View {
     var body: some View {
-        VStack {
-            RankComponent()
-            MissionCounterComponent()
-            TotalDistanceComponent()
+        NavigationStack {
+            ScrollView {
+                VStack {
+                    RankComponent()
+                        .padding(.vertical)
+                    MissionCounterComponent()
+                        .padding(.vertical)
+                    TotalDistanceComponent()
+                        .padding(.vertical)
+                }
+            }.navigationTitle("Meu Progresso")
         }
     }
 }

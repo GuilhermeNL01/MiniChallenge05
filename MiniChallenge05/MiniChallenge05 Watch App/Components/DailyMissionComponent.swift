@@ -124,7 +124,7 @@ struct DailyMissionComponent: View {
             }
         }
         .padding(4)
-        .background(.gray)
+        .background(.blue)
         .clipShape(.rect(cornerRadius: 20))
     }
     
