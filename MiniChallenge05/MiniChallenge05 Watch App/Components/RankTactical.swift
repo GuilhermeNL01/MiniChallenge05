@@ -9,11 +9,20 @@ import SwiftUI
 
 struct RankTactical: View {
     var body: some View {
-        HStack {
-            Image(systemName: "person.2.circle.fill")
-            VStack {
-                Text("Agente Recruta")
-                Text("25 Missões")
+        ZStack {
+            RoundedRectangle(cornerRadius: 5)
+                .foregroundStyle(.pink)
+                .frame(width: 200, height: 60)
+            HStack {
+                Image(systemName: "person.2.circle.fill")
+                    .resizable()
+                    .frame(width: 34, height: 34)
+                VStack {
+                    Text("Agente Tático")
+                        .bold()
+                    
+                    Text("75 Missões")
+                }
             }
         }
     }
