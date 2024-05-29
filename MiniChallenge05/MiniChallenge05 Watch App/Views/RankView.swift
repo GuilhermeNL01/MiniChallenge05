@@ -9,12 +9,19 @@ import SwiftUI
 
 struct RankView: View {
     var body: some View {
-        VStack {
-            RankRecruit()
-            RankNoob()
-            RankTactical()
-            RankSpecial()
-            RankMaster()
+        ScrollView {
+            VStack {
+                RankRecruit()
+                    .padding()
+                RankNoob()
+                    .padding()
+                RankTactical()
+                    .padding()
+                RankSpecial()
+                    .padding()
+                RankMaster()
+                    .padding()
+            }
         }
     }
 
