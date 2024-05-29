@@ -4,12 +4,12 @@
 //
 //  Created by Guilherme Nunes Lobo on 22/05/24.
 //
+
 import SwiftUI
 import SwiftData
 
 class RewardManager {
     
-    @Environment(\.modelContext) var context: ModelContext
     var model: ModelNew
     
     init(model: ModelNew) {
@@ -61,12 +61,58 @@ class RewardManager {
             }
         }
         
+        completion(rewarded)
+    }
+}
+struct RewardCheckView: View {
+    @Environment(\.modelContext) private var context: ModelContext
+    @Query private var model: [ModelNew]
+
+    @State private var rewardMessage: String = ""
+    private let predefinedDistance: Double = 4000
+    
+    private var rewardManager: RewardManager {
+        RewardManager(model: model.first ?? ModelNew())
+    }
+
+    var body: some View {
+        VStack {
+            Button("Check for Reward") {
+                rewardManager.checkForReward(with: predefinedDistance) { rewarded in
+                    rewardMessage = rewarded ? "You've earned a reward!" : "No reward this time."
+                    saveChanges()
+                }
+            }
+            .padding()
+            
+            Text(rewardMessage)
+                .padding()
+            
+            VStack {
+                Text("Rewards Summary")
+                    .font(.headline)
+                Text("Item Alpha: \(rewardManager.model.itemAlpha)")
+                Text("Item Bravo: \(rewardManager.model.itemBravo)")
+                Text("Item Charlie: \(rewardManager.model.itemCharlie)")
+                Text("Item Delta: \(rewardManager.model.itemDelta)")
+            }
+            .padding()
+        }
+        .padding()
+        .onAppear {
+            if model.isEmpty {
+                let newModel = ModelNew()
+                context.insert(newModel)
+                saveChanges()
+            }
+        }
+    }
+
+    private func saveChanges() {
         do {
             try context.save()
         } catch {
             print("Failed to save context: \(error)")
         }
-        
-        completion(rewarded)
     }
 }
