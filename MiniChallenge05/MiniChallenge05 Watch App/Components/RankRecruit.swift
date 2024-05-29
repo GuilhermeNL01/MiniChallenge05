@@ -9,22 +9,24 @@ import SwiftUI
 
 struct RankRecruit: View {
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 5)
-                .foregroundStyle(.green)
-                .frame(width: 200, height: 60)
+        VStack{
+            Text("Agente Recruta")
+                .bold()
             HStack {
+                Spacer()
                 Image(systemName: "person.2.circle.fill")
                     .resizable()
                     .frame(width: 34, height: 34)
+                Spacer()
                 VStack {
-                    Text("Agente Recruta")
-                        .bold()
-                    
                     Text("25 Missões")
                 }
+                Spacer()
             }
         }
+        .padding(10)
+        .background(.blue)
+        .clipShape(.rect(cornerRadius: 20))
     }
 }
 

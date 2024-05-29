@@ -24,6 +24,7 @@ struct DailyMission: Codable {
 struct DailyMissionComponent: View {
     @Environment(\.modelContext) var context
     @Query var dailyMissionList: [ModelNew]
+    @Environment(\.scenePhase) var scenePhase
     
     @State private var dailyMissionCurrent: DailyMission = DailyMission(
         missionDescription: "",
@@ -113,8 +114,17 @@ struct DailyMissionComponent: View {
             
         }
         .onAppear(perform: generateNewMission)
+        .onChange(of: scenePhase) { oldPhase, newPhase in
+            if newPhase == .active {
+                generateNewMission()
+            } else if newPhase == .inactive {
+                generateNewMission()
+            } else if newPhase == .background {
+                generateNewMission()
+            }
+        }
         .padding(4)
-        .background(.gray)
+        .background(.blue)
         .clipShape(.rect(cornerRadius: 20))
     }
     

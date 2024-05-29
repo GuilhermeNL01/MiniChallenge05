@@ -29,6 +29,8 @@
 		43A9F8A32BFFC24D005AEE82 /* ItemSearchComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A9F8A22BFFC24D005AEE82 /* ItemSearchComponent.swift */; };
 		81AED6122BFE689E005F471D /* DailyMissionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6112BFE689E005F471D /* DailyMissionComponent.swift */; };
 		81AED6162C05001C005F471D /* MissionCounterComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6152C05001C005F471D /* MissionCounterComponent.swift */; };
+		81AED61C2C07AEE9005F471D /* AgentProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED61B2C07AEE9005F471D /* AgentProgressView.swift */; };
+		81AED61E2C07B245005F471D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED61D2C07B245005F471D /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		81AED6102BFBBDAF005F471D /* MiniChallenge05-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MiniChallenge05-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		81AED6112BFE689E005F471D /* DailyMissionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMissionComponent.swift; sourceTree = "<group>"; };
 		81AED6152C05001C005F471D /* MissionCounterComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionCounterComponent.swift; sourceTree = "<group>"; };
+		81AED61B2C07AEE9005F471D /* AgentProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentProgressView.swift; sourceTree = "<group>"; };
+		81AED61D2C07B245005F471D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,8 @@
 				4099E1082BF7EC56002A9440 /* ContentView.swift */,
 				4095670F2BFD25D600B9A506 /* DistanceView.swift */,
 				2ED1E4B42C0119210073AF9A /* RankView.swift */,
+				81AED61B2C07AEE9005F471D /* AgentProgressView.swift */,
+				81AED61D2C07B245005F471D /* MainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -272,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4019DD862BFBD09700AA61D9 /* Model.swift in Sources */,
+				81AED61E2C07B245005F471D /* MainView.swift in Sources */,
 				2ED1E4B82C0524210073AF9A /* RankRecruit.swift in Sources */,
 				2ED1E4B32C010D7F0073AF9A /* RankComponent.swift in Sources */,
 				40A502112BFE6BA0000B1D57 /* RewardManager.swift in Sources */,
@@ -288,6 +295,7 @@
 				43A9F8A32BFFC24D005AEE82 /* ItemSearchComponent.swift in Sources */,
 				4095670C2BFD1B0A00B9A506 /* HealthKitManager.swift in Sources */,
 				2ED1E4BC2C0524DE0073AF9A /* RankTactical.swift in Sources */,
+				81AED61C2C07AEE9005F471D /* AgentProgressView.swift in Sources */,
 				406954A42C0007D500105FF3 /* TotalDistanceComponent.swift in Sources */,
 				4019DD8A2BFBD41100AA61D9 /* BPMComponent.swift in Sources */,
 			);
