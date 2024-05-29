@@ -10,14 +10,13 @@ import SwiftData
 
 struct ContentView: View {
     
-    var alpha: [ModelNew] = []
+    var dataModel: [ModelNew] = []
     
     var body: some View {
         
         NavigationStack{
             VStack {
-                
-                    Text("Teste")
+                    RankComponent(dataModel: dataModel)
             }
             .padding()
             
