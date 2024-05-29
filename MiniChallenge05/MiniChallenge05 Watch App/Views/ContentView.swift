@@ -18,6 +18,8 @@ struct ContentView: View {
             VStack {
                 
                     Text("Teste")
+                
+                RankComponent()
             }
             .padding()
             
