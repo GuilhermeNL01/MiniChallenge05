@@ -55,11 +55,6 @@ class HealthKitManager: ObservableObject {
             
             DispatchQueue.main.async {
                 print("Distância percorrida: \(distance) metros")
-                self.rewardManager.checkForReward(with: distance) { rewarded in
-                    if rewarded {
-                        print("Usuário recebeu um item!")
-                    }
-                }
                 completion(distance)
             }
         }
@@ -73,7 +68,7 @@ class HealthKitManager: ObservableObject {
             return
         }
 
-        let startDate = Date.distantPast 
+        let startDate = Date.distantPast
         let endDate = Date()
         let predicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: .strictStartDate)
 
