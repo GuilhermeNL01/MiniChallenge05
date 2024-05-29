@@ -66,16 +66,6 @@ class RewardManager {
     }
 }
 
-//
-//  RewardCheckView.swift
-//  MiniChallenge05 Watch App
-//
-//  Created by Guilherme Nunes Lobo on 22/05/24.
-//
-import SwiftUI
-import HealthKit
-import SwiftData
-
 struct RewardCheckView: View {
     @Environment(\.modelContext) private var context: ModelContext
     @Query private var model: [ModelNew]
