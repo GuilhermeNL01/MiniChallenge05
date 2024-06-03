@@ -45,6 +45,16 @@
         }
       }
     },
+    "%lld M / %lldM" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld M / %2$lldM"
+          }
+        }
+      }
+    },
     "%lld Missões" : {
       "localizations" : {
         "en" : {
@@ -456,6 +466,7 @@
       }
     },
     "Item Alpha: %lld" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -478,6 +489,7 @@
       }
     },
     "Item Bravo: %lld" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -500,6 +512,7 @@
       }
     },
     "Item Charlie: %lld" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -522,6 +535,7 @@
       }
     },
     "Item Delta: %lld" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -632,6 +646,7 @@
       }
     },
     "Rewards" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

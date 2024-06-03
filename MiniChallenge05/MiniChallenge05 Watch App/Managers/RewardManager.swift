@@ -5,6 +5,14 @@
 //  Created by Guilherme Nunes Lobo on 22/05/24.
 //
 
+
+//
+//  RewardManager.swift
+//  MiniChallenge05 Watch App
+//
+//  Created by Guilherme Nunes Lobo on 22/05/24.
+//
+
 import SwiftUI
 import HealthKit
 import SwiftData
@@ -64,7 +72,15 @@ class RewardManager {
         
         completion(rewarded)
     }
+    
+    // Calculate the progress for each item
+    func progress(for index: Int, distance: Double) -> Double {
+        let lastDistance = model.lastRewardDistances[index]
+        let nextDistance = model.nextRewardDistances[index]
+        return (distance - lastDistance) / (nextDistance - lastDistance)
+    }
 }
+
 
 struct RewardCheckView: View {
     @Environment(\.modelContext) private var context: ModelContext
@@ -78,43 +94,47 @@ struct RewardCheckView: View {
     
     @State private var distance: Double = 0.0
     @State private var healthKitManager: HealthKitManager?
+    @State private var progressAlpha: Double = 0.0
+    @State private var progressBravo: Double = 0.0
+    @State private var progressCharlie: Double = 0.0
+    @State private var progressDelta: Double = 0.0
 
     var body: some View {
-        VStack {
-            Text(rewardMessage)
-                .padding()
-            
+        ScrollView{
             VStack {
-                Text("Rewards")
-                    .font(.headline)
-                Text("Item Alpha: \(itemAlpha)")
-                Text("Item Bravo: \(itemBravo)")
-                Text("Item Charlie: \(itemCharlie)")
-                Text("Item Delta: \(itemDelta)")
+                VStack(spacing: 15) {
+                    CircularProgressView(icon: "hare.fill", title: "Item 01", progress: progressAlpha, currentDistance: distance, totalDistance: model.first?.nextRewardDistances[0] ?? 50)
+                    CircularProgressView(icon: "tortoise.fill", title: "Item 02", progress: progressBravo, currentDistance: distance, totalDistance: model.first?.nextRewardDistances[1] ?? 50)
+                }
+                .padding(.top, 50)
+                
+                VStack(spacing: 15) {
+                    CircularProgressView(icon: "camera.fill", title: "Item 03", progress: progressCharlie, currentDistance: distance, totalDistance: model.first?.nextRewardDistances[2] ?? 50)
+                    CircularProgressView(icon: "volleyball.fill", title: "Item 04", progress: progressDelta, currentDistance: distance, totalDistance: model.first?.nextRewardDistances[3] ?? 50)
+                }
+                .padding(.top, 20)
             }
-            .padding()
-        }
-        .padding()
-        .onAppear {
-            if model.isEmpty {
-                let newModel = ModelNew()
-                context.insert(newModel)
-                saveChanges()
-                healthKitManager = HealthKitManager(model: newModel)
-            } else {
-                healthKitManager = HealthKitManager(model: model.first!)
-            }
-            
-            healthKitManager?.requestAuthorization { success in
-                if success {
-                    fetchAndCheckRewards()
+            .background(Color.black)
+            .onAppear {
+                if model.isEmpty {
+                    let newModel = ModelNew()
+                    context.insert(newModel)
+                    saveChanges()
+                    healthKitManager = HealthKitManager(model: newModel)
                 } else {
-                    print("HealthKit authorization failed")
+                    healthKitManager = HealthKitManager(model: model.first!)
+                }
+                
+                healthKitManager?.requestAuthorization { success in
+                    if success {
+                        fetchAndCheckRewards()
+                    } else {
+                        print("HealthKit authorization failed")
+                    }
                 }
             }
         }
     }
-
     private func fetchAndCheckRewards() {
         healthKitManager?.fetchWalkingRunningDistance { distance in
             self.distance = distance
@@ -124,6 +144,12 @@ struct RewardCheckView: View {
                 itemBravo = healthKitManager?.rewardManager.model.itemBravo ?? 0
                 itemCharlie = healthKitManager?.rewardManager.model.itemCharlie ?? 0
                 itemDelta = healthKitManager?.rewardManager.model.itemDelta ?? 0
+                
+                progressAlpha = healthKitManager?.rewardManager.progress(for: 0, distance: distance) ?? 0.0
+                progressBravo = healthKitManager?.rewardManager.progress(for: 1, distance: distance) ?? 0.0
+                progressCharlie = healthKitManager?.rewardManager.progress(for: 2, distance: distance) ?? 0.0
+                progressDelta = healthKitManager?.rewardManager.progress(for: 3, distance: distance) ?? 0.0
+                
                 saveChanges()
             }
         }
@@ -137,4 +163,3 @@ struct RewardCheckView: View {
         }
     }
 }
-
