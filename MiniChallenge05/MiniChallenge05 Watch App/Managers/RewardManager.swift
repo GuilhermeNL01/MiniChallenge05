@@ -9,15 +9,36 @@ import SwiftUI
 import HealthKit
 import SwiftData
 
+/**]
+ The `RewardManager` class is responsible for managing rewards based on the distance traveled.
+ It tracks the next reward distances and updates the rewards accordingly.
+ */
 class RewardManager {
+
+    // MARK: - Properties
     
+    /// The model containing the data for rewards and distances.
     var model: ModelNew
     
+    // MARK: - Initialization
+    
+    /**
+     Initializes a new `RewardManager` with the provided model.
+     
+     - Parameter model: The model containing the reward and distance data.
+     */
     init(model: ModelNew) {
         self.model = model
     }
     
-    // Gera uma nova distância para a próxima recompensa
+    // MARK: - Private Methods
+    
+    /**
+     Generates a new distance required for the next reward based on the given index.
+     
+     - Parameter index: The index of the reward.
+     - Returns: A new distance value with some random variation.
+     */
     private func generateNextRewardDistance(for index: Int) -> Double {
         let baseDistance: Double
         switch index {
@@ -36,7 +57,14 @@ class RewardManager {
         return baseDistance + variation
     }
     
-    // Verifica se a distância percorrida atinge a próxima recompensa
+    // MARK: - Public Methods
+    
+    /**
+     Checks if the given distance is sufficient to earn a reward and updates the model accordingly.
+     
+     - Parameter distance: The distance traveled.
+     - Parameter completion: A closure called with a boolean indicating if a reward was earned.
+     */
     func checkForReward(with distance: Double, completion: @escaping (Bool) -> Void) {
         var rewarded = false
         for index in 0..<model.nextRewardDistances.count {
@@ -64,77 +92,17 @@ class RewardManager {
         
         completion(rewarded)
     }
-}
-
-struct RewardCheckView: View {
-    @Environment(\.modelContext) private var context: ModelContext
-    @Query private var model: [ModelNew]
     
-    @State private var rewardMessage: String = ""
-    @State private var itemAlpha: Int = 0
-    @State private var itemBravo: Int = 0
-    @State private var itemCharlie: Int = 0
-    @State private var itemDelta: Int = 0
-    
-    @State private var distance: Double = 0.0
-    @State private var healthKitManager: HealthKitManager?
-
-    var body: some View {
-        VStack {
-            Text(rewardMessage)
-                .padding()
-            
-            VStack {
-                Text("Rewards")
-                    .font(.headline)
-                Text("Item Alpha: \(itemAlpha)")
-                Text("Item Bravo: \(itemBravo)")
-                Text("Item Charlie: \(itemCharlie)")
-                Text("Item Delta: \(itemDelta)")
-            }
-            .padding()
-        }
-        .padding()
-        .onAppear {
-            if model.isEmpty {
-                let newModel = ModelNew()
-                context.insert(newModel)
-                saveChanges()
-                healthKitManager = HealthKitManager(model: newModel)
-            } else {
-                healthKitManager = HealthKitManager(model: model.first!)
-            }
-            
-            healthKitManager?.requestAuthorization { success in
-                if success {
-                    fetchAndCheckRewards()
-                } else {
-                    print("HealthKit authorization failed")
-                }
-            }
-        }
-    }
-
-    private func fetchAndCheckRewards() {
-        healthKitManager?.fetchWalkingRunningDistance { distance in
-            self.distance = distance
-            healthKitManager?.rewardManager.checkForReward(with: distance) { rewarded in
-                rewardMessage = rewarded ? "You've earned a reward!" : "No reward this time."
-                itemAlpha = healthKitManager?.rewardManager.model.itemAlpha ?? 0
-                itemBravo = healthKitManager?.rewardManager.model.itemBravo ?? 0
-                itemCharlie = healthKitManager?.rewardManager.model.itemCharlie ?? 0
-                itemDelta = healthKitManager?.rewardManager.model.itemDelta ?? 0
-                saveChanges()
-            }
-        }
-    }
-
-    private func saveChanges() {
-        do {
-            try context.save()
-        } catch {
-            print("Failed to save context: \(error)")
-        }
+    /**
+     Calculates the progress towards the next reward for a given item index based on the distance traveled.
+     
+     - Parameter index: The index of the reward item.
+     - Parameter distance: The distance traveled.
+     - Returns: The progress as a value between 0.0 and 1.0.
+     */
+    func progress(for index: Int, distance: Double) -> Double {
+        let lastDistance = model.lastRewardDistances[index]
+        let nextDistance = model.nextRewardDistances[index]
+        return (distance - lastDistance) / (nextDistance - lastDistance)
     }
 }
-
