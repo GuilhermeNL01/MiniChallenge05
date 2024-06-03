@@ -6,22 +6,49 @@
 //
 import HealthKit
 
+/**
+ The `HealthKitManager` class is responsible for managing HealthKit interactions, including requesting authorization and fetching walking/running distance data
+ */
 class HealthKitManager: ObservableObject {
+    // MARK: - Properties
+    
+    /// The HealthKit store used to access HealthKit data.
     let healthStore = HKHealthStore()
+    
+    /// The manager responsible for handling rewards based on distance.
     let rewardManager: RewardManager
     
+    // MARK: - Initialization
+    
+    /**
+     Initializes a new `HealthKitManager` with the provided model.
+     
+     - Parameter model: The model containing the reward and distance data.
+     */
     init(model: ModelNew) {
         self.rewardManager = RewardManager(model: model)
         storeStartDateIfNeeded()
     }
     
-    func storeStartDateIfNeeded() {
+    // MARK: - Private Methods
+    
+    /**
+     Stores the start date in `UserDefaults` if it hasn't been stored already.
+     */
+    private func storeStartDateIfNeeded() {
         let userDefaults = UserDefaults.standard
         if userDefaults.object(forKey: "startDate") == nil {
             userDefaults.set(Date(), forKey: "startDate")
         }
     }
     
+    // MARK: - Public Methods
+    
+    /**
+     Requests authorization to access HealthKit data.
+     
+     - Parameter completion: A closure called with a boolean indicating if authorization was successful.
+     */
     func requestAuthorization(completion: @escaping (Bool) -> Void) {
         guard let distanceType = HKObjectType.quantityType(forIdentifier: .distanceWalkingRunning) else {
             completion(false)
@@ -36,6 +63,11 @@ class HealthKitManager: ObservableObject {
         }
     }
     
+    /**
+     Fetches the total walking/running distance for the current day.
+     
+     - Parameter completion: A closure called with the total distance in meters.
+     */
     func fetchWalkingRunningDistance(completion: @escaping (Double) -> Void) {
         guard let distanceType = HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning) else {
             completion(0.0)
@@ -62,6 +94,11 @@ class HealthKitManager: ObservableObject {
         healthStore.execute(query)
     }
     
+    /**
+     Fetches the total walking/running distance since the beginning of recorded data.
+     
+     - Parameter completion: A closure called with the total distance in meters.
+     */
     func fetchTotalWalkingRunningDistance(completion: @escaping (Double) -> Void) {
         guard let distanceType = HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning) else {
             completion(0.0)

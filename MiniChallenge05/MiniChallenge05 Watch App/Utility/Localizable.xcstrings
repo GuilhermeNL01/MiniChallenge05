@@ -2,6 +2,7 @@
   "sourceLanguage" : "en",
   "strings" : {
     "%lf M/ %lf M" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -41,6 +42,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld"
+          }
+        }
+      }
+    },
+    "%lld M / %lldM" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld M / %2$lldM"
           }
         }
       }
@@ -367,6 +378,9 @@
         }
       }
     },
+    "Authorization Failed" : {
+
+    },
     "BPM" : {
       "localizations" : {
         "en" : {
@@ -434,6 +448,7 @@
       }
     },
     "Item 01" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -456,6 +471,7 @@
       }
     },
     "Item Alpha: %lld" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -478,6 +494,7 @@
       }
     },
     "Item Bravo: %lld" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -500,6 +517,7 @@
       }
     },
     "Item Charlie: %lld" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -522,6 +540,7 @@
       }
     },
     "Item Delta: %lld" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -631,7 +650,11 @@
         }
       }
     },
+    "OK" : {
+
+    },
     "Rewards" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
