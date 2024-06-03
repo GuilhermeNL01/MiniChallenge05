@@ -7,6 +7,16 @@
 
 import SwiftUI
 
+/**
+ The `CircularProgressView` struct displays a circular progress indicator with additional information.
+ 
+ - Parameters:
+    - icon: The name of the system icon to display.
+    - title: The title associated with the progress.
+    - progress: The progress value represented by the circular indicator (0.0 to 1.0).
+    - currentDistance: The current distance traveled.
+    - totalDistance: The total distance required for completion.
+ */
 struct CircularProgressView: View {
     var icon: String
     var title: String
@@ -31,7 +41,8 @@ struct CircularProgressView: View {
 
                 Image(systemName: icon)
                     .foregroundColor(.blue)
-                    .font(.title)
+                    .font(.system(size: 20))
+
             }
             .padding(.trailing, 10)
 
@@ -43,21 +54,27 @@ struct CircularProgressView: View {
                 HStack {
                     Image(systemName: "figure.walk")
                         .foregroundColor(.white)
-                    Text("\(Int(currentDistance)) M / \(Int(totalDistance))M")
-                        .font(.system(size:11))
-                        .foregroundColor(.white)
-                        .lineLimit(1)
 
-                        
+                    if currentDistance < 1000 {
+                        Text("\(Int(currentDistance)) M / \(Int(totalDistance))M")
+                            .font(.system(size: 11))
+                            .foregroundColor(.white)
+                            .lineLimit(1)
+                    } else {
+                        Text(String(format: "%.1f", currentDistance / 1000) + " KM / " + String(format: "%.1f", totalDistance / 1000) + " KM")
+                            .font(.system(size: 11))
+                            .foregroundColor(.white)
+                            .lineLimit(1)
+                    }
                 }
             }
         }
         .padding()
-        .background(Color.purple)
+        .background(Color(hex: ColorPalette.darkBlue))
         .cornerRadius(10)
     }
 }
 
-#Preview{
-    CircularProgressView(icon: "camera.fill", title: "Item 06", progress: 30, currentDistance: 500, totalDistance: 1000)
+#Preview {
+    CircularProgressView(icon: "camera.fill", title: "Item 06", progress: 0.3, currentDistance: 1500, totalDistance: 2000)
 }

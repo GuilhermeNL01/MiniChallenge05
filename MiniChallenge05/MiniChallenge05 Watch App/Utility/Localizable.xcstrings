@@ -2,6 +2,7 @@
   "sourceLanguage" : "en",
   "strings" : {
     "%lf M/ %lf M" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -377,6 +378,9 @@
         }
       }
     },
+    "Authorization Failed" : {
+
+    },
     "BPM" : {
       "localizations" : {
         "en" : {
@@ -444,6 +448,7 @@
       }
     },
     "Item 01" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -644,6 +649,9 @@
           }
         }
       }
+    },
+    "OK" : {
+
     },
     "Rewards" : {
       "extractionState" : "stale",

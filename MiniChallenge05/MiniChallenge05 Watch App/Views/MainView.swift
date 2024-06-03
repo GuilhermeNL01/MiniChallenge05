@@ -14,6 +14,7 @@ struct MainView: View {
                 VStack {
                     DailyMissionComponent()
                     InventoryComponent()
+                    RewardCheckView()
                 }
             }.navigationTitle("Missão Atual")
         }
