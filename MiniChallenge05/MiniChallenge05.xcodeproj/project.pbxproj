@@ -34,6 +34,7 @@
 		81AED6232C0E3685005F471D /* CircularProgressComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6222C0E3685005F471D /* CircularProgressComponent.swift */; };
 		81AED6252C0E36D6005F471D /* CircularInformationComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6242C0E36D6005F471D /* CircularInformationComponent.swift */; };
 		81AED6292C0E3A13005F471D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6282C0E3A13005F471D /* Color.swift */; };
+		81AED62B2C0E3D4E005F471D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 81AED62A2C0E3D4E005F471D /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		81AED6222C0E3685005F471D /* CircularProgressComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CircularProgressComponent.swift; path = "../../../../../../../../.Trash/MiniChallenge05/MiniChallenge05/MiniChallenge05 Watch App/Components/ItemSearchComponents/CircularProgressComponent.swift"; sourceTree = "<group>"; };
 		81AED6242C0E36D6005F471D /* CircularInformationComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularInformationComponent.swift; sourceTree = "<group>"; };
 		81AED6282C0E3A13005F471D /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		81AED62A2C0E3D4E005F471D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				81AED6282C0E3A13005F471D /* Color.swift */,
+				81AED62A2C0E3D4E005F471D /* Localizable.xcstrings */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 4099E0F42BF7EC56002A9440;
 			productRefGroup = 4099E0FC2BF7EC56002A9440 /* Products */;
@@ -300,6 +304,7 @@
 			files = (
 				4099E10E2BF7EC57002A9440 /* Preview Assets.xcassets in Resources */,
 				4099E10B2BF7EC57002A9440 /* Assets.xcassets in Resources */,
+				81AED62B2C0E3D4E005F471D /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
