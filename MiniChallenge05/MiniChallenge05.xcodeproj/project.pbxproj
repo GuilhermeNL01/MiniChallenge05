@@ -127,8 +127,6 @@
 			children = (
 				81AED6212C0E3659005F471D /* ItemSearchComponents */,
 				4019DD892BFBD41100AA61D9 /* BPMComponent.swift */,
-				4095670B2BFD1B0A00B9A506 /* HealthKitManager.swift */,
-				40A502102BFE6BA0000B1D57 /* RewardManager.swift */,
 				81AED6112BFE689E005F471D /* DailyMissionComponent.swift */,
 				406954A32C0007D500105FF3 /* TotalDistanceComponent.swift */,
 				2EE53CAF2BFFC3A50071559A /* InventoryComponent.swift */,
@@ -163,6 +161,7 @@
 		4099E1052BF7EC56002A9440 /* MiniChallenge05 Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				81AED6262C0E375B005F471D /* Managers */,
 				4019DD882BFBD30700AA61D9 /* Components */,
 				4019DD872BFBD2DB00AA61D9 /* Views */,
 				4019DD842BFBD07700AA61D9 /* Model */,
@@ -191,6 +190,15 @@
 				81AED6242C0E36D6005F471D /* CircularInformationComponent.swift */,
 			);
 			path = ItemSearchComponents;
+			sourceTree = "<group>";
+		};
+		81AED6262C0E375B005F471D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4095670B2BFD1B0A00B9A506 /* HealthKitManager.swift */,
+				40A502102BFE6BA0000B1D57 /* RewardManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
