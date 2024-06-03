@@ -58,55 +58,20 @@ struct DailyMissionComponent: View {
             // Mission Items
             HStack {
                 Spacer()
-                VStack{
-                    Image(systemName: "graduationcap.circle.fill")
-                        .resizable()
-                        .frame(width: 30, height: 30)
-                    if dailyMissionList.first?.missionCompletion == true{
-                        Text("\(dailyMissionList.first?.dailyMission.missionItemAlpha ?? 0)/\(dailyMissionList.first?.dailyMission.missionItemAlpha ?? 0)")
-                    } else {
-                        Text("\(dailyMissionList.first?.dailyMission.missionItemAlpha ?? 0)/\(dailyMissionList.first?.itemAlpha ?? 0)")
-                    }
-                }
+                
+                DailyMissionItemComponent(image: "graduationcap.circle.fill", missionItem: dailyMissionList.first?.dailyMission.missionItemAlpha ?? 0, currentItem: dailyMissionList.first?.itemAlpha ?? 0, missionCompletion: ((dailyMissionList.first?.missionCompletion) != nil))
                 
                 Spacer()
                 
-                VStack{
-                    Image(systemName: "backpack.circle.fill")
-                        .resizable()
-                        .frame(width: 30, height: 30)
-                    if dailyMissionList.first?.missionCompletion == true{
-                        Text("\(dailyMissionList.first?.dailyMission.missionItemBravo ?? 0)/\(dailyMissionList.first?.dailyMission.missionItemBravo ?? 0)")
-                    } else {
-                        Text("\(dailyMissionList.first?.dailyMission.missionItemBravo ?? 0)/\(dailyMissionList.first?.itemBravo ?? 0)")
-                    }
-                }
+                DailyMissionItemComponent(image: "backpack.circle.fill", missionItem: dailyMissionList.first?.dailyMission.missionItemBravo ?? 0, currentItem: dailyMissionList.first?.itemBravo ?? 0, missionCompletion: ((dailyMissionList.first?.missionCompletion) != nil))
                 
                 Spacer()
                 
-                VStack{
-                    Image(systemName: "paperclip.circle.fill")
-                        .resizable()
-                        .frame(width: 30, height: 30)
-                    if dailyMissionList.first?.missionCompletion == true{
-                        Text("\(dailyMissionList.first?.dailyMission.missionItemCharlie ?? 0)/\(dailyMissionList.first?.dailyMission.missionItemCharlie ?? 0)")
-                    } else {
-                        Text("\(dailyMissionList.first?.dailyMission.missionItemCharlie ?? 0)/\(dailyMissionList.first?.itemCharlie ?? 0)")
-                    }
-                }
+                DailyMissionItemComponent(image: "paperclip.circle.fill", missionItem: dailyMissionList.first?.dailyMission.missionItemCharlie ?? 0, currentItem: dailyMissionList.first?.itemCharlie ?? 0, missionCompletion: ((dailyMissionList.first?.missionCompletion) != nil))
                 
                 Spacer()
                 
-                VStack{
-                    Image(systemName: "person.2.circle.fill")
-                        .resizable()
-                        .frame(width: 30, height: 30)
-                    if dailyMissionList.first?.missionCompletion == true{
-                        Text("\(dailyMissionList.first?.dailyMission.missionItemDelta ?? 0)/\(dailyMissionList.first?.dailyMission.missionItemDelta ?? 0)")
-                    } else {
-                        Text("\(dailyMissionList.first?.dailyMission.missionItemDelta ?? 0)/\(dailyMissionList.first?.itemDelta ?? 0)")
-                    }
-                }
+                DailyMissionItemComponent(image: "person.2.circle.fill", missionItem: dailyMissionList.first?.dailyMission.missionItemDelta ?? 0, currentItem: dailyMissionList.first?.itemDelta ?? 0, missionCompletion: ((dailyMissionList.first?.missionCompletion) != nil))
                 
                 Spacer()
             }
