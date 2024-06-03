@@ -43,4 +43,4 @@ struct ColorPalette {
     static let darkBlue = "051726"
 }
 
-// if you want to use this, use as follows: Color.init(hex: ColorPalette.darkBlue)
+// if you want to use this, use as follows: Color(hex: ColorPalette.darkBlue) or Color.init(hex: ColorPalette.darkBlue)
