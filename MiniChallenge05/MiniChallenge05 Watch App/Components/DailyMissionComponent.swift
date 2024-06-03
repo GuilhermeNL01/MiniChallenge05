@@ -124,7 +124,7 @@ struct DailyMissionComponent: View {
             }
         }
         .padding(4)
-        .background(.blue)
+        .background(Color(hex: ColorPalette.darkBlue))
         .clipShape(.rect(cornerRadius: 20))
     }
     
