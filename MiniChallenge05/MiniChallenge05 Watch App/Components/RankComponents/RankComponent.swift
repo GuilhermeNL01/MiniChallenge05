@@ -17,19 +17,19 @@ struct RankComponent: View {
             HStack{
                 switch dataModel.first?.totalMissions ?? 0 {
                 case 0..<25:
-                    RankRecruit()
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "25 Missões", agentRank: "Agente Recruta", color: .blue)
                         .padding()
                 case 26..<50:
-                    RankNoob()
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "50 Missões", agentRank: "Agente Novato", color: .blue)
                         .padding()
                 case 51..<100:
-                    RankTactical()
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "75 Missões", agentRank: "Agente Tático", color: .pink)
                         .padding()
                 case 100..<200:
-                    RankSpecial()
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "125 Missões", agentRank: "Agente Especial", color: .orange)
                         .padding()
                 case 200...:
-                    RankMaster()
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "215 Missões", agentRank: "Agente Mestre", color: .red)
                         .padding()
                 default:
                     Image(systemName: "person.2.slash.fill")
