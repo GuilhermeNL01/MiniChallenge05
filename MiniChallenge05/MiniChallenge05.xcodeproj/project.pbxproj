@@ -31,6 +31,8 @@
 		81AED6162C05001C005F471D /* MissionCounterComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6152C05001C005F471D /* MissionCounterComponent.swift */; };
 		81AED61C2C07AEE9005F471D /* AgentProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED61B2C07AEE9005F471D /* AgentProgressView.swift */; };
 		81AED61E2C07B245005F471D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED61D2C07B245005F471D /* MainView.swift */; };
+		81AED6232C0E3685005F471D /* CircularProgressComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6222C0E3685005F471D /* CircularProgressComponent.swift */; };
+		81AED6252C0E36D6005F471D /* CircularInformationComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6242C0E36D6005F471D /* CircularInformationComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		81AED6152C05001C005F471D /* MissionCounterComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionCounterComponent.swift; sourceTree = "<group>"; };
 		81AED61B2C07AEE9005F471D /* AgentProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentProgressView.swift; sourceTree = "<group>"; };
 		81AED61D2C07B245005F471D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		81AED6222C0E3685005F471D /* CircularProgressComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CircularProgressComponent.swift; path = "../../../../../../../../.Trash/MiniChallenge05/MiniChallenge05/MiniChallenge05 Watch App/Components/ItemSearchComponents/CircularProgressComponent.swift"; sourceTree = "<group>"; };
+		81AED6242C0E36D6005F471D /* CircularInformationComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularInformationComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,7 @@
 		4019DD882BFBD30700AA61D9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				81AED6212C0E3659005F471D /* ItemSearchComponents */,
 				4019DD892BFBD41100AA61D9 /* BPMComponent.swift */,
 				4095670B2BFD1B0A00B9A506 /* HealthKitManager.swift */,
 				40A502102BFE6BA0000B1D57 /* RewardManager.swift */,
@@ -128,7 +133,6 @@
 				406954A32C0007D500105FF3 /* TotalDistanceComponent.swift */,
 				2EE53CAF2BFFC3A50071559A /* InventoryComponent.swift */,
 				2ED1E4B22C010D7F0073AF9A /* RankComponent.swift */,
-				43A9F8A22BFFC24D005AEE82 /* ItemSearchComponent.swift */,
 				81AED6152C05001C005F471D /* MissionCounterComponent.swift */,
 				2ED1E4B72C0524210073AF9A /* RankRecruit.swift */,
 				2ED1E4B92C0524B10073AF9A /* RankNoob.swift */,
@@ -177,6 +181,16 @@
 				4099E10D2BF7EC57002A9440 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		81AED6212C0E3659005F471D /* ItemSearchComponents */ = {
+			isa = PBXGroup;
+			children = (
+				43A9F8A22BFFC24D005AEE82 /* ItemSearchComponent.swift */,
+				81AED6222C0E3685005F471D /* CircularProgressComponent.swift */,
+				81AED6242C0E36D6005F471D /* CircularInformationComponent.swift */,
+			);
+			path = ItemSearchComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,11 +303,13 @@
 				2EE53CB02BFFC3A50071559A /* InventoryComponent.swift in Sources */,
 				2ED1E4BA2C0524B10073AF9A /* RankNoob.swift in Sources */,
 				409567102BFD25D600B9A506 /* DistanceView.swift in Sources */,
+				81AED6252C0E36D6005F471D /* CircularInformationComponent.swift in Sources */,
 				2ED1E4BE2C0524F80073AF9A /* RankSpecial.swift in Sources */,
 				4099E1072BF7EC56002A9440 /* MiniChallenge05App.swift in Sources */,
 				81AED6122BFE689E005F471D /* DailyMissionComponent.swift in Sources */,
 				43A9F8A32BFFC24D005AEE82 /* ItemSearchComponent.swift in Sources */,
 				4095670C2BFD1B0A00B9A506 /* HealthKitManager.swift in Sources */,
+				81AED6232C0E3685005F471D /* CircularProgressComponent.swift in Sources */,
 				2ED1E4BC2C0524DE0073AF9A /* RankTactical.swift in Sources */,
 				81AED61C2C07AEE9005F471D /* AgentProgressView.swift in Sources */,
 				406954A42C0007D500105FF3 /* TotalDistanceComponent.swift in Sources */,
