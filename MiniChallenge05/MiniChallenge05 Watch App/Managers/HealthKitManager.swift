@@ -86,7 +86,6 @@ class HealthKitManager: ObservableObject {
             }
             
             DispatchQueue.main.async {
-                print("Distância percorrida: \(distance) metros")
                 completion(distance)
             }
         }
@@ -100,28 +99,33 @@ class HealthKitManager: ObservableObject {
      - Parameter completion: A closure called with the total distance in meters.
      */
     func fetchTotalWalkingRunningDistance(completion: @escaping (Double) -> Void) {
-        guard let distanceType = HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning) else {
-            completion(0.0)
-            return
-        }
-
-        let startDate = Date.distantPast
-        let endDate = Date()
-        let predicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: .strictStartDate)
-
-        let query = HKStatisticsQuery(quantityType: distanceType, quantitySamplePredicate: predicate, options: .cumulativeSum) { _, result, error in
-            var totalDistance: Double = 0
-            
-            if let result = result, let sum = result.sumQuantity() {
-                totalDistance = sum.doubleValue(for: HKUnit.meter())
+            // Ensure the distance type is valid
+            guard let distanceType = HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning) else {
+                completion(0.0)
+                return
             }
             
-            DispatchQueue.main.async {
-                print("Distância total percorrida desde o início: \(totalDistance) metros")
-                completion(totalDistance)
+            // Set the predicate for all time data
+            let startDate = Date.distantPast
+            let endDate = Date()
+            let predicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: .strictStartDate)
+            
+            // Define the query for cumulative sum
+            let query = HKStatisticsQuery(quantityType: distanceType, quantitySamplePredicate: predicate, options: .cumulativeSum) { _, result, error in
+                var totalDistance: Double = 0
+                
+                // Process the result
+                if let result = result, let sum = result.sumQuantity() {
+                    totalDistance = sum.doubleValue(for: HKUnit.meter())
+                }
+                
+                // Ensure the completion handler is called on the main thread
+                DispatchQueue.main.async {
+                    completion(totalDistance)
+                }
             }
+            
+            // Execute the query
+            healthStore.execute(query)
         }
-
-        healthStore.execute(query)
     }
-}

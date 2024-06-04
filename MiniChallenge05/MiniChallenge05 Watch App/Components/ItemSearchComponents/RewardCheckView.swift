@@ -134,13 +134,25 @@ struct RewardCheckView: View {
     }
     
     /**
-     Saves changes made to the model context.
+     Saves changes made to the model context and handles any errors that occur during the save operation.
      */
     private func saveChanges() {
         do {
             try context.save()
+            
         } catch {
-            print("Failed to save context: \(error)")
+            handleSaveError(error)
         }
+    }
+    
+    /**
+     Handles errors that occur during the save operation.
+     
+     - Parameter error: The error that occurred during the save operation.
+     */
+    private func handleSaveError(_ error: Error) {
+        
+        alertMessage = "An error occurred while saving data. Please try again."
+        showAlert = true
     }
 }
