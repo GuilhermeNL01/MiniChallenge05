@@ -396,6 +396,7 @@
 
     },
     "BPM" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -416,6 +417,9 @@
           }
         }
       }
+    },
+    "BPM/Missão" : {
+
     },
     "Carregando..." : {
       "localizations" : {
@@ -575,6 +579,9 @@
           }
         }
       }
+    },
+    "Média Cardíaca" : {
+
     },
     "Meu Progresso" : {
       "localizations" : {

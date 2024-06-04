@@ -22,6 +22,8 @@ struct AgentProgressView: View {
                         .padding(.vertical)
                     TotalDistanceComponent()
                         .padding(.vertical)
+                    BPMComponent()
+                        .padding(.vertical)
                 }
             }.navigationTitle("Meu Progresso")
         }
