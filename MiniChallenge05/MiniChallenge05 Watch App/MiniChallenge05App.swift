@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import WidgetKit
 
 @main
 struct MiniChallenge05_Watch_AppApp: App {
