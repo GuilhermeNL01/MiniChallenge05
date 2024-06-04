@@ -6,26 +6,90 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct RankView: View {
+    
+    @Query var dataModel: [ModelNew]
+    
     var body: some View {
+        
+        
         ScrollView {
+        
             VStack {
-                IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "25 Missões", agentRank: "Agente Recruta", color: .blue)
-                    .padding()
-                IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "50 Missões", agentRank: "Agente Novato", color: .blue)
-                    .padding()
-                IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "75 Missões", agentRank: "Agente Tático", color: .pink)
-                    .padding()
-                IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "125 Missões", agentRank: "Agente Especial", color: .orange)
-                    .padding()
-                IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "215 Missões", agentRank: "Agente Mestre", color: .red)
-                    .padding()
+                switch dataModel.first?.totalMissions ?? 0 {
+                case 0..<25:
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "25 Missões", agentRank: "Agente Recruta", color: .blue, maxValue: 25, currentValue: dataModel.first?.totalMissions ?? 0)
+                        .padding()
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "50 Missões", agentRank: "Agente Novato", color: .gray, maxValue: 50, currentValue: dataModel.first?.totalMissions ?? 0)
+                        .padding()
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "75 Missões", agentRank: "Agente Tático", color: .gray, maxValue: 100, currentValue: dataModel.first?.totalMissions ?? 0)
+                        .padding()
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "125 Missões", agentRank: "Agente Especial", color: .gray, maxValue: 200, currentValue: dataModel.first?.totalMissions ?? 0)
+                        .padding()
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "215 Missões", agentRank: "Agente Mestre", color: .gray, maxValue: 200, currentValue: dataModel.first?.totalMissions ?? 0)
+                        .padding()
+                case 26..<50:
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "25 Missões", agentRank: "Agente Recruta", color: .blue, maxValue: 25, currentValue: dataModel.first?.totalMissions ?? 0)
+                        .padding()
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "50 Missões", agentRank: "Agente Novato", color: .green, maxValue: 50, currentValue: dataModel.first?.totalMissions ?? 0)
+                        .padding()
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "75 Missões", agentRank: "Agente Tático", color: .gray, maxValue: 100, currentValue: dataModel.first?.totalMissions ?? 0)
+                        .padding()
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "125 Missões", agentRank: "Agente Especial", color: .gray, maxValue: 200, currentValue: dataModel.first?.totalMissions ?? 0)
+                        .padding()
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "215 Missões", agentRank: "Agente Mestre", color: .gray, maxValue: 200, currentValue: dataModel.first?.totalMissions ?? 0)
+                        .padding()
+                case 51..<100:
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "25 Missões", agentRank: "Agente Recruta", color: .blue, maxValue: 25, currentValue: dataModel.first?.totalMissions ?? 0)
+                        .padding()
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "50 Missões", agentRank: "Agente Novato", color: .green, maxValue: 50, currentValue: dataModel.first?.totalMissions ?? 0)
+                        .padding()
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "75 Missões", agentRank: "Agente Tático", color: .yellow, maxValue: 100, currentValue: dataModel.first?.totalMissions ?? 0)
+                        .padding()
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "125 Missões", agentRank: "Agente Especial", color: .gray, maxValue: 200, currentValue: dataModel.first?.totalMissions ?? 0)
+                        .padding()
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "215 Missões", agentRank: "Agente Mestre", color: .gray, maxValue: 200, currentValue: dataModel.first?.totalMissions ?? 0)
+                        .padding()
+                case 100..<200:
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "25 Missões", agentRank: "Agente Recruta", color: .blue, maxValue: 25, currentValue: dataModel.first?.totalMissions ?? 0)
+                        .padding()
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "50 Missões", agentRank: "Agente Novato", color: .green, maxValue: 50, currentValue: dataModel.first?.totalMissions ?? 0)
+                        .padding()
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "75 Missões", agentRank: "Agente Tático", color: .yellow, maxValue: 100, currentValue: dataModel.first?.totalMissions ?? 0)
+                        .padding()
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "125 Missões", agentRank: "Agente Especial", color: .orange, maxValue: 200, currentValue: dataModel.first?.totalMissions ?? 0)
+                        .padding()
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "215 Missões", agentRank: "Agente Mestre", color: .gray, maxValue: 200, currentValue: dataModel.first?.totalMissions ?? 0)
+                        .padding()
+                case 200...:
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "25 Missões", agentRank: "Agente Recruta", color: .blue, maxValue: 25, currentValue: dataModel.first?.totalMissions ?? 0)
+                        .padding()
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "50 Missões", agentRank: "Agente Novato", color: .green, maxValue: 50, currentValue: dataModel.first?.totalMissions ?? 0)
+                        .padding()
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "75 Missões", agentRank: "Agente Tático", color: .yellow, maxValue: 100, currentValue: dataModel.first?.totalMissions ?? 0)
+                        .padding()
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "125 Missões", agentRank: "Agente Especial", color: .orange, maxValue: 200, currentValue: dataModel.first?.totalMissions ?? 0)
+                        .padding()
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "215 Missões", agentRank: "Agente Mestre", color: .red, maxValue: 200, currentValue: dataModel.first?.totalMissions ?? 0)
+                        .padding()
+                default:
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "25 Missões", agentRank: "Agente Recruta", color: .blue, maxValue: 25, currentValue: dataModel.first?.totalMissions ?? 0)
+                        .padding()
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "50 Missões", agentRank: "Agente Novato", color: .green, maxValue: 50, currentValue: dataModel.first?.totalMissions ?? 0)
+                        .padding()
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "75 Missões", agentRank: "Agente Tático", color: .yellow, maxValue: 100, currentValue: dataModel.first?.totalMissions ?? 0)
+                        .padding()
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "125 Missões", agentRank: "Agente Especial", color: .orange, maxValue: 200, currentValue: dataModel.first?.totalMissions ?? 0)
+                        .padding()
+                    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "215 Missões", agentRank: "Agente Mestre", color: .red, maxValue: 200, currentValue: dataModel.first?.totalMissions ?? 0)
+                        .padding()
+                }
             }
             .navigationTitle("Patentes")
         }
     }
-
 }
 
 #Preview {
