@@ -13,27 +13,45 @@ struct IndividualRankComponent: View {
     let missionNumber: String
     let agentRank: String
     let color: Color
+    let maxValue: Int
+    let currentValue: Int
     
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 5)
-                .foregroundStyle(color)
-                .frame(width: 200, height: 60)
+        
+        VStack {
+            HStack{
+                Text(agentRank)
+                    .bold()
+                    .fixedSize(horizontal: true, vertical: false)
+                Spacer()
+            }
             HStack {
+                Spacer()
+                
                 Image(systemName: image)
                     .resizable()
                     .frame(width: 34, height: 34)
+                
+                Spacer()
+                
                 VStack {
-                    Text(agentRank)
-                        .bold()
                     
-                    Text(missionNumber)
+                    ProgressView(value: 5, total: 50)
+                    HStack{
+                        Text(missionNumber)
+                        Spacer()
+                    }
                 }
+                
+                Spacer()
             }
         }
+        .padding()
+        .background(color)
+        .clipShape(.rect(cornerRadius: 15))
     }
 }
 
 #Preview {
-    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "215 Missões", agentRank: "Agente Mestre", color: .red)
+    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "215 Missões", agentRank: "Agente Especial", color: .red, maxValue: 50, currentValue: 37)
 }

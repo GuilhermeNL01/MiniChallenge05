@@ -46,6 +46,9 @@
         }
       }
     },
+    "%lld KM" : {
+
+    },
     "%lld M / %lldM" : {
       "localizations" : {
         "en" : {
@@ -137,6 +140,7 @@
       }
     },
     "0,%lld KM" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -392,6 +396,7 @@
 
     },
     "BPM" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -412,6 +417,9 @@
           }
         }
       }
+    },
+    "BPM/Missão" : {
+
     },
     "Carregando..." : {
       "localizations" : {
@@ -572,6 +580,9 @@
         }
       }
     },
+    "Média Cardíaca" : {
+
+    },
     "Meu Progresso" : {
       "localizations" : {
         "en" : {
@@ -686,7 +697,11 @@
         }
       }
     },
+    "Total Caminhado" : {
+
+    },
     "Total Percorrido" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

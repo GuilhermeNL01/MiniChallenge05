@@ -16,26 +16,39 @@ struct BPMComponent: View {
     @State private var value = 0
     
     var body: some View {
-        VStack{
-            HStack(){
-                 
-                 Image(systemName: "heart.fill")
-                 
-                 Text("\(value)")
-                     .fontWeight(.regular)
-                     .font(.system(size: 15))
-                 
-                 Text("BPM")
-                     .fontWeight(.regular)
-                     .font(.system(size: 15))
-                
-                Spacer()
-
-             }
-         }
-         .padding()
-         .onAppear(perform: start)
-    }
+           VStack(spacing: 4) {
+               HStack {
+                   Image(systemName: "heart.fill")
+                       .foregroundColor(Color.blue)
+                       .font(.system(size: 30))
+                   Spacer()
+                   Text("Média Cardíaca")
+                       .fontWeight(.regular)
+                       .font(.system(size: 16))
+                       .lineLimit(1)
+                       .foregroundColor(Color.white)
+               }
+               
+               HStack(alignment: .lastTextBaseline, spacing: 2) {
+                   Spacer()
+                   Text("\(value)")
+                       .fontWeight(.bold)
+                       .font(.system(size: 20))
+                       .foregroundColor(Color.white)
+                   
+                   Text("BPM/Missão")
+                       .fontWeight(.regular)
+                       .font(.system(size: 15))
+                       .foregroundColor(Color.white)
+                       .multilineTextAlignment(.leading)
+               }
+           }
+           .frame(width: Constants.componentWidth)
+           .padding(.all, 10)
+           .background(Color(hex: ColorPalette.darkBlue))
+           .cornerRadius(Constants.componentCornerRadius)
+           .onAppear(perform: start)
+       }
     
     func start() {
         autorizeHealthKit()
@@ -81,4 +94,8 @@ struct BPMComponent: View {
             self.value = Int(lastHeartRate)
         }
     }
+}
+
+#Preview{
+    BPMComponent()
 }

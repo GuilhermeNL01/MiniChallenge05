@@ -18,11 +18,11 @@ struct AgentProgressView: View {
                         RankComponent()
                     }.buttonStyle(CustomButton())
 
-                    RankComponent()
-                        .padding(.vertical)
                     MissionCounterComponent()
                         .padding(.vertical)
                     TotalDistanceComponent()
+                        .padding(.vertical)
+                    BPMComponent()
                         .padding(.vertical)
                 }
             }.navigationTitle("Meu Progresso")
