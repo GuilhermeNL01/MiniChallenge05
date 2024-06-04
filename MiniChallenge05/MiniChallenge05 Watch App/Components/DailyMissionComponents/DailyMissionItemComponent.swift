@@ -20,9 +20,9 @@ struct DailyMissionItemComponent: View {
     
     var body: some View {
         VStack{
-            Image(systemName: "backpack.circle.fill")
+            Image(systemName: image)
                 .resizable()
-                .frame(width: 30, height: 30)
+                .frame(width: Constants.itemWidth, height: Constants.itemHeight)
             if missionCompletion == true{
                 Text("\(missionItem)/\(missionItem)")
             } else {

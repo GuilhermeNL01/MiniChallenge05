@@ -31,6 +31,8 @@
 		81AED62D2C0E4330005F471D /* CircularProgressComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED62C2C0E4330005F471D /* CircularProgressComponent.swift */; };
 		81AED62F2C0E53DF005F471D /* DailyMissionItemComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED62E2C0E53DF005F471D /* DailyMissionItemComponent.swift */; };
 		81AED6332C0E59E1005F471D /* IndividualRankComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6322C0E59E1005F471D /* IndividualRankComponent.swift */; };
+		81AED6362C0F86C9005F471D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6352C0F86C9005F471D /* Constants.swift */; };
+		81AED6392C0F885A005F471D /* InventoryItemComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6382C0F885A005F471D /* InventoryItemComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		81AED62C2C0E4330005F471D /* CircularProgressComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressComponent.swift; sourceTree = "<group>"; };
 		81AED62E2C0E53DF005F471D /* DailyMissionItemComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMissionItemComponent.swift; sourceTree = "<group>"; };
 		81AED6322C0E59E1005F471D /* IndividualRankComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualRankComponent.swift; sourceTree = "<group>"; };
+		81AED6352C0F86C9005F471D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		81AED6382C0F885A005F471D /* InventoryItemComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryItemComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,12 +125,12 @@
 		4019DD882BFBD30700AA61D9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				81AED6372C0F8830005F471D /* InventoryComponents */,
 				81AED6342C0E5C58005F471D /* RankComponents */,
 				81AED6312C0E5890005F471D /* DailyMissionComponents */,
 				81AED6212C0E3659005F471D /* ItemSearchComponents */,
 				4019DD892BFBD41100AA61D9 /* BPMComponent.swift */,
 				406954A32C0007D500105FF3 /* TotalDistanceComponent.swift */,
-				2EE53CAF2BFFC3A50071559A /* InventoryComponent.swift */,
 				81AED6152C05001C005F471D /* MissionCounterComponent.swift */,
 			);
 			path = Components;
@@ -196,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				81AED6282C0E3A13005F471D /* Color.swift */,
+				81AED6352C0F86C9005F471D /* Constants.swift */,
 				81AED62A2C0E3D4E005F471D /* Localizable.xcstrings */,
 			);
 			path = Utility;
@@ -217,6 +222,15 @@
 				81AED6322C0E59E1005F471D /* IndividualRankComponent.swift */,
 			);
 			path = RankComponents;
+			sourceTree = "<group>";
+		};
+		81AED6372C0F8830005F471D /* InventoryComponents */ = {
+			isa = PBXGroup;
+			children = (
+				2EE53CAF2BFFC3A50071559A /* InventoryComponent.swift */,
+				81AED6382C0F885A005F471D /* InventoryItemComponent.swift */,
+			);
+			path = InventoryComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,13 +341,14 @@
 				81AED6292C0E3A13005F471D /* Color.swift in Sources */,
 				81AED6162C05001C005F471D /* MissionCounterComponent.swift in Sources */,
 				81AED62D2C0E4330005F471D /* CircularProgressComponent.swift in Sources */,
+				81AED6392C0F885A005F471D /* InventoryItemComponent.swift in Sources */,
 				81AED6332C0E59E1005F471D /* IndividualRankComponent.swift in Sources */,
 				4099E1092BF7EC56002A9440 /* ContentView.swift in Sources */,
 				2ED1E4B52C0119210073AF9A /* RankView.swift in Sources */,
 				2EE53CB02BFFC3A50071559A /* InventoryComponent.swift in Sources */,
+				81AED6362C0F86C9005F471D /* Constants.swift in Sources */,
 				81AED62F2C0E53DF005F471D /* DailyMissionItemComponent.swift in Sources */,
 				409567102BFD25D600B9A506 /* DistanceView.swift in Sources */,
-				81AED6252C0E36D6005F471D /* CircularInformationComponent.swift in Sources */,
 				4099E1072BF7EC56002A9440 /* MiniChallenge05App.swift in Sources */,
 				81AED6122BFE689E005F471D /* DailyMissionComponent.swift in Sources */,
 				4095670C2BFD1B0A00B9A506 /* HealthKitManager.swift in Sources */,

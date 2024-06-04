@@ -18,8 +18,6 @@ struct AgentProgressView: View {
                         RankComponent()
                     }.buttonStyle(CustomButton())
 
-                    RankComponent()
-                        .padding(.vertical)
                     MissionCounterComponent()
                         .padding(.vertical)
                     TotalDistanceComponent()
