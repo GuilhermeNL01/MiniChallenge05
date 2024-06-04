@@ -11,15 +11,15 @@ struct RankView: View {
     var body: some View {
         ScrollView {
             VStack {
-                RankRecruit()
+                IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "25 Missões", agentRank: "Agente Recruta", color: .blue)
                     .padding()
-                RankNoob()
+                IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "50 Missões", agentRank: "Agente Novato", color: .blue)
                     .padding()
-                RankTactical()
+                IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "75 Missões", agentRank: "Agente Tático", color: .pink)
                     .padding()
-                RankSpecial()
+                IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "125 Missões", agentRank: "Agente Especial", color: .orange)
                     .padding()
-                RankMaster()
+                IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "215 Missões", agentRank: "Agente Mestre", color: .red)
                     .padding()
             }
         }

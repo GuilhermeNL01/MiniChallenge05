@@ -5,14 +5,11 @@
 //  Created by Luca on 22/05/24.
 //
 
-// 22 de Maio: 9 5 3 4
-// 23 de Maio: 7 0 0 4
-
-
 import SwiftUI
 import SwiftData
 
 // Struct defining basic Daily Mission properties
+
 struct DailyMission: Codable {
     var missionDescription: String
     var missionItemAlpha: Int
@@ -37,6 +34,7 @@ struct DailyMissionComponent: View {
     @State private var date: Date = Date()
     
     // Descriptions for the Daily Mission Component. NOT CURRENTLY USED
+    
     private let missionDescriptions = [
         "Collect 10 apples",
         "Defeat 5 enemies",
@@ -55,62 +53,27 @@ struct DailyMissionComponent: View {
             }
             .padding(.bottom)
              
-            // Mission Items
+            // Individual Components for each Item
+            
             HStack {
                 Spacer()
-                VStack{
-                    Image(systemName: "graduationcap.circle.fill")
-                        .resizable()
-                        .frame(width: 30, height: 30)
-                    if dailyMissionList.first?.missionCompletion == true{
-                        Text("\(dailyMissionList.first?.dailyMission.missionItemAlpha ?? 0)/\(dailyMissionList.first?.dailyMission.missionItemAlpha ?? 0)")
-                    } else {
-                        Text("\(dailyMissionList.first?.dailyMission.missionItemAlpha ?? 0)/\(dailyMissionList.first?.itemAlpha ?? 0)")
-                    }
-                }
+                
+                DailyMissionItemComponent(image: "graduationcap.circle.fill", missionItem: dailyMissionList.first?.dailyMission.missionItemAlpha ?? 0, currentItem: dailyMissionList.first?.itemAlpha ?? 0, missionCompletion: ((dailyMissionList.first?.missionCompletion) != nil))
                 
                 Spacer()
                 
-                VStack{
-                    Image(systemName: "backpack.circle.fill")
-                        .resizable()
-                        .frame(width: 30, height: 30)
-                    if dailyMissionList.first?.missionCompletion == true{
-                        Text("\(dailyMissionList.first?.dailyMission.missionItemBravo ?? 0)/\(dailyMissionList.first?.dailyMission.missionItemBravo ?? 0)")
-                    } else {
-                        Text("\(dailyMissionList.first?.dailyMission.missionItemBravo ?? 0)/\(dailyMissionList.first?.itemBravo ?? 0)")
-                    }
-                }
+                DailyMissionItemComponent(image: "backpack.circle.fill", missionItem: dailyMissionList.first?.dailyMission.missionItemBravo ?? 0, currentItem: dailyMissionList.first?.itemBravo ?? 0, missionCompletion: ((dailyMissionList.first?.missionCompletion) != nil))
                 
                 Spacer()
                 
-                VStack{
-                    Image(systemName: "paperclip.circle.fill")
-                        .resizable()
-                        .frame(width: 30, height: 30)
-                    if dailyMissionList.first?.missionCompletion == true{
-                        Text("\(dailyMissionList.first?.dailyMission.missionItemCharlie ?? 0)/\(dailyMissionList.first?.dailyMission.missionItemCharlie ?? 0)")
-                    } else {
-                        Text("\(dailyMissionList.first?.dailyMission.missionItemCharlie ?? 0)/\(dailyMissionList.first?.itemCharlie ?? 0)")
-                    }
-                }
+                DailyMissionItemComponent(image: "paperclip.circle.fill", missionItem: dailyMissionList.first?.dailyMission.missionItemCharlie ?? 0, currentItem: dailyMissionList.first?.itemCharlie ?? 0, missionCompletion: ((dailyMissionList.first?.missionCompletion) != nil))
                 
                 Spacer()
                 
-                VStack{
-                    Image(systemName: "person.2.circle.fill")
-                        .resizable()
-                        .frame(width: 30, height: 30)
-                    if dailyMissionList.first?.missionCompletion == true{
-                        Text("\(dailyMissionList.first?.dailyMission.missionItemDelta ?? 0)/\(dailyMissionList.first?.dailyMission.missionItemDelta ?? 0)")
-                    } else {
-                        Text("\(dailyMissionList.first?.dailyMission.missionItemDelta ?? 0)/\(dailyMissionList.first?.itemDelta ?? 0)")
-                    }
-                }
+                DailyMissionItemComponent(image: "person.2.circle.fill", missionItem: dailyMissionList.first?.dailyMission.missionItemDelta ?? 0, currentItem: dailyMissionList.first?.itemDelta ?? 0, missionCompletion: ((dailyMissionList.first?.missionCompletion) != nil))
                 
                 Spacer()
             }
-            // Inventory Items
             
         }
         .onAppear(perform: generateNewMission)
@@ -124,7 +87,7 @@ struct DailyMissionComponent: View {
             }
         }
         .padding(4)
-        .background(.blue)
+        .background(Color(hex: ColorPalette.darkBlue))
         .clipShape(.rect(cornerRadius: 20))
     }
     
@@ -138,19 +101,24 @@ struct DailyMissionComponent: View {
             )
             
             if let existingMission = dailyMissionList.first {
+                
             // Update the existing mission
+                
                 if dateFormatter() != dailyMissionList.first?.date {
                     existingMission.dailyMission = dailyMissionCurrent
                     existingMission.date = dateFormatter()
                     existingMission.missionCompletion = false
                 }
         } else {
+            
             // Create a new mission if none exists
+            
             let modelDailyMission = ModelNew(date: dateFormatter(), dailyMission: dailyMissionCurrent)
             context.insert(modelDailyMission)
         }
         
         // Save changes to the context
+        
         try? context.save()
         
         completeMission()
@@ -169,22 +137,27 @@ struct DailyMissionComponent: View {
     func completeMission() {
         if let existingMission = dailyMissionList.first {
             if existingMission.missionCompletion == false {
+                
                 // Update the existing mission
+                
                 if existingMission.itemAlpha >= existingMission.dailyMission.missionItemAlpha &&
                     existingMission.itemBravo >= existingMission.dailyMission.missionItemBravo &&
                     existingMission.itemCharlie >= existingMission.dailyMission.missionItemCharlie &&
                     existingMission.itemDelta >= existingMission.dailyMission.missionItemDelta {
                     
                     // Remove items from inventory once all necessary mission items are acquired
+                    
                     existingMission.itemAlpha -= existingMission.dailyMission.missionItemAlpha
                     existingMission.itemBravo -= existingMission.dailyMission.missionItemBravo
                     existingMission.itemCharlie -= existingMission.dailyMission.missionItemCharlie
                     existingMission.itemDelta -= existingMission.dailyMission.missionItemDelta
                     
                     // Increment the total mission counter for the rank logic
+                    
                     existingMission.totalMissions += 1
                     
                     // Mark the mision as completed
+                    
                     existingMission.missionCompletion = true
                 }
                 
