@@ -12,6 +12,12 @@ struct AgentProgressView: View {
         NavigationStack {
             ScrollView {
                 VStack {
+                    NavigationLink {
+                        RankView()
+                    } label: {
+                        RankComponent()
+                    }.buttonStyle(CustomButton())
+
                     RankComponent()
                         .padding(.vertical)
                     MissionCounterComponent()
@@ -21,6 +27,14 @@ struct AgentProgressView: View {
                 }
             }.navigationTitle("Meu Progresso")
         }
+    }
+}
+
+struct CustomButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .background(Color(red: 0, green: 0, blue: 0))
+            .clipShape(Rectangle())
     }
 }
 
