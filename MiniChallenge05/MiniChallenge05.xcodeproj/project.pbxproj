@@ -19,7 +19,6 @@
 		4019DD8A2BFBD41100AA61D9 /* BPMComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4019DD892BFBD41100AA61D9 /* BPMComponent.swift */; };
 		406954A42C0007D500105FF3 /* TotalDistanceComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406954A32C0007D500105FF3 /* TotalDistanceComponent.swift */; };
 		4095670C2BFD1B0A00B9A506 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095670B2BFD1B0A00B9A506 /* HealthKitManager.swift */; };
-		409567102BFD25D600B9A506 /* DistanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095670F2BFD25D600B9A506 /* DistanceView.swift */; };
 		4099E1022BF7EC56002A9440 /* MiniChallenge05 Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4099E1012BF7EC56002A9440 /* MiniChallenge05 Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4099E1072BF7EC56002A9440 /* MiniChallenge05App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4099E1062BF7EC56002A9440 /* MiniChallenge05App.swift */; };
 		4099E1092BF7EC56002A9440 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4099E1082BF7EC56002A9440 /* ContentView.swift */; };
@@ -96,7 +95,6 @@
 		4019DD892BFBD41100AA61D9 /* BPMComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPMComponent.swift; sourceTree = "<group>"; };
 		406954A32C0007D500105FF3 /* TotalDistanceComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalDistanceComponent.swift; sourceTree = "<group>"; };
 		4095670B2BFD1B0A00B9A506 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
-		4095670F2BFD25D600B9A506 /* DistanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceView.swift; sourceTree = "<group>"; };
 		4099E0FB2BF7EC56002A9440 /* MiniChallenge05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallenge05.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4099E1012BF7EC56002A9440 /* MiniChallenge05 Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MiniChallenge05 Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4099E1062BF7EC56002A9440 /* MiniChallenge05App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChallenge05App.swift; sourceTree = "<group>"; };
@@ -171,7 +169,6 @@
 			isa = PBXGroup;
 			children = (
 				4099E1082BF7EC56002A9440 /* ContentView.swift */,
-				4095670F2BFD25D600B9A506 /* DistanceView.swift */,
 				2ED1E4B42C0119210073AF9A /* RankView.swift */,
 				81AED61B2C07AEE9005F471D /* AgentProgressView.swift */,
 				81AED61D2C07B245005F471D /* MainView.swift */,
@@ -447,7 +444,6 @@
 				2EE53CB02BFFC3A50071559A /* InventoryComponent.swift in Sources */,
 				81AED6362C0F86C9005F471D /* Constants.swift in Sources */,
 				81AED62F2C0E53DF005F471D /* DailyMissionItemComponent.swift in Sources */,
-				409567102BFD25D600B9A506 /* DistanceView.swift in Sources */,
 				4099E1072BF7EC56002A9440 /* MiniChallenge05App.swift in Sources */,
 				81AED6122BFE689E005F471D /* DailyMissionComponent.swift in Sources */,
 				4095670C2BFD1B0A00B9A506 /* HealthKitManager.swift in Sources */,
