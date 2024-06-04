@@ -690,7 +690,11 @@
         }
       }
     },
+    "Total Caminhado" : {
+
+    },
     "Total Percorrido" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

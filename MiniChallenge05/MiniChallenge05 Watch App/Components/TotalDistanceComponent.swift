@@ -18,7 +18,7 @@ struct TotalDistanceComponent: View {
                     .font(.system(size: 50))
                     .foregroundColor(.blue)
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("Total Walked")
+                    Text("Total Caminhado")
                         .font(.system(size: 15,weight: .bold))
                         .foregroundColor(.white)
                     Text("\(Int(totalDistance * 10) % 10) KM")
