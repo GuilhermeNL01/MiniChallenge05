@@ -69,7 +69,8 @@ struct CircularProgressView: View {
                 }
             }
         }
-        .padding()
+        .frame(width: Constants.componentWidth)
+        .padding(.all, 10)
         .background(Color(hex: ColorPalette.darkBlue))
         .cornerRadius(10)
     }

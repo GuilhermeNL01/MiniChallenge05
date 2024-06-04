@@ -22,7 +22,8 @@ struct MissionCounterComponent: View {
             VStack{
                 HStack{
                     Text("Missões Completadas")
-                        .font(.callout.bold())
+                        .font(.system(size: Constants.componentTitle, weight: .bold))
+                        .foregroundColor(.white)
                     Spacer()
                 }
                 .padding(.bottom, 5)
@@ -33,7 +34,8 @@ struct MissionCounterComponent: View {
                 }
                 
             }.padding(.leading, 3)
-        }.frame(width: Constants.componentWidth)
+        }
+        .frame(width: Constants.componentWidth)
         .padding(10)
         .background(Color(hex: ColorPalette.darkBlue))
         .clipShape(.rect(cornerRadius: Constants.componentCornerRadius))

@@ -22,16 +22,16 @@ struct TotalDistanceComponent: View {
                         .font(.system(size: 15,weight: .bold))
                         .foregroundColor(.white)
                     Text("\(Int(totalDistance * 10) % 10) KM")
-                        .font(.system(size: 15, weight: .regular, design: .default))
+                        .font(.system(size: Constants.componentTitle, weight: .regular, design: .default))
                         .foregroundColor(.white)
                 }
                 Spacer()
             }
-            .padding(.all)
         }
-        .background(Color(hex: ColorPalette.darkBlue))
-        .cornerRadius(10)
+        .frame(width: Constants.componentWidth)
         .padding(.all, 10)
+        .background(Color(hex: ColorPalette.darkBlue))
+        .clipShape(.rect(cornerRadius: Constants.componentCornerRadius))
         .onAppear {
             fetchTotalDistance()
         }
