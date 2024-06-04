@@ -15,25 +15,32 @@ struct IndividualRankComponent: View {
     let color: Color
     
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 5)
-                .foregroundStyle(color)
-                .frame(width: 200, height: 60)
-            HStack {
-                Image(systemName: image)
-                    .resizable()
-                    .frame(width: 34, height: 34)
-                VStack {
-                    Text(agentRank)
-                        .bold()
-                    
-                    Text(missionNumber)
-                }
+        
+        HStack {
+            Spacer()
+            
+            Image(systemName: image)
+                .resizable()
+                .frame(width: 34, height: 34)
+            
+            Spacer()
+            
+            VStack {
+                Text(agentRank)
+                    .bold()
+                    .fixedSize(horizontal: true, vertical: false)
+                
+                Text(missionNumber)
             }
+            
+            Spacer()
         }
+        .padding()
+        .background(color)
+        .clipShape(.rect(cornerRadius: 15))
     }
 }
 
 #Preview {
-    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "215 Missões", agentRank: "Agente Mestre", color: .red)
+    IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "215 Missões", agentRank: "Agente Especial", color: .red)
 }
