@@ -58,19 +58,19 @@ struct DailyMissionComponent: View {
             HStack {
                 Spacer()
                 
-                DailyMissionItemComponent(image: "graduationcap.circle.fill", missionItem: dailyMissionList.first?.dailyMission.missionItemAlpha ?? 0, currentItem: dailyMissionList.first?.itemAlpha ?? 0, missionCompletion: ((dailyMissionList.first?.missionCompletion) != nil))
+                DailyMissionItemComponent(image: "graduationcap.circle.fill", missionItem: dailyMissionList.first?.dailyMission.missionItemAlpha ?? 0, currentItem: dailyMissionList.first?.itemAlpha ?? 0, missionCompletion: ((dailyMissionList.first?.missionCompletion) ?? false))
                 
                 Spacer()
                 
-                DailyMissionItemComponent(image: "backpack.circle.fill", missionItem: dailyMissionList.first?.dailyMission.missionItemBravo ?? 0, currentItem: dailyMissionList.first?.itemBravo ?? 0, missionCompletion: ((dailyMissionList.first?.missionCompletion) != nil))
+                DailyMissionItemComponent(image: "backpack.circle.fill", missionItem: dailyMissionList.first?.dailyMission.missionItemBravo ?? 0, currentItem: dailyMissionList.first?.itemBravo ?? 0, missionCompletion: ((dailyMissionList.first?.missionCompletion) ?? false))
                 
                 Spacer()
                 
-                DailyMissionItemComponent(image: "paperclip.circle.fill", missionItem: dailyMissionList.first?.dailyMission.missionItemCharlie ?? 0, currentItem: dailyMissionList.first?.itemCharlie ?? 0, missionCompletion: ((dailyMissionList.first?.missionCompletion) != nil))
+                DailyMissionItemComponent(image: "paperclip.circle.fill", missionItem: dailyMissionList.first?.dailyMission.missionItemCharlie ?? 0, currentItem: dailyMissionList.first?.itemCharlie ?? 0, missionCompletion: ((dailyMissionList.first?.missionCompletion) ?? false))
                 
                 Spacer()
                 
-                DailyMissionItemComponent(image: "person.2.circle.fill", missionItem: dailyMissionList.first?.dailyMission.missionItemDelta ?? 0, currentItem: dailyMissionList.first?.itemDelta ?? 0, missionCompletion: ((dailyMissionList.first?.missionCompletion) != nil))
+                DailyMissionItemComponent(image: "person.2.circle.fill", missionItem: dailyMissionList.first?.dailyMission.missionItemDelta ?? 0, currentItem: dailyMissionList.first?.itemDelta ?? 0, missionCompletion: ((dailyMissionList.first?.missionCompletion) ?? false))
                 
                 Spacer()
             }
