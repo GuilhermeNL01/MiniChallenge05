@@ -22,6 +22,7 @@ struct RankView: View {
                 IndividualRankComponent(image: "person.2.circle.fill", missionNumber: "215 Missões", agentRank: "Agente Mestre", color: .red)
                     .padding()
             }
+            .navigationTitle("Patentes")
         }
     }
 
