@@ -87,6 +87,7 @@ struct RankView: View {
                         .padding()
                 }
             }
+            .navigationTitle("Patentes")
         }
     }
 }
