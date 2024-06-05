@@ -16,38 +16,43 @@ struct BPMComponent: View {
     @State private var value = 0
     
     var body: some View {
-           VStack(spacing: 4) {
-               HStack {
-                   Image(systemName: "heart.fill")
-                       .foregroundColor(Color.blue)
-                       .font(.system(size: 30))
-                   Spacer()
-                   Text("Média Cardíaca")
-                       .fontWeight(.regular)
-                       .font(.system(size: 16))
-                       .lineLimit(1)
-                       .foregroundColor(Color.white)
-               }
-               
-               HStack(alignment: .lastTextBaseline, spacing: 2) {
-                   Spacer()
-                   Text("\(value)")
-                       .fontWeight(.bold)
-                       .font(.system(size: 20))
-                       .foregroundColor(Color.white)
-                   
-                   Text("BPM/Missão")
-                       .fontWeight(.regular)
-                       .font(.system(size: 15))
-                       .foregroundColor(Color.white)
-                       .multilineTextAlignment(.leading)
-               }
-           }
-           .frame(width: Constants.componentWidth)
-           .padding(.all, 10)
-           .background(Color(hex: ColorPalette.darkBlue))
-           .cornerRadius(Constants.componentCornerRadius)
-           .onAppear(perform: start)
+        HStack {
+            Image(systemName: "heart.fill")
+                .foregroundColor(Color(hex: ColorPalette.lightBlue))
+                .font(.system(size: 30))
+            Spacer()
+            VStack {
+                HStack {
+                    Text("Média Cardíaca")
+                        .font(.system(size: Constants.componentTitle, weight: .bold))
+                        .foregroundColor(.white)
+                        .lineLimit(2)
+                        .foregroundColor(Color.white)
+                    Spacer()
+                }
+                HStack(alignment: .lastTextBaseline, spacing: 2) {
+                    Text("\(value)")
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
+                        .foregroundColor(Color.white)
+                    
+                    Text("BPM/Missão")
+                        .fontWeight(.regular)
+                        .font(.system(size: 15))
+                        .foregroundColor(Color.white)
+                        .multilineTextAlignment(.leading)
+                    
+                    Spacer()
+                }
+            }
+            Spacer()
+        }
+        .frame(width: Constants.componentWidth)
+        .padding(.all, 10)
+        .background(Color(hex: ColorPalette.darkBlue))
+        .cornerRadius(Constants.componentCornerRadius)
+        .onAppear(perform: start)
+           
        }
     
     func start() {

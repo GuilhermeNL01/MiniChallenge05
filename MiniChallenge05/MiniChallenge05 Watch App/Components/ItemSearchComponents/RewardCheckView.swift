@@ -38,11 +38,11 @@ struct RewardCheckView: View {
         ScrollView {
             VStack {
                 VStack(spacing: 15) {
-                    CircularProgressView(icon: "Binóculo2", title: "Binóculo", progress: progressAlpha, currentDistance: distance, totalDistance: model.first?.nextRewardDistances[0] ?? 50)
-                    CircularProgressView(icon: "Camera2", title: "Câmera", progress: progressBravo, currentDistance: distance, totalDistance: model.first?.nextRewardDistances[1] ?? 50)
+                    CircularProgressView(icon: "Binóculo2", title: "Binóculo", progress: progressAlpha, currentDistance: distance, totalDistance: model.first?.nextRewardDistances[0] ?? 50, backgroundColor: Color(hex: ColorPalette.darkPink), progressColor: Color(hex: ColorPalette.lightPink))
+                    CircularProgressView(icon: "Camera2", title: "Câmera", progress: progressBravo, currentDistance: distance, totalDistance: model.first?.nextRewardDistances[1] ?? 50, backgroundColor: Color(hex: ColorPalette.darkOrange), progressColor: Color(hex: ColorPalette.lightOrange))
                     
-                    CircularProgressView(icon: "Folder2", title: "Pasta", progress: progressCharlie, currentDistance: distance, totalDistance: model.first?.nextRewardDistances[2] ?? 50)
-                    CircularProgressView(icon: "Hat2", title: "Chapéu", progress: progressDelta, currentDistance: distance, totalDistance: model.first?.nextRewardDistances[3] ?? 50)
+                    CircularProgressView(icon: "Folder2", title: "Pasta", progress: progressCharlie, currentDistance: distance, totalDistance: model.first?.nextRewardDistances[2] ?? 50, backgroundColor: Color(hex: ColorPalette.darkGreen), progressColor: Color(hex: ColorPalette.lightGreen))
+                    CircularProgressView(icon: "Hat2", title: "Chapéu", progress: progressDelta, currentDistance: distance, totalDistance: model.first?.nextRewardDistances[3] ?? 50, backgroundColor: Color(hex: ColorPalette.darkYellow), progressColor: Color(hex: ColorPalette.lightYellow))
                 }
                 .padding(.top, 20)
             }
