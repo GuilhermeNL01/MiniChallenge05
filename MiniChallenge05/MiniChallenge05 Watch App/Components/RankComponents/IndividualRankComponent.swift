@@ -28,7 +28,7 @@ struct IndividualRankComponent: View {
             HStack {
                 Spacer()
                 
-                Image(systemName: image)
+                Image(image)
                     .resizable()
                     .frame(width: 34, height: 34)
                 

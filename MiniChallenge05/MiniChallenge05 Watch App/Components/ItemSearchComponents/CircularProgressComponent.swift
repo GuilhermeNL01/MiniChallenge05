@@ -41,9 +41,9 @@ struct CircularProgressView: View {
                     .rotationEffect(.degrees(-90))
                     .frame(width: 60, height: 60)
 
-                Image(systemName: icon)
-                    .foregroundColor(progressColor)
-                    .font(.system(size: 20))
+                Image(icon)
+                    .resizable()
+                    .frame(width: Constants.itemWidth, height: Constants.itemHeight)
 
             }
             .padding(.leading, 5)
@@ -58,8 +58,6 @@ struct CircularProgressView: View {
                 Spacer()
 
                 HStack {
-                    Image(systemName: "figure.walk")
-                        .foregroundColor(.white)
 
                     if currentDistance < 1000 {
                         Text("\(Int(currentDistance)) M / \(Int(totalDistance))M")
