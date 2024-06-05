@@ -15,7 +15,7 @@ struct InventoryItemComponent: View {
     
     var body: some View {
         VStack{
-            Image(systemName: image)
+            Image(image)
                 .resizable()
                 .frame(width: Constants.itemWidth, height: Constants.itemHeight)
                 Text("\(item)")
