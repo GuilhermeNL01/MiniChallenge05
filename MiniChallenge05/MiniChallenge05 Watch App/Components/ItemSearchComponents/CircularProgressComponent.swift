@@ -23,6 +23,8 @@ struct CircularProgressView: View {
     var progress: Double
     var currentDistance: Double
     var totalDistance: Double
+    var backgroundColor: Color
+    var progressColor: Color
 
     var body: some View {
         HStack {
@@ -77,5 +79,5 @@ struct CircularProgressView: View {
 }
 
 #Preview {
-    CircularProgressView(icon: "camera.fill", title: "Item 06", progress: 0.3, currentDistance: 1500, totalDistance: 2000)
+    CircularProgressView(icon: "camera.fill", title: "Item 06", progress: 0.3, currentDistance: 1500, totalDistance: 2000, backgroundColor: Color(hex: ColorPalette.darkBlue), progressColor: Color(hex:ColorPalette.buttonBlue))
 }

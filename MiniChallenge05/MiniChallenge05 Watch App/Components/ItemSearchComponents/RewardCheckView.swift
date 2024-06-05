@@ -38,11 +38,11 @@ struct RewardCheckView: View {
         ScrollView {
             VStack {
                 VStack(spacing: 15) {
-                    CircularProgressView(icon: "hare.fill", title: "Item 01", progress: progressAlpha, currentDistance: distance, totalDistance: model.first?.nextRewardDistances[0] ?? 50)
-                    CircularProgressView(icon: "tortoise.fill", title: "Item 02", progress: progressBravo, currentDistance: distance, totalDistance: model.first?.nextRewardDistances[1] ?? 50)
+                    CircularProgressView(icon: "hare.fill", title: "Item 01", progress: progressAlpha, currentDistance: distance, totalDistance: model.first?.nextRewardDistances[0] ?? 50, backgroundColor: Color(hex: ColorPalette.darkBlue), progressColor: Color(hex: ColorPalette.buttonBlue))
+                    CircularProgressView(icon: "tortoise.fill", title: "Item 02", progress: progressBravo, currentDistance: distance, totalDistance: model.first?.nextRewardDistances[1] ?? 50, backgroundColor: Color(hex: ColorPalette.darkBlue), progressColor: Color(hex: ColorPalette.buttonBlue))
                     
-                    CircularProgressView(icon: "camera.fill", title: "Item 03", progress: progressCharlie, currentDistance: distance, totalDistance: model.first?.nextRewardDistances[2] ?? 50)
-                    CircularProgressView(icon: "volleyball.fill", title: "Item 04", progress: progressDelta, currentDistance: distance, totalDistance: model.first?.nextRewardDistances[3] ?? 50)
+                    CircularProgressView(icon: "camera.fill", title: "Item 03", progress: progressCharlie, currentDistance: distance, totalDistance: model.first?.nextRewardDistances[2] ?? 50, backgroundColor: Color(hex: ColorPalette.darkBlue), progressColor: Color(hex: ColorPalette.buttonBlue))
+                    CircularProgressView(icon: "volleyball.fill", title: "Item 04", progress: progressDelta, currentDistance: distance, totalDistance: model.first?.nextRewardDistances[3] ?? 50, backgroundColor: Color(hex: ColorPalette.darkBlue), progressColor: Color(hex: ColorPalette.buttonBlue))
                 }
                 .padding(.top, 20)
             }

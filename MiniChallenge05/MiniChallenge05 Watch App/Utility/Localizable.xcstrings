@@ -422,6 +422,7 @@
 
     },
     "Carregando..." : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -442,6 +443,9 @@
           }
         }
       }
+    },
+    "Hello, World!" : {
+
     },
     "Inventário" : {
       "localizations" : {
@@ -727,6 +731,7 @@
       }
     },
     "Você andou %.2f metros hoje" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
