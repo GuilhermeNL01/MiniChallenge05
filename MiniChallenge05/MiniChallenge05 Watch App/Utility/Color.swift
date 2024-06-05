@@ -39,9 +39,30 @@ extension Color {
 // Struct for our Color Palette.
 
 struct ColorPalette {
-    static let buttonBlue = "35C6D9"
+    
+    // BLUE
+    static let lightBlue = "35C6D9"
     static let darkBlue = "032227"
+    
+    // GRAY
     static let darkGray = "232323"
+    
+    // PINK
+    static let darkPink = "300B36"
+    static let lightPink = "CB48E0"
+    
+    // ORANGE
+    static let darkOrange = "2C1301"
+    static let lightOrange = "E5711C"
+    
+    
+    // GREEN
+    static let darkGreen = "052905"
+    static let lightGreen = "1CE01E"
+    
+    // YELLOW
+    static let darkYellow = "363706"
+    static let lightYellow = "E6EA35"
 }
 
 // if you want to use this, use as follows: Color(hex: ColorPalette.darkBlue) or Color.init(hex: ColorPalette.darkBlue)

@@ -18,7 +18,7 @@ struct BPMComponent: View {
     var body: some View {
         HStack {
             Image(systemName: "heart.fill")
-                .foregroundColor(Color(hex: ColorPalette.buttonBlue))
+                .foregroundColor(Color(hex: ColorPalette.lightBlue))
                 .font(.system(size: 30))
             Spacer()
             VStack {

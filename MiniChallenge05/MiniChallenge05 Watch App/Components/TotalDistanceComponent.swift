@@ -16,7 +16,7 @@ struct TotalDistanceComponent: View {
             HStack {
                 Image(systemName: "figure.walk")
                     .font(.system(size: 50))
-                    .foregroundColor(Color(hex: ColorPalette.buttonBlue))
+                    .foregroundColor(Color(hex: ColorPalette.lightBlue))
                 VStack(alignment: .leading, spacing: 4) {
                     Text("Total Caminhado")
                         .font(.system(size: 15,weight: .bold))

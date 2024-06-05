@@ -444,9 +444,6 @@
         }
       }
     },
-    "Hello, World!" : {
-
-    },
     "Inventário" : {
       "localizations" : {
         "en" : {

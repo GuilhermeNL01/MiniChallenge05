@@ -37,7 +37,7 @@ struct IndividualRankComponent: View {
                 VStack {
                     
                     ProgressView(value: 5, total: 50)
-                        .tint(Color(hex: ColorPalette.buttonBlue))
+                        .tint(Color(hex: ColorPalette.lightBlue))
                     HStack{
                         Text(missionNumber)
                         Spacer()
