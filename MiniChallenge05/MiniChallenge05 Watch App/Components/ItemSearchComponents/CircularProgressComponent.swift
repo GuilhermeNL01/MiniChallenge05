@@ -23,37 +23,41 @@ struct CircularProgressView: View {
     var progress: Double
     var currentDistance: Double
     var totalDistance: Double
+    var backgroundColor: Color
+    var progressColor: Color
 
     var body: some View {
         HStack {
             ZStack {
                 Circle()
                     .trim(from: 0.0, to: progress)
-                    .stroke(Color.blue, style: StrokeStyle(lineWidth: 6, lineCap: .round, lineJoin: .round))
+                    .stroke(progressColor, style: StrokeStyle(lineWidth: 6, lineCap: .round, lineJoin: .round))
                     .rotationEffect(.degrees(-90))
                     .frame(width: 60, height: 60)
 
                 Circle()
                     .trim(from: progress, to: 1.0)
-                    .stroke(Color.blue.opacity(0.3), style: StrokeStyle(lineWidth: 6, lineCap: .round, lineJoin: .round))
+                    .stroke(progressColor.opacity(0.3), style: StrokeStyle(lineWidth: 6, lineCap: .round, lineJoin: .round))
                     .rotationEffect(.degrees(-90))
                     .frame(width: 60, height: 60)
 
-                Image(systemName: icon)
-                    .foregroundColor(.blue)
-                    .font(.system(size: 20))
+                Image(icon)
+                    .resizable()
+                    .frame(width: Constants.itemWidth, height: Constants.itemHeight)
 
             }
-            .padding(.trailing, 10)
+            .padding(.leading, 5)
 
+            Spacer ()
+            
             VStack(alignment: .leading) {
                 Text(title)
                     .font(.headline)
                     .foregroundColor(.white)
+                
+                Spacer()
 
                 HStack {
-                    Image(systemName: "figure.walk")
-                        .foregroundColor(.white)
 
                     if currentDistance < 1000 {
                         Text("\(Int(currentDistance)) M / \(Int(totalDistance))M")
@@ -67,14 +71,17 @@ struct CircularProgressView: View {
                             .lineLimit(1)
                     }
                 }
+                
+                Spacer()
             }
         }
-        .padding()
-        .background(Color(hex: ColorPalette.darkBlue))
+        .frame(width: Constants.componentWidth)
+        .padding(.all, 10)
+        .background(backgroundColor)
         .cornerRadius(10)
     }
 }
 
 #Preview {
-    CircularProgressView(icon: "camera.fill", title: "Item 06", progress: 0.3, currentDistance: 1500, totalDistance: 2000)
+    CircularProgressView(icon: "camera.fill", title: "Item 06", progress: 0.3, currentDistance: 1500, totalDistance: 2000, backgroundColor: Color(hex: ColorPalette.darkBlue), progressColor: Color(hex:ColorPalette.lightBlue))
 }

@@ -27,25 +27,25 @@ struct InventoryComponent: View {
             HStack{
                 Spacer()
 
-                InventoryItemComponent(image: "graduationcap.circle.fill", item: inventory.first?.itemAlpha ?? 0)
+                InventoryItemComponent(image: "Binóculo", item: inventory.first?.itemAlpha ?? 0)
                 
                 Spacer()
 
-                InventoryItemComponent(image: "backpack.circle.fill", item: inventory.first?.itemBravo ?? 0)
+                InventoryItemComponent(image: "Camera", item: inventory.first?.itemBravo ?? 0)
                 
                 Spacer()
                 
-                InventoryItemComponent(image: "paperclip.circle.fill", item: inventory.first?.itemCharlie ?? 0)
+                InventoryItemComponent(image: "Folder", item: inventory.first?.itemCharlie ?? 0)
                 
                 Spacer()
                 
-                InventoryItemComponent(image: "person.2.circle.fill", item: inventory.first?.itemDelta ?? 0)
+                InventoryItemComponent(image: "Hat", item: inventory.first?.itemDelta ?? 0)
                 
                 Spacer()
             }
         }
         .padding(4)
-        .background(.blue)
+        .background(Color(hex: ColorPalette.darkBlue))
         .clipShape(.rect(cornerRadius: 20))
     }
 }

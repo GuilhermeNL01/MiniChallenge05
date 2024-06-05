@@ -28,7 +28,7 @@ struct IndividualRankComponent: View {
             HStack {
                 Spacer()
                 
-                Image(systemName: image)
+                Image(image)
                     .resizable()
                     .frame(width: 34, height: 34)
                 
@@ -37,6 +37,7 @@ struct IndividualRankComponent: View {
                 VStack {
                     
                     ProgressView(value: 5, total: 50)
+                        .tint(Color(hex: ColorPalette.lightBlue))
                     HStack{
                         Text(missionNumber)
                         Spacer()
