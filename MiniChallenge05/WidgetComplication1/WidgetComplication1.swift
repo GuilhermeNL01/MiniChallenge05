@@ -1,8 +1,8 @@
 //
-//  Complication.swift
-//  Complication
+//  WidgetComplication1.swift
+//  WidgetComplication1
 //
-//  Created by GABRIEL Ferreira Cardoso on 04/06/24.
+//  Created by GABRIEL Ferreira Cardoso on 06/06/24.
 //
 
 import SwiftUI
@@ -36,11 +36,11 @@ struct ComplicationWidgetEntryView: View {
     
     var body: some View {
         if renderingMode == .fullColor {
-            Image("Image")
+            Image("Spy")
                 .resizable()
                 .scaledToFit()
         } else {
-            Image("Image")
+            Image("Spy")
                 .resizable()
                 .scaledToFit()
                 .widgetAccentable()
@@ -77,4 +77,3 @@ struct ComplicationWidget: Widget {
 } timeline: {
     SimpleEntry(date: .now)
 }
-
