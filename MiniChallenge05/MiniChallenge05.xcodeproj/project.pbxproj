@@ -264,6 +264,70 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+<<<<<<< Updated upstream
+=======
+		2E6E84432C1225D900862058 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SRXHT55569;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WidgetComplication1/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WidgetComplication1;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SpyHunt.Mini04.watchkitapp.WidgetComplication1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		2E6E84442C1225D900862058 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SRXHT55569;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WidgetComplication1/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WidgetComplication1;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SpyHunt.Mini04.watchkitapp.WidgetComplication1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
+>>>>>>> Stashed changes
 		4099E10F2BF7EC57002A9440 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -387,7 +451,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniChallenge05 Watch App/Preview Content\"";
+<<<<<<< Updated upstream
 				DEVELOPMENT_TEAM = 3XAB48JYXN;
+=======
+				DEVELOPMENT_TEAM = SRXHT55569;
+>>>>>>> Stashed changes
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MiniChallenge05-Watch-App-Info.plist";
@@ -400,8 +468,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+<<<<<<< Updated upstream
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GuilhermeNunesLobo.MiniChallenge05.watchkitapp;
+=======
+				MARKETING_VERSION = 1.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SpyHunt.Mini04.watchkitapp;
+>>>>>>> Stashed changes
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -421,7 +494,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniChallenge05 Watch App/Preview Content\"";
+<<<<<<< Updated upstream
 				DEVELOPMENT_TEAM = 3XAB48JYXN;
+=======
+				DEVELOPMENT_TEAM = SRXHT55569;
+>>>>>>> Stashed changes
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MiniChallenge05-Watch-App-Info.plist";
@@ -434,8 +511,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+<<<<<<< Updated upstream
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GuilhermeNunesLobo.MiniChallenge05.watchkitapp;
+=======
+				MARKETING_VERSION = 1.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SpyHunt.Mini04.watchkitapp;
+>>>>>>> Stashed changes
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -453,10 +535,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+<<<<<<< Updated upstream
 				DEVELOPMENT_TEAM = 3XAB48JYXN;
 				INFOPLIST_KEY_CFBundleDisplayName = MiniChallenge05;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GuilhermeNunesLobo.MiniChallenge05;
+=======
+				DEVELOPMENT_TEAM = SRXHT55569;
+				INFOPLIST_KEY_CFBundleDisplayName = MiniChallenge05;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SpyHunt.Mini04;
+>>>>>>> Stashed changes
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -469,10 +558,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+<<<<<<< Updated upstream
 				DEVELOPMENT_TEAM = 3XAB48JYXN;
 				INFOPLIST_KEY_CFBundleDisplayName = MiniChallenge05;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GuilhermeNunesLobo.MiniChallenge05;
+=======
+				DEVELOPMENT_TEAM = SRXHT55569;
+				INFOPLIST_KEY_CFBundleDisplayName = MiniChallenge05;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SpyHunt.Mini04;
+>>>>>>> Stashed changes
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
