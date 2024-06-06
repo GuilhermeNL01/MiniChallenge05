@@ -8,30 +8,34 @@
 import SwiftUI
 
 struct SecondChoiceComponent: View {
-    @Environment(\.dismiss) var dismiss
-
+    @State var presentPopup = false
+    var itemQuantity: Int
+    
     var body: some View {
-        VStack{
-            Button("Press to dismiss") {
-                
+        
+        Button {
+            presentPopup.toggle()
+        } label: {
+            VStack{
+                Text("\(itemQuantity)")
             }
-            .font(.title)
-            .padding()
-            .background(.black)
-        }.toolbar {
-            ToolbarItem(placement: .confirmationAction){
-                Button {
-                    
-                    dismiss()
-                } label: {
-                    Image(systemName: "checkmark")
-                }
-
+            .frame(width: 60)
+            .padding(10)
+            .background(Color(hex: ColorPalette.lightBlue).opacity(0.32))
+            .clipShape(.rect(cornerRadius: Constants.componentCornerRadius))
+            .overlay {
+                RoundedRectangle(cornerRadius: Constants.componentCornerRadius)
+                    .stroke(Color(hex: ColorPalette.lightBlue), lineWidth: 2)
             }
         }
+        .buttonStyle(CustomButton())
+        .sheet(isPresented: $presentPopup) {
+          FirstPopupComponent()
+        }
+        
     }
 }
 
 #Preview {
-    SecondChoiceComponent()
+    SecondChoiceComponent(itemQuantity: 1)
 }

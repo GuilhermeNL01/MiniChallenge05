@@ -42,6 +42,7 @@
 		81AED6422C123942005F471D /* TradeItemChooseComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6412C123942005F471D /* TradeItemChooseComponent.swift */; };
 		81AED6442C123D95005F471D /* FirstChoiceComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6432C123D95005F471D /* FirstChoiceComponent.swift */; };
 		81AED6462C123DA5005F471D /* SecondChoiceComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6452C123DA5005F471D /* SecondChoiceComponent.swift */; };
+		81AED6482C12571B005F471D /* FirstPopupComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6472C12571B005F471D /* FirstPopupComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,7 @@
 		81AED6412C123942005F471D /* TradeItemChooseComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeItemChooseComponent.swift; sourceTree = "<group>"; };
 		81AED6432C123D95005F471D /* FirstChoiceComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstChoiceComponent.swift; sourceTree = "<group>"; };
 		81AED6452C123DA5005F471D /* SecondChoiceComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondChoiceComponent.swift; sourceTree = "<group>"; };
+		81AED6472C12571B005F471D /* FirstPopupComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPopupComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +311,7 @@
 				81AED6412C123942005F471D /* TradeItemChooseComponent.swift */,
 				81AED6432C123D95005F471D /* FirstChoiceComponent.swift */,
 				81AED6452C123DA5005F471D /* SecondChoiceComponent.swift */,
+				81AED6472C12571B005F471D /* FirstPopupComponent.swift */,
 			);
 			path = TradeComponents;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				2EE53CB02BFFC3A50071559A /* InventoryComponent.swift in Sources */,
 				81AED6362C0F86C9005F471D /* Constants.swift in Sources */,
 				81AED62F2C0E53DF005F471D /* DailyMissionItemComponent.swift in Sources */,
+				81AED6482C12571B005F471D /* FirstPopupComponent.swift in Sources */,
 				4099E1072BF7EC56002A9440 /* MiniChallenge05App.swift in Sources */,
 				81AED6122BFE689E005F471D /* DailyMissionComponent.swift in Sources */,
 				4095670C2BFD1B0A00B9A506 /* HealthKitManager.swift in Sources */,
