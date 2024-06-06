@@ -43,6 +43,7 @@
 		81AED6442C123D95005F471D /* FirstChoiceComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6432C123D95005F471D /* FirstChoiceComponent.swift */; };
 		81AED6462C123DA5005F471D /* SecondChoiceComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6452C123DA5005F471D /* SecondChoiceComponent.swift */; };
 		81AED6482C12571B005F471D /* FirstPopupComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6472C12571B005F471D /* FirstPopupComponent.swift */; };
+		81AED64A2C127A7B005F471D /* ItemPickerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6492C127A7B005F471D /* ItemPickerComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,7 @@
 		81AED6432C123D95005F471D /* FirstChoiceComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstChoiceComponent.swift; sourceTree = "<group>"; };
 		81AED6452C123DA5005F471D /* SecondChoiceComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondChoiceComponent.swift; sourceTree = "<group>"; };
 		81AED6472C12571B005F471D /* FirstPopupComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPopupComponent.swift; sourceTree = "<group>"; };
+		81AED6492C127A7B005F471D /* ItemPickerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPickerComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,6 +314,7 @@
 				81AED6432C123D95005F471D /* FirstChoiceComponent.swift */,
 				81AED6452C123DA5005F471D /* SecondChoiceComponent.swift */,
 				81AED6472C12571B005F471D /* FirstPopupComponent.swift */,
+				81AED6492C127A7B005F471D /* ItemPickerComponent.swift */,
 			);
 			path = TradeComponents;
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 				81AED6122BFE689E005F471D /* DailyMissionComponent.swift in Sources */,
 				4095670C2BFD1B0A00B9A506 /* HealthKitManager.swift in Sources */,
 				40F6D4212C0E5233001163A5 /* RewardCheckView.swift in Sources */,
+				81AED64A2C127A7B005F471D /* ItemPickerComponent.swift in Sources */,
 				81AED61C2C07AEE9005F471D /* AgentProgressView.swift in Sources */,
 				406954A42C0007D500105FF3 /* TotalDistanceComponent.swift in Sources */,
 				4019DD8A2BFBD41100AA61D9 /* BPMComponent.swift in Sources */,

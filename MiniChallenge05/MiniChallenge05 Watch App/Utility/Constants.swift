@@ -18,6 +18,7 @@ struct Constants {
     
     static let componentWidth = WKInterfaceDevice.current().screenBounds.width/1.1
     static let componentCornerRadius : CGFloat = 14
+    static let componentSquare = WKInterfaceDevice.current().screenBounds.width/3
     
     static let componentTitle : CGFloat = 15
     static let componentFootnote : CGFloat = 12
