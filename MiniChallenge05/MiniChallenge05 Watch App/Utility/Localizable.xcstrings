@@ -396,6 +396,7 @@
 
     },
     "BPM" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -416,6 +417,9 @@
           }
         }
       }
+    },
+    "BPM/Missão" : {
+
     },
     "Carregando..." : {
       "extractionState" : "stale",
@@ -439,9 +443,6 @@
           }
         }
       }
-    },
-    "Frequência Cardíaca" : {
-
     },
     "Inventário" : {
       "localizations" : {
@@ -580,6 +581,9 @@
         }
       }
     },
+    "Média Cardíaca" : {
+
+    },
     "Meu Progresso" : {
       "localizations" : {
         "en" : {
@@ -647,7 +651,6 @@
       }
     },
     "Missões Completadas" : {
-      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -668,9 +671,6 @@
           }
         }
       }
-    },
-    "Missões Completas" : {
-
     },
     "OK" : {
 
