@@ -701,6 +701,9 @@
         }
       }
     },
+    "Selecione o item necessário" : {
+
+    },
     "Total Caminhado" : {
 
     },
@@ -726,6 +729,9 @@
           }
         }
       }
+    },
+    "Troca de itens" : {
+
     },
     "Você andou %.2f metros hoje" : {
       "extractionState" : "stale",

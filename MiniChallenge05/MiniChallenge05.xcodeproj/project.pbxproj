@@ -37,6 +37,11 @@
 		81AED6332C0E59E1005F471D /* IndividualRankComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6322C0E59E1005F471D /* IndividualRankComponent.swift */; };
 		81AED6362C0F86C9005F471D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6352C0F86C9005F471D /* Constants.swift */; };
 		81AED6392C0F885A005F471D /* InventoryItemComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6382C0F885A005F471D /* InventoryItemComponent.swift */; };
+		81AED63D2C122A8F005F471D /* InventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED63C2C122A8F005F471D /* InventoryView.swift */; };
+		81AED63F2C122FE5005F471D /* SoloCircularProgressComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED63E2C122FE5005F471D /* SoloCircularProgressComponent.swift */; };
+		81AED6422C123942005F471D /* TradeItemChooseComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6412C123942005F471D /* TradeItemChooseComponent.swift */; };
+		81AED6442C123D95005F471D /* FirstChoiceComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6432C123D95005F471D /* FirstChoiceComponent.swift */; };
+		81AED6462C123DA5005F471D /* SecondChoiceComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6452C123DA5005F471D /* SecondChoiceComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +121,11 @@
 		81AED6322C0E59E1005F471D /* IndividualRankComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualRankComponent.swift; sourceTree = "<group>"; };
 		81AED6352C0F86C9005F471D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		81AED6382C0F885A005F471D /* InventoryItemComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryItemComponent.swift; sourceTree = "<group>"; };
+		81AED63C2C122A8F005F471D /* InventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryView.swift; sourceTree = "<group>"; };
+		81AED63E2C122FE5005F471D /* SoloCircularProgressComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoloCircularProgressComponent.swift; sourceTree = "<group>"; };
+		81AED6412C123942005F471D /* TradeItemChooseComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeItemChooseComponent.swift; sourceTree = "<group>"; };
+		81AED6432C123D95005F471D /* FirstChoiceComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstChoiceComponent.swift; sourceTree = "<group>"; };
+		81AED6452C123DA5005F471D /* SecondChoiceComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondChoiceComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +182,7 @@
 				2ED1E4B42C0119210073AF9A /* RankView.swift */,
 				81AED61B2C07AEE9005F471D /* AgentProgressView.swift */,
 				81AED61D2C07B245005F471D /* MainView.swift */,
+				81AED63C2C122A8F005F471D /* InventoryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,6 +190,7 @@
 		4019DD882BFBD30700AA61D9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				81AED6402C123921005F471D /* TradeComponents */,
 				81AED6372C0F8830005F471D /* InventoryComponents */,
 				81AED6342C0E5C58005F471D /* RankComponents */,
 				81AED6312C0E5890005F471D /* DailyMissionComponents */,
@@ -240,6 +252,7 @@
 			children = (
 				81AED62C2C0E4330005F471D /* CircularProgressComponent.swift */,
 				40F6D4202C0E5233001163A5 /* RewardCheckView.swift */,
+				81AED63E2C122FE5005F471D /* SoloCircularProgressComponent.swift */,
 			);
 			path = ItemSearchComponents;
 			sourceTree = "<group>";
@@ -288,6 +301,16 @@
 				81AED6382C0F885A005F471D /* InventoryItemComponent.swift */,
 			);
 			path = InventoryComponents;
+			sourceTree = "<group>";
+		};
+		81AED6402C123921005F471D /* TradeComponents */ = {
+			isa = PBXGroup;
+			children = (
+				81AED6412C123942005F471D /* TradeItemChooseComponent.swift */,
+				81AED6432C123D95005F471D /* FirstChoiceComponent.swift */,
+				81AED6452C123DA5005F471D /* SecondChoiceComponent.swift */,
+			);
+			path = TradeComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,7 +453,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81AED6462C123DA5005F471D /* SecondChoiceComponent.swift in Sources */,
 				4019DD862BFBD09700AA61D9 /* Model.swift in Sources */,
+				81AED63D2C122A8F005F471D /* InventoryView.swift in Sources */,
 				81AED61E2C07B245005F471D /* MainView.swift in Sources */,
 				2ED1E4B32C010D7F0073AF9A /* RankComponent.swift in Sources */,
 				40A502112BFE6BA0000B1D57 /* RewardManager.swift in Sources */,
@@ -438,8 +463,11 @@
 				81AED6162C05001C005F471D /* MissionCounterComponent.swift in Sources */,
 				81AED62D2C0E4330005F471D /* CircularProgressComponent.swift in Sources */,
 				81AED6392C0F885A005F471D /* InventoryItemComponent.swift in Sources */,
+				81AED6442C123D95005F471D /* FirstChoiceComponent.swift in Sources */,
 				81AED6332C0E59E1005F471D /* IndividualRankComponent.swift in Sources */,
+				81AED63F2C122FE5005F471D /* SoloCircularProgressComponent.swift in Sources */,
 				4099E1092BF7EC56002A9440 /* ContentView.swift in Sources */,
+				81AED6422C123942005F471D /* TradeItemChooseComponent.swift in Sources */,
 				2ED1E4B52C0119210073AF9A /* RankView.swift in Sources */,
 				2EE53CB02BFFC3A50071559A /* InventoryComponent.swift in Sources */,
 				81AED6362C0F86C9005F471D /* Constants.swift in Sources */,
