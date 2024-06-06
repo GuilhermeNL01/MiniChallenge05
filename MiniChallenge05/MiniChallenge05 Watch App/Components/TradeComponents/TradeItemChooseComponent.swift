@@ -25,7 +25,7 @@ struct TradeItemChooseComponent: View {
             
             Spacer()
             
-            Text("\(counter)")
+            FirstChoiceComponent(itemQuantity: counter)
             
             Spacer()
             
