@@ -34,7 +34,6 @@ struct CustomButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .background(Color(red: 0, green: 0, blue: 0))
-            .clipShape(Rectangle())
     }
 }
 

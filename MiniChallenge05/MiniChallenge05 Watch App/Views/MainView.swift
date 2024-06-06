@@ -13,7 +13,16 @@ struct MainView: View {
             ScrollView {
                 VStack {
                     DailyMissionComponent()
-                    InventoryComponent()
+                    
+                    NavigationLink {
+                        InventoryView()
+                    } label: {
+                        InventoryComponent()
+                    }
+                    .buttonStyle(CustomButton())
+
+                    
+                    
                     RewardCheckView()
                 }
             }.navigationTitle("Missão Atual")
