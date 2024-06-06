@@ -21,7 +21,7 @@ struct MissionCounterComponent: View {
           
             VStack{
                 HStack{
-                    Text("Missões Completadas")
+                    Text("Missões Completas")
                         .font(.system(size: Constants.componentTitle, weight: .bold))
                         .foregroundColor(.white)
                     Spacer()

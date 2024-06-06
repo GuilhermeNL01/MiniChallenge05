@@ -7,46 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E6E84372C1225D800862058 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E40D8192C0F90A000C4D413 /* WidgetKit.framework */; };
-		2E6E84382C1225D800862058 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E40D81B2C0F90A000C4D413 /* SwiftUI.framework */; };
-		2E6E843B2C1225D800862058 /* WidgetComplication1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6E843A2C1225D800862058 /* WidgetComplication1.swift */; };
-		2E6E843D2C1225D900862058 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E6E843C2C1225D900862058 /* Assets.xcassets */; };
-		2E6E84412C1225D900862058 /* WidgetComplication1Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2E6E84362C1225D800862058 /* WidgetComplication1Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2ED1E4B32C010D7F0073AF9A /* RankComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED1E4B22C010D7F0073AF9A /* RankComponent.swift */; };
-		2ED1E4B52C0119210073AF9A /* RankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED1E4B42C0119210073AF9A /* RankView.swift */; };
-		2EE53CB02BFFC3A50071559A /* InventoryComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE53CAF2BFFC3A50071559A /* InventoryComponent.swift */; };
 		4019DD862BFBD09700AA61D9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4019DD852BFBD09700AA61D9 /* Model.swift */; };
 		4019DD8A2BFBD41100AA61D9 /* BPMComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4019DD892BFBD41100AA61D9 /* BPMComponent.swift */; };
-		406954A42C0007D500105FF3 /* TotalDistanceComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406954A32C0007D500105FF3 /* TotalDistanceComponent.swift */; };
+		406954A42C0007D500105FF3 /* TotalDistanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406954A32C0007D500105FF3 /* TotalDistanceView.swift */; };
 		4095670C2BFD1B0A00B9A506 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095670B2BFD1B0A00B9A506 /* HealthKitManager.swift */; };
+		409567102BFD25D600B9A506 /* DistanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095670F2BFD25D600B9A506 /* DistanceView.swift */; };
 		4099E1022BF7EC56002A9440 /* MiniChallenge05 Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4099E1012BF7EC56002A9440 /* MiniChallenge05 Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4099E1072BF7EC56002A9440 /* MiniChallenge05App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4099E1062BF7EC56002A9440 /* MiniChallenge05App.swift */; };
 		4099E1092BF7EC56002A9440 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4099E1082BF7EC56002A9440 /* ContentView.swift */; };
 		4099E10B2BF7EC57002A9440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4099E10A2BF7EC57002A9440 /* Assets.xcassets */; };
 		4099E10E2BF7EC57002A9440 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4099E10D2BF7EC57002A9440 /* Preview Assets.xcassets */; };
 		40A502112BFE6BA0000B1D57 /* RewardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A502102BFE6BA0000B1D57 /* RewardManager.swift */; };
-		40F6D4212C0E5233001163A5 /* RewardCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F6D4202C0E5233001163A5 /* RewardCheckView.swift */; };
 		81AED6122BFE689E005F471D /* DailyMissionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6112BFE689E005F471D /* DailyMissionComponent.swift */; };
-		81AED6162C05001C005F471D /* MissionCounterComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6152C05001C005F471D /* MissionCounterComponent.swift */; };
-		81AED61C2C07AEE9005F471D /* AgentProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED61B2C07AEE9005F471D /* AgentProgressView.swift */; };
-		81AED61E2C07B245005F471D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED61D2C07B245005F471D /* MainView.swift */; };
-		81AED6292C0E3A13005F471D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6282C0E3A13005F471D /* Color.swift */; };
-		81AED62B2C0E3D4E005F471D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 81AED62A2C0E3D4E005F471D /* Localizable.xcstrings */; };
-		81AED62D2C0E4330005F471D /* CircularProgressComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED62C2C0E4330005F471D /* CircularProgressComponent.swift */; };
-		81AED62F2C0E53DF005F471D /* DailyMissionItemComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED62E2C0E53DF005F471D /* DailyMissionItemComponent.swift */; };
-		81AED6332C0E59E1005F471D /* IndividualRankComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6322C0E59E1005F471D /* IndividualRankComponent.swift */; };
-		81AED6362C0F86C9005F471D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6352C0F86C9005F471D /* Constants.swift */; };
-		81AED6392C0F885A005F471D /* InventoryItemComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6382C0F885A005F471D /* InventoryItemComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2E6E843F2C1225D900862058 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4099E0F52BF7EC56002A9440 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2E6E84352C1225D800862058;
-			remoteInfo = WidgetComplication1Extension;
-		};
 		4099E1032BF7EC56002A9440 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4099E0F52BF7EC56002A9440 /* Project object */;
@@ -57,17 +32,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2E40D8292C0F90A100C4D413 /* Embed Foundation Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				2E6E84412C1225D900862058 /* WidgetComplication1Extension.appex in Embed Foundation Extensions */,
-			);
-			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4099E1142BF7EC57002A9440 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -82,19 +46,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2E40D8192C0F90A000C4D413 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
-		2E40D81B2C0F90A000C4D413 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		2E6E84362C1225D800862058 /* WidgetComplication1Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetComplication1Extension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		2E6E843A2C1225D800862058 /* WidgetComplication1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetComplication1.swift; sourceTree = "<group>"; };
-		2E6E843C2C1225D900862058 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2E6E843E2C1225D900862058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2ED1E4B22C010D7F0073AF9A /* RankComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankComponent.swift; sourceTree = "<group>"; };
-		2ED1E4B42C0119210073AF9A /* RankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankView.swift; sourceTree = "<group>"; };
-		2EE53CAF2BFFC3A50071559A /* InventoryComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryComponent.swift; sourceTree = "<group>"; };
 		4019DD852BFBD09700AA61D9 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		4019DD892BFBD41100AA61D9 /* BPMComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPMComponent.swift; sourceTree = "<group>"; };
-		406954A32C0007D500105FF3 /* TotalDistanceComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalDistanceComponent.swift; sourceTree = "<group>"; };
+		406954A32C0007D500105FF3 /* TotalDistanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalDistanceView.swift; sourceTree = "<group>"; };
 		4095670B2BFD1B0A00B9A506 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		4095670F2BFD25D600B9A506 /* DistanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceView.swift; sourceTree = "<group>"; };
 		4099E0FB2BF7EC56002A9440 /* MiniChallenge05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallenge05.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4099E1012BF7EC56002A9440 /* MiniChallenge05 Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MiniChallenge05 Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4099E1062BF7EC56002A9440 /* MiniChallenge05App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChallenge05App.swift; sourceTree = "<group>"; };
@@ -102,32 +58,12 @@
 		4099E10A2BF7EC57002A9440 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4099E10D2BF7EC57002A9440 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		40A502102BFE6BA0000B1D57 /* RewardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardManager.swift; sourceTree = "<group>"; };
-		40F6D4202C0E5233001163A5 /* RewardCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardCheckView.swift; sourceTree = "<group>"; };
 		81AED60F2BFBBD71005F471D /* MiniChallenge05 Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MiniChallenge05 Watch App.entitlements"; sourceTree = "<group>"; };
 		81AED6102BFBBDAF005F471D /* MiniChallenge05-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MiniChallenge05-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		81AED6112BFE689E005F471D /* DailyMissionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMissionComponent.swift; sourceTree = "<group>"; };
-		81AED6152C05001C005F471D /* MissionCounterComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionCounterComponent.swift; sourceTree = "<group>"; };
-		81AED61B2C07AEE9005F471D /* AgentProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentProgressView.swift; sourceTree = "<group>"; };
-		81AED61D2C07B245005F471D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		81AED6282C0E3A13005F471D /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		81AED62A2C0E3D4E005F471D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		81AED62C2C0E4330005F471D /* CircularProgressComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressComponent.swift; sourceTree = "<group>"; };
-		81AED62E2C0E53DF005F471D /* DailyMissionItemComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMissionItemComponent.swift; sourceTree = "<group>"; };
-		81AED6322C0E59E1005F471D /* IndividualRankComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualRankComponent.swift; sourceTree = "<group>"; };
-		81AED6352C0F86C9005F471D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		81AED6382C0F885A005F471D /* InventoryItemComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryItemComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2E6E84332C1225D800862058 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2E6E84382C1225D800862058 /* SwiftUI.framework in Frameworks */,
-				2E6E84372C1225D800862058 /* WidgetKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4099E0FE2BF7EC56002A9440 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -138,25 +74,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2E40D8182C0F90A000C4D413 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2E40D8192C0F90A000C4D413 /* WidgetKit.framework */,
-				2E40D81B2C0F90A000C4D413 /* SwiftUI.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2E6E84392C1225D800862058 /* WidgetComplication1 */ = {
-			isa = PBXGroup;
-			children = (
-				2E6E843A2C1225D800862058 /* WidgetComplication1.swift */,
-				2E6E843C2C1225D900862058 /* Assets.xcassets */,
-				2E6E843E2C1225D900862058 /* Info.plist */,
-			);
-			path = WidgetComplication1;
-			sourceTree = "<group>";
-		};
 		4019DD842BFBD07700AA61D9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,9 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				4099E1082BF7EC56002A9440 /* ContentView.swift */,
-				2ED1E4B42C0119210073AF9A /* RankView.swift */,
-				81AED61B2C07AEE9005F471D /* AgentProgressView.swift */,
-				81AED61D2C07B245005F471D /* MainView.swift */,
+				4095670F2BFD25D600B9A506 /* DistanceView.swift */,
+				406954A32C0007D500105FF3 /* TotalDistanceView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,13 +95,10 @@
 		4019DD882BFBD30700AA61D9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				81AED6372C0F8830005F471D /* InventoryComponents */,
-				81AED6342C0E5C58005F471D /* RankComponents */,
-				81AED6312C0E5890005F471D /* DailyMissionComponents */,
-				81AED6212C0E3659005F471D /* ItemSearchComponents */,
 				4019DD892BFBD41100AA61D9 /* BPMComponent.swift */,
-				406954A32C0007D500105FF3 /* TotalDistanceComponent.swift */,
-				81AED6152C05001C005F471D /* MissionCounterComponent.swift */,
+				4095670B2BFD1B0A00B9A506 /* HealthKitManager.swift */,
+				40A502102BFE6BA0000B1D57 /* RewardManager.swift */,
+				81AED6112BFE689E005F471D /* DailyMissionComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -194,8 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				4099E1052BF7EC56002A9440 /* MiniChallenge05 Watch App */,
-				2E6E84392C1225D800862058 /* WidgetComplication1 */,
-				2E40D8182C0F90A000C4D413 /* Frameworks */,
 				4099E0FC2BF7EC56002A9440 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -205,7 +116,6 @@
 			children = (
 				4099E0FB2BF7EC56002A9440 /* MiniChallenge05.app */,
 				4099E1012BF7EC56002A9440 /* MiniChallenge05 Watch App.app */,
-				2E6E84362C1225D800862058 /* WidgetComplication1Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -213,8 +123,6 @@
 		4099E1052BF7EC56002A9440 /* MiniChallenge05 Watch App */ = {
 			isa = PBXGroup;
 			children = (
-				81AED6272C0E39FF005F471D /* Utility */,
-				81AED6262C0E375B005F471D /* Managers */,
 				4019DD882BFBD30700AA61D9 /* Components */,
 				4019DD872BFBD2DB00AA61D9 /* Views */,
 				4019DD842BFBD07700AA61D9 /* Model */,
@@ -235,81 +143,9 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		81AED6212C0E3659005F471D /* ItemSearchComponents */ = {
-			isa = PBXGroup;
-			children = (
-				81AED62C2C0E4330005F471D /* CircularProgressComponent.swift */,
-				40F6D4202C0E5233001163A5 /* RewardCheckView.swift */,
-			);
-			path = ItemSearchComponents;
-			sourceTree = "<group>";
-		};
-		81AED6262C0E375B005F471D /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				4095670B2BFD1B0A00B9A506 /* HealthKitManager.swift */,
-				40A502102BFE6BA0000B1D57 /* RewardManager.swift */,
-			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
-		81AED6272C0E39FF005F471D /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-				81AED6282C0E3A13005F471D /* Color.swift */,
-				81AED6352C0F86C9005F471D /* Constants.swift */,
-				81AED62A2C0E3D4E005F471D /* Localizable.xcstrings */,
-			);
-			path = Utility;
-			sourceTree = "<group>";
-		};
-		81AED6312C0E5890005F471D /* DailyMissionComponents */ = {
-			isa = PBXGroup;
-			children = (
-				81AED6112BFE689E005F471D /* DailyMissionComponent.swift */,
-				81AED62E2C0E53DF005F471D /* DailyMissionItemComponent.swift */,
-			);
-			path = DailyMissionComponents;
-			sourceTree = "<group>";
-		};
-		81AED6342C0E5C58005F471D /* RankComponents */ = {
-			isa = PBXGroup;
-			children = (
-				2ED1E4B22C010D7F0073AF9A /* RankComponent.swift */,
-				81AED6322C0E59E1005F471D /* IndividualRankComponent.swift */,
-			);
-			path = RankComponents;
-			sourceTree = "<group>";
-		};
-		81AED6372C0F8830005F471D /* InventoryComponents */ = {
-			isa = PBXGroup;
-			children = (
-				2EE53CAF2BFFC3A50071559A /* InventoryComponent.swift */,
-				81AED6382C0F885A005F471D /* InventoryItemComponent.swift */,
-			);
-			path = InventoryComponents;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2E6E84352C1225D800862058 /* WidgetComplication1Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2E6E84422C1225D900862058 /* Build configuration list for PBXNativeTarget "WidgetComplication1Extension" */;
-			buildPhases = (
-				2E6E84322C1225D800862058 /* Sources */,
-				2E6E84332C1225D800862058 /* Frameworks */,
-				2E6E84342C1225D800862058 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = WidgetComplication1Extension;
-			productName = WidgetComplication1Extension;
-			productReference = 2E6E84362C1225D800862058 /* WidgetComplication1Extension.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		4099E0FA2BF7EC56002A9440 /* MiniChallenge05 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4099E1152BF7EC57002A9440 /* Build configuration list for PBXNativeTarget "MiniChallenge05" */;
@@ -334,12 +170,10 @@
 				4099E0FD2BF7EC56002A9440 /* Sources */,
 				4099E0FE2BF7EC56002A9440 /* Frameworks */,
 				4099E0FF2BF7EC56002A9440 /* Resources */,
-				2E40D8292C0F90A100C4D413 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2E6E84402C1225D900862058 /* PBXTargetDependency */,
 			);
 			name = "MiniChallenge05 Watch App";
 			productName = "MiniChallenge05 Watch App";
@@ -356,9 +190,6 @@
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
-					2E6E84352C1225D800862058 = {
-						CreatedOnToolsVersion = 15.4;
-					};
 					4099E0FA2BF7EC56002A9440 = {
 						CreatedOnToolsVersion = 15.4;
 					};
@@ -374,8 +205,6 @@
 			knownRegions = (
 				en,
 				Base,
-				"pt-BR",
-				it,
 			);
 			mainGroup = 4099E0F42BF7EC56002A9440;
 			productRefGroup = 4099E0FC2BF7EC56002A9440 /* Products */;
@@ -384,20 +213,11 @@
 			targets = (
 				4099E0FA2BF7EC56002A9440 /* MiniChallenge05 */,
 				4099E1002BF7EC56002A9440 /* MiniChallenge05 Watch App */,
-				2E6E84352C1225D800862058 /* WidgetComplication1Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2E6E84342C1225D800862058 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2E6E843D2C1225D900862058 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4099E0F92BF7EC56002A9440 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -411,45 +231,24 @@
 			files = (
 				4099E10E2BF7EC57002A9440 /* Preview Assets.xcassets in Resources */,
 				4099E10B2BF7EC57002A9440 /* Assets.xcassets in Resources */,
-				81AED62B2C0E3D4E005F471D /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2E6E84322C1225D800862058 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2E6E843B2C1225D800862058 /* WidgetComplication1.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4099E0FD2BF7EC56002A9440 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4019DD862BFBD09700AA61D9 /* Model.swift in Sources */,
-				81AED61E2C07B245005F471D /* MainView.swift in Sources */,
-				2ED1E4B32C010D7F0073AF9A /* RankComponent.swift in Sources */,
 				40A502112BFE6BA0000B1D57 /* RewardManager.swift in Sources */,
-				81AED6292C0E3A13005F471D /* Color.swift in Sources */,
-				81AED6162C05001C005F471D /* MissionCounterComponent.swift in Sources */,
-				81AED62D2C0E4330005F471D /* CircularProgressComponent.swift in Sources */,
-				81AED6392C0F885A005F471D /* InventoryItemComponent.swift in Sources */,
-				81AED6332C0E59E1005F471D /* IndividualRankComponent.swift in Sources */,
 				4099E1092BF7EC56002A9440 /* ContentView.swift in Sources */,
-				2ED1E4B52C0119210073AF9A /* RankView.swift in Sources */,
-				2EE53CB02BFFC3A50071559A /* InventoryComponent.swift in Sources */,
-				81AED6362C0F86C9005F471D /* Constants.swift in Sources */,
-				81AED62F2C0E53DF005F471D /* DailyMissionItemComponent.swift in Sources */,
+				409567102BFD25D600B9A506 /* DistanceView.swift in Sources */,
 				4099E1072BF7EC56002A9440 /* MiniChallenge05App.swift in Sources */,
 				81AED6122BFE689E005F471D /* DailyMissionComponent.swift in Sources */,
 				4095670C2BFD1B0A00B9A506 /* HealthKitManager.swift in Sources */,
-				40F6D4212C0E5233001163A5 /* RewardCheckView.swift in Sources */,
-				81AED61C2C07AEE9005F471D /* AgentProgressView.swift in Sources */,
-				406954A42C0007D500105FF3 /* TotalDistanceComponent.swift in Sources */,
+				406954A42C0007D500105FF3 /* TotalDistanceView.swift in Sources */,
 				4019DD8A2BFBD41100AA61D9 /* BPMComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,11 +256,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2E6E84402C1225D900862058 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2E6E84352C1225D800862058 /* WidgetComplication1Extension */;
-			targetProxy = 2E6E843F2C1225D900862058 /* PBXContainerItemProxy */;
-		};
 		4099E1042BF7EC56002A9440 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4099E1002BF7EC56002A9440 /* MiniChallenge05 Watch App */;
@@ -470,6 +264,8 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+<<<<<<< Updated upstream
+=======
 		2E6E84432C1225D900862058 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -477,7 +273,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J7Y95G67T3;
+				DEVELOPMENT_TEAM = SRXHT55569;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WidgetComplication1/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WidgetComplication1;
@@ -489,7 +285,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.SpyHunt.Mini05.watchkitapp.WidgetComplication1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SpyHunt.Mini04.watchkitapp.WidgetComplication1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -507,7 +303,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J7Y95G67T3;
+				DEVELOPMENT_TEAM = SRXHT55569;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WidgetComplication1/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WidgetComplication1;
@@ -519,7 +315,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.SpyHunt.Mini05.watchkitapp.WidgetComplication1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SpyHunt.Mini04.watchkitapp.WidgetComplication1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -531,6 +327,7 @@
 			};
 			name = Release;
 		};
+>>>>>>> Stashed changes
 		4099E10F2BF7EC57002A9440 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -648,18 +445,21 @@
 		4099E1122BF7EC57002A9440 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "MiniChallenge05 Watch App/MiniChallenge05 Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniChallenge05 Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = J7Y95G67T3;
+<<<<<<< Updated upstream
+				DEVELOPMENT_TEAM = 3XAB48JYXN;
+=======
+				DEVELOPMENT_TEAM = SRXHT55569;
+>>>>>>> Stashed changes
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MiniChallenge05-Watch-App-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Step Quest";
+				INFOPLIST_KEY_CFBundleDisplayName = MiniChallenge05;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "We need ypur authorization to track your steps and BPM";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "We need ypur authorization to track your steps and BPM";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -668,8 +468,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+<<<<<<< Updated upstream
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GuilhermeNunesLobo.MiniChallenge05.watchkitapp;
+=======
 				MARKETING_VERSION = 1.4;
-				PRODUCT_BUNDLE_IDENTIFIER = com.SpyHunt.Mini05.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SpyHunt.Mini04.watchkitapp;
+>>>>>>> Stashed changes
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -683,18 +488,21 @@
 		4099E1132BF7EC57002A9440 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "MiniChallenge05 Watch App/MiniChallenge05 Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniChallenge05 Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = J7Y95G67T3;
+<<<<<<< Updated upstream
+				DEVELOPMENT_TEAM = 3XAB48JYXN;
+=======
+				DEVELOPMENT_TEAM = SRXHT55569;
+>>>>>>> Stashed changes
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MiniChallenge05-Watch-App-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Step Quest";
+				INFOPLIST_KEY_CFBundleDisplayName = MiniChallenge05;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "We need ypur authorization to track your steps and BPM";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "We need ypur authorization to track your steps and BPM";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -703,8 +511,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+<<<<<<< Updated upstream
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GuilhermeNunesLobo.MiniChallenge05.watchkitapp;
+=======
 				MARKETING_VERSION = 1.4;
-				PRODUCT_BUNDLE_IDENTIFIER = com.SpyHunt.Mini05.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SpyHunt.Mini04.watchkitapp;
+>>>>>>> Stashed changes
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -722,10 +535,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J7Y95G67T3;
+<<<<<<< Updated upstream
+				DEVELOPMENT_TEAM = 3XAB48JYXN;
 				INFOPLIST_KEY_CFBundleDisplayName = MiniChallenge05;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.SpyHunt.Mini05;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GuilhermeNunesLobo.MiniChallenge05;
+=======
+				DEVELOPMENT_TEAM = SRXHT55569;
+				INFOPLIST_KEY_CFBundleDisplayName = MiniChallenge05;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SpyHunt.Mini04;
+>>>>>>> Stashed changes
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -738,10 +558,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J7Y95G67T3;
+<<<<<<< Updated upstream
+				DEVELOPMENT_TEAM = 3XAB48JYXN;
 				INFOPLIST_KEY_CFBundleDisplayName = MiniChallenge05;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.SpyHunt.Mini05;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GuilhermeNunesLobo.MiniChallenge05;
+=======
+				DEVELOPMENT_TEAM = SRXHT55569;
+				INFOPLIST_KEY_CFBundleDisplayName = MiniChallenge05;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SpyHunt.Mini04;
+>>>>>>> Stashed changes
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -752,15 +579,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2E6E84422C1225D900862058 /* Build configuration list for PBXNativeTarget "WidgetComplication1Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2E6E84432C1225D900862058 /* Debug */,
-				2E6E84442C1225D900862058 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4099E0F82BF7EC56002A9440 /* Build configuration list for PBXProject "MiniChallenge05" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

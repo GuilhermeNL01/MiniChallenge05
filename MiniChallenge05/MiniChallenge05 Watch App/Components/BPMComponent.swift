@@ -16,6 +16,28 @@ struct BPMComponent: View {
     @State private var value = 0
     
     var body: some View {
+<<<<<<< Updated upstream
+        VStack{
+            HStack(){
+                 
+                 Image(systemName: "heart.fill")
+                 
+                 Text("\(value)")
+                     .fontWeight(.regular)
+                     .font(.system(size: 15))
+                 
+                 Text("BPM")
+                     .fontWeight(.regular)
+                     .font(.system(size: 15))
+                
+                Spacer()
+
+             }
+         }
+         .padding()
+         .onAppear(perform: start)
+    }
+=======
         HStack {
             Image(systemName: "heart.fill")
                 .foregroundColor(Color(hex: ColorPalette.lightBlue))
@@ -23,7 +45,7 @@ struct BPMComponent: View {
             Spacer()
             VStack {
                 HStack {
-                    Text("Média Cardíaca")
+                    Text("Frequência Cardíaca")
                         .font(.system(size: Constants.componentTitle, weight: .bold))
                         .foregroundColor(.white)
                         .lineLimit(2)
@@ -36,7 +58,7 @@ struct BPMComponent: View {
                         .font(.system(size: 20))
                         .foregroundColor(Color.white)
                     
-                    Text("BPM/Missão")
+                    Text("BPM")
                         .fontWeight(.regular)
                         .font(.system(size: 15))
                         .foregroundColor(Color.white)
@@ -54,6 +76,7 @@ struct BPMComponent: View {
         .onAppear(perform: start)
            
        }
+>>>>>>> Stashed changes
     
     func start() {
         autorizeHealthKit()
@@ -99,8 +122,4 @@ struct BPMComponent: View {
             self.value = Int(lastHeartRate)
         }
     }
-}
-
-#Preview{
-    BPMComponent()
 }
