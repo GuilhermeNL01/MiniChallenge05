@@ -22,13 +22,25 @@ struct FirstChoiceComponent: View {
                 if itemChosen == "" {
                     Image(systemName: "questionmark")
                 } else {
-                    Image(itemChosen)
-                        .resizable()
-                        .frame(width: Constants.itemWidth, height: Constants.itemHeight)
+                    HStack{
+                        Image(itemChosen)
+                            .resizable()
+                            .frame(width: Constants.smallItemWidth, height: Constants.smallItemHeight)
+                        Spacer()
+                        if itemQuantity < 10 {
+                            Text("0" + "\(itemQuantity)")
+                                .font(.title2)
+                                .bold()
+                        } else {
+                            Text("\(itemQuantity)")
+                                .font(.title2)
+                                .bold()
+                        }
+                    }
                 }
-//                Text("\(itemQuantity)")
+              
             }
-            .frame(width: 60)
+            .frame(width: 60, height: 25)
             .padding(10)
             .background(Color(hex: ColorPalette.lightBlue).opacity(0.32))
             .clipShape(RoundedRectangle(cornerRadius: Constants.componentCornerRadius)) // Fixed the clipShape
