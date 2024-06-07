@@ -9,7 +9,8 @@ import SwiftUI
 
 struct FirstChoiceComponent: View {
     
-    @State var presentPopup = false
+    @State private var presentPopup = false
+    @State private var itemChosen: String = ""
     var itemQuantity: Int
     
     var body: some View {
@@ -18,12 +19,19 @@ struct FirstChoiceComponent: View {
             presentPopup.toggle()
         } label: {
             VStack{
-                Text("\(itemQuantity)")
+                if itemChosen == "" {
+                    Image(systemName: "questionmark")
+                } else {
+                    Image(itemChosen)
+                        .resizable()
+                        .frame(width: Constants.itemWidth, height: Constants.itemHeight)
+                }
+//                Text("\(itemQuantity)")
             }
             .frame(width: 60)
             .padding(10)
             .background(Color(hex: ColorPalette.lightBlue).opacity(0.32))
-            .clipShape(.rect(cornerRadius: Constants.componentCornerRadius))
+            .clipShape(RoundedRectangle(cornerRadius: Constants.componentCornerRadius)) // Fixed the clipShape
             .overlay {
                 RoundedRectangle(cornerRadius: Constants.componentCornerRadius)
                     .stroke(Color(hex: ColorPalette.lightBlue), lineWidth: 2)
@@ -31,7 +39,7 @@ struct FirstChoiceComponent: View {
         }
         .buttonStyle(CustomButton())
         .sheet(isPresented: $presentPopup) {
-          FirstPopupComponent()
+            FirstPopupComponent(itemChosen: $itemChosen) // Pass the binding here
         }
         
     }

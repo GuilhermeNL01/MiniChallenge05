@@ -30,7 +30,7 @@ struct SecondChoiceComponent: View {
         }
         .buttonStyle(CustomButton())
         .sheet(isPresented: $presentPopup) {
-          FirstPopupComponent()
+//          FirstPopupComponent()
         }
         
     }
