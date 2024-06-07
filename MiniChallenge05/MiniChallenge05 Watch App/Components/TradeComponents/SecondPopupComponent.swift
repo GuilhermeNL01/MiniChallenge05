@@ -27,7 +27,7 @@ struct SecondPopupComponent: View {
                 HStack {
                     Spacer()
                     Button {
-                        if itemChosen == "Binóculo" {
+                        if itemChosen != "Binóculo" {
                             pressed.toggle()
                             pressed2 = false
                             pressed3 = false
@@ -43,7 +43,7 @@ struct SecondPopupComponent: View {
                     }.buttonStyle(CustomButton())
                     Spacer()
                     Button {
-                        if itemChosen == "Camera" {
+                        if itemChosen != "Camera" {
                             pressed2.toggle()
                             pressed = false
                             pressed3 = false
@@ -62,7 +62,7 @@ struct SecondPopupComponent: View {
                 HStack {
                     Spacer()
                     Button {
-                        if itemChosen == "Folder" {
+                        if itemChosen != "Folder" {
                             pressed3.toggle()
                             pressed = false
                             pressed2 = false
@@ -78,7 +78,7 @@ struct SecondPopupComponent: View {
                     }.buttonStyle(CustomButton())
                     Spacer()
                     Button {
-                        if itemChosen == "Hat" {
+                        if itemChosen != "Hat" {
                             pressed4.toggle()
                             pressed = false
                             pressed2 = false
