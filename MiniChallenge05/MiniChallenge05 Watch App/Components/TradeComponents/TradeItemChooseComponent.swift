@@ -10,9 +10,10 @@ import SwiftUI
 struct TradeItemChooseComponent: View {
     
     @State var counter: Int = 0
+    @Binding var itemChosen: String
     
     var body: some View {
-        HStack{
+        HStack {
             Spacer()
             Button {
                 if counter > 0 {
@@ -27,7 +28,7 @@ struct TradeItemChooseComponent: View {
             
             Spacer()
             
-            FirstChoiceComponent(itemQuantity: counter)
+            FirstChoiceComponent(itemChosen: $itemChosen, itemQuantity: counter) // Pass the binding
             
             Spacer()
             
@@ -46,6 +47,3 @@ struct TradeItemChooseComponent: View {
     }
 }
 
-#Preview {
-    TradeItemChooseComponent()
-}

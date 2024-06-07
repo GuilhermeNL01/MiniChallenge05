@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 import SwiftUI
 
 struct Constants {
@@ -23,4 +24,11 @@ struct Constants {
     static let componentTitle : CGFloat = 15
     static let componentFootnote : CGFloat = 12
     
+}
+
+import SwiftUI
+
+class SharedState: ObservableObject {
+    @Published var itemChosen: String = ""
+    @Published var itemQuantity: Int = 0
 }

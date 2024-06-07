@@ -162,6 +162,9 @@
         }
       }
     },
+    "0%lld" : {
+
+    },
     "25 Missões" : {
       "extractionState" : "stale",
       "localizations" : {
