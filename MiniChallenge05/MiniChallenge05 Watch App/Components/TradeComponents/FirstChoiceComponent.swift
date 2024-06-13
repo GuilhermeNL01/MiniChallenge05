@@ -11,7 +11,8 @@ struct FirstChoiceComponent: View {
     
     @State private var presentPopup = false
     @Binding var itemChosen: String // Use binding here
-    var itemQuantity: Int
+    @Binding var itemQuantity: Int
+    @Binding var secondItemQuantity: Int
     
     var body: some View {
         
@@ -44,11 +45,8 @@ struct FirstChoiceComponent: View {
         }
         .buttonStyle(CustomButton())
         .sheet(isPresented: $presentPopup) {
-            FirstPopupComponent(itemChosen: $itemChosen) // Pass the binding here
+            FirstPopupComponent(itemQuantity: $itemQuantity, secondItemQuantity: $secondItemQuantity, itemChosen: $itemChosen) // Pass the binding here
         }
     }
 }
 
-#Preview {
-    FirstChoiceComponent(itemChosen: .constant(""), itemQuantity: 1)
-}

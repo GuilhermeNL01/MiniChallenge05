@@ -9,6 +9,8 @@ import SwiftUI
 
 struct FirstPopupComponent: View {
     @Environment(\.dismiss) var dismiss
+    @Binding var itemQuantity: Int
+    @Binding var secondItemQuantity: Int
     @Binding var itemChosen: String
     @State private var pressed: Bool = false
     @State private var pressed2: Bool = false
@@ -24,6 +26,8 @@ struct FirstPopupComponent: View {
                     pressed2 = false
                     pressed3 = false
                     pressed4 = false
+                    itemQuantity = 0
+                    secondItemQuantity = 0
                     if pressed {
                         itemChosen = "Binóculo"
                     } else {
@@ -38,6 +42,8 @@ struct FirstPopupComponent: View {
                     pressed = false
                     pressed3 = false
                     pressed4 = false
+                    itemQuantity = 0
+                    secondItemQuantity = 0
                     if pressed2 {
                         itemChosen = "Camera"
                     } else {
@@ -56,6 +62,8 @@ struct FirstPopupComponent: View {
                     pressed = false
                     pressed2 = false
                     pressed4 = false
+                    itemQuantity = 0
+                    secondItemQuantity = 0
                     if pressed3 {
                         itemChosen = "Folder"
                     } else {
@@ -70,6 +78,8 @@ struct FirstPopupComponent: View {
                     pressed = false
                     pressed2 = false
                     pressed3 = false
+                    itemQuantity = 0
+                    secondItemQuantity = 0
                     if pressed4 {
                         itemChosen = "Hat"
                     } else {
@@ -94,6 +104,3 @@ struct FirstPopupComponent: View {
     }
 }
 
-#Preview {
-    FirstPopupComponent(itemChosen: .constant("")) // Provide a constant binding for preview
-}

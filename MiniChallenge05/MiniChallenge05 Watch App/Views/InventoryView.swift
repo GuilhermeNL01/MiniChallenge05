@@ -14,6 +14,7 @@ struct InventoryView: View {
     @Query var model: [ModelNew]
     
     @State private var tradeItemQuantity: Int = 0
+    @State private var secondItemQuantity: Int = 0
     @State private var itemChosen: String = "" // Add itemChosen state here
     @State private var itemPicked: String = ""
     
@@ -69,14 +70,14 @@ struct InventoryView: View {
                         Spacer()
                     }
                     
-                    TradeItemChooseComponent(itemChosen: $itemChosen)
+                    TradeItemChooseComponent(counter: $tradeItemQuantity, secondItemQuantity: $secondItemQuantity, itemChosen: $itemChosen, itemPicked: $itemPicked)
                         .padding(.vertical)
                                         
                     Image(systemName: "arrow.down")
                         .resizable()
                         .frame(width: Constants.smallItemWidth ,height: Constants.smallItemHeight)
                                         
-                    SecondChoiceComponent(itemChosen: $itemChosen, itemPicked: $itemPicked, itemQuantity: $tradeItemQuantity) // Pass the binding
+                    SecondChoiceComponent(itemChosen: $itemChosen, itemPicked: $itemPicked, secondItemQuantity: $secondItemQuantity, itemQuantity: $tradeItemQuantity) // Pass the binding
                     
                 }
             }.navigationTitle("Inventário")

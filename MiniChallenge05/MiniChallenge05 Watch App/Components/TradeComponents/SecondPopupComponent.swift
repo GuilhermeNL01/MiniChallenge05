@@ -11,6 +11,9 @@ struct SecondPopupComponent: View {
     @Environment(\.dismiss) var dismiss
     
     @Binding var itemChosen: String
+    @Binding var itemPicked: String
+    @Binding var itemQuantity: Int
+    @Binding var secondItemQuantity: Int
     
     @State private var pressed: Bool = false
     @State private var pressed2: Bool = false
@@ -32,6 +35,9 @@ struct SecondPopupComponent: View {
                             pressed2 = false
                             pressed3 = false
                             pressed4 = false
+                            itemPicked = "Binóculo"
+                            itemQuantity = 0
+                            secondItemQuantity = 0
                         }
                         
                     } label: {
@@ -48,6 +54,9 @@ struct SecondPopupComponent: View {
                             pressed = false
                             pressed3 = false
                             pressed4 = false
+                            itemPicked = "Camera"
+                            itemQuantity = 0
+                            secondItemQuantity = 0
                         }
                     } label: {
                         if itemChosen == "Camera" {
@@ -67,6 +76,9 @@ struct SecondPopupComponent: View {
                             pressed = false
                             pressed2 = false
                             pressed4 = false
+                            itemPicked = "Folder"
+                            itemQuantity = 0
+                            secondItemQuantity = 0
                         }
                     } label: {
                         if itemChosen == "Folder" {
@@ -83,6 +95,9 @@ struct SecondPopupComponent: View {
                             pressed = false
                             pressed2 = false
                             pressed3 = false
+                            itemPicked = "Hat"
+                            itemQuantity = 0
+                            secondItemQuantity = 0
                         }
                     } label: {
                         if itemChosen == "Hat" {
@@ -105,5 +120,7 @@ struct SecondPopupComponent: View {
                 }
             }
         }
-    }
+    
+    
+}
 

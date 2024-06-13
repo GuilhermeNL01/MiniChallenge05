@@ -11,6 +11,7 @@ struct SecondChoiceComponent: View {
     @State private var presentPopup = false
     @Binding var itemChosen: String
     @Binding var itemPicked: String 
+    @Binding var secondItemQuantity: Int
     @Binding var itemQuantity: Int
     
     var body: some View {
@@ -27,7 +28,7 @@ struct SecondChoiceComponent: View {
                             .resizable()
                             .frame(width: Constants.smallItemWidth, height: Constants.smallItemHeight)
                         Spacer()
-                        Text(itemQuantity < 10 ? "0\(itemQuantity)" : "\(itemQuantity)")
+                        Text(secondItemQuantity < 10 ? "0\(secondItemQuantity)" : "\(secondItemQuantity)")
                             .font(.title2)
                             .bold()
                     }
@@ -44,7 +45,7 @@ struct SecondChoiceComponent: View {
         }
         .buttonStyle(CustomButton())
         .sheet(isPresented: $presentPopup) {
-            SecondPopupComponent(itemChosen: $itemChosen) // Pass the binding here
+            SecondPopupComponent(itemChosen: $itemChosen, itemPicked: $itemPicked, itemQuantity: $itemQuantity, secondItemQuantity: $secondItemQuantity) // Pass the binding here
         }
     }
 }
