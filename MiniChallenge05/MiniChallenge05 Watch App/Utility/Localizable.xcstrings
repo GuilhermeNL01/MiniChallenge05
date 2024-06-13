@@ -162,6 +162,9 @@
         }
       }
     },
+    "0%lld" : {
+
+    },
     "25 Missões" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -701,6 +704,9 @@
         }
       }
     },
+    "Selecione o item necessário" : {
+
+    },
     "Total Caminhado" : {
 
     },
@@ -726,6 +732,12 @@
           }
         }
       }
+    },
+    "Troca de itens" : {
+
+    },
+    "Trocar Item" : {
+
     },
     "Você andou %.2f metros hoje" : {
       "extractionState" : "stale",
