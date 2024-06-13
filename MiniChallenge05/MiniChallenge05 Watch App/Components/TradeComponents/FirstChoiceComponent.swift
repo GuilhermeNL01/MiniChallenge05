@@ -9,21 +9,35 @@ import SwiftUI
 
 struct FirstChoiceComponent: View {
     
-    @State var presentPopup = false
-    var itemQuantity: Int
+    @State private var presentPopup = false
+    @Binding var itemChosen: String // Use binding here
+    @Binding var itemQuantity: Int
+    @Binding var secondItemQuantity: Int
     
     var body: some View {
         
         Button {
             presentPopup.toggle()
         } label: {
-            VStack{
-                Text("\(itemQuantity)")
+            VStack {
+                if itemChosen.isEmpty {
+                    Image(systemName: "questionmark")
+                } else {
+                    HStack {
+                        Image(itemChosen)
+                            .resizable()
+                            .frame(width: Constants.smallItemWidth, height: Constants.smallItemHeight)
+                        Spacer()
+                        Text(itemQuantity < 10 ? "0\(itemQuantity)" : "\(itemQuantity)")
+                            .font(.title2)
+                            .bold()
+                    }
+                }
             }
-            .frame(width: 60)
+            .frame(width: 60, height: 25)
             .padding(10)
             .background(Color(hex: ColorPalette.lightBlue).opacity(0.32))
-            .clipShape(.rect(cornerRadius: Constants.componentCornerRadius))
+            .clipShape(RoundedRectangle(cornerRadius: Constants.componentCornerRadius))
             .overlay {
                 RoundedRectangle(cornerRadius: Constants.componentCornerRadius)
                     .stroke(Color(hex: ColorPalette.lightBlue), lineWidth: 2)
@@ -31,12 +45,8 @@ struct FirstChoiceComponent: View {
         }
         .buttonStyle(CustomButton())
         .sheet(isPresented: $presentPopup) {
-          FirstPopupComponent()
+            FirstPopupComponent(itemQuantity: $itemQuantity, secondItemQuantity: $secondItemQuantity, itemChosen: $itemChosen) // Pass the binding here
         }
-        
     }
 }
 
-#Preview {
-    FirstChoiceComponent(itemQuantity: 1)
-}

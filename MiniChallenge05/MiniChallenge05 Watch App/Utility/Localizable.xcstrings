@@ -162,6 +162,9 @@
         }
       }
     },
+    "0%lld" : {
+
+    },
     "25 Missões" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -678,9 +681,6 @@
     "Patentes" : {
 
     },
-    "Press to dismiss" : {
-
-    },
     "Rewards" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -734,6 +734,9 @@
       }
     },
     "Troca de itens" : {
+
+    },
+    "Trocar Item" : {
 
     },
     "Você andou %.2f metros hoje" : {

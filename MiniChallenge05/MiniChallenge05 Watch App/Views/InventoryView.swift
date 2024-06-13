@@ -13,6 +13,11 @@ struct InventoryView: View {
     @Environment(\.modelContext) var context
     @Query var model: [ModelNew]
     
+    @State private var tradeItemQuantity: Int = 0
+    @State private var secondItemQuantity: Int = 0
+    @State private var itemChosen: String = "" 
+    @State private var itemPicked: String = ""
+    
     @State private var rewardMessage: String = ""
     @State private var itemAlpha: Int = 0
     @State private var itemBravo: Int = 0
@@ -65,8 +70,22 @@ struct InventoryView: View {
                         Spacer()
                     }
                     
-                    TradeItemChooseComponent()
+                    TradeItemChooseComponent(counter: $tradeItemQuantity, secondItemQuantity: $secondItemQuantity, itemChosen: $itemChosen, itemPicked: $itemPicked)
                         .padding(.vertical)
+                                        
+                    Image(systemName: "arrow.down")
+                        .resizable()
+                        .frame(width: Constants.smallItemWidth ,height: Constants.smallItemHeight)
+                        .padding(.bottom)
+                          
+                    Spacer()
+                    
+                    SecondChoiceComponent(itemChosen: $itemChosen, itemPicked: $itemPicked, secondItemQuantity: $secondItemQuantity, itemQuantity: $tradeItemQuantity) // Pass the binding
+                        .padding(.bottom)
+                    
+                    Spacer()
+                    
+                    TradeButtonComponent(itemQuantity: $tradeItemQuantity, secondItemQuantity: $secondItemQuantity, itemChosen: $itemChosen, itemPicked: $itemPicked)
                     
                 }
             }.navigationTitle("Inventário")
