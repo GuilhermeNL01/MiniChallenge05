@@ -13,7 +13,7 @@ struct MainView: View {
             ScrollView {
                 VStack {
                     DailyMissionComponent()
-                    
+                        .padding(.bottom)
                     NavigationLink {
                         InventoryView()
                     } label: {

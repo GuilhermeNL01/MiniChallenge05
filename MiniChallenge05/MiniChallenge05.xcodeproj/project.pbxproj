@@ -46,6 +46,7 @@
 		81AED64A2C127A7B005F471D /* ItemPickerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED6492C127A7B005F471D /* ItemPickerComponent.swift */; };
 		81AED64C2C133845005F471D /* SecondPopupComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED64B2C133845005F471D /* SecondPopupComponent.swift */; };
 		81AED64E2C13399B005F471D /* SecondItemPickerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED64D2C13399B005F471D /* SecondItemPickerComponent.swift */; };
+		81AED6502C1B6A9C005F471D /* TradeButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AED64F2C1B6A9C005F471D /* TradeButtonComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +135,7 @@
 		81AED6492C127A7B005F471D /* ItemPickerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPickerComponent.swift; sourceTree = "<group>"; };
 		81AED64B2C133845005F471D /* SecondPopupComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPopupComponent.swift; sourceTree = "<group>"; };
 		81AED64D2C13399B005F471D /* SecondItemPickerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondItemPickerComponent.swift; sourceTree = "<group>"; };
+		81AED64F2C1B6A9C005F471D /* TradeButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeButtonComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,6 +323,7 @@
 				81AED64B2C133845005F471D /* SecondPopupComponent.swift */,
 				81AED6492C127A7B005F471D /* ItemPickerComponent.swift */,
 				81AED64D2C13399B005F471D /* SecondItemPickerComponent.swift */,
+				81AED64F2C1B6A9C005F471D /* TradeButtonComponent.swift */,
 			);
 			path = TradeComponents;
 			sourceTree = "<group>";
@@ -493,6 +496,7 @@
 				40F6D4212C0E5233001163A5 /* RewardCheckView.swift in Sources */,
 				81AED64A2C127A7B005F471D /* ItemPickerComponent.swift in Sources */,
 				81AED61C2C07AEE9005F471D /* AgentProgressView.swift in Sources */,
+				81AED6502C1B6A9C005F471D /* TradeButtonComponent.swift in Sources */,
 				406954A42C0007D500105FF3 /* TotalDistanceComponent.swift in Sources */,
 				4019DD8A2BFBD41100AA61D9 /* BPMComponent.swift in Sources */,
 			);

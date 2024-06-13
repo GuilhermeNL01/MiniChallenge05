@@ -15,7 +15,7 @@ struct InventoryView: View {
     
     @State private var tradeItemQuantity: Int = 0
     @State private var secondItemQuantity: Int = 0
-    @State private var itemChosen: String = "" // Add itemChosen state here
+    @State private var itemChosen: String = "" 
     @State private var itemPicked: String = ""
     
     @State private var rewardMessage: String = ""
@@ -76,8 +76,16 @@ struct InventoryView: View {
                     Image(systemName: "arrow.down")
                         .resizable()
                         .frame(width: Constants.smallItemWidth ,height: Constants.smallItemHeight)
-                                        
+                        .padding(.bottom)
+                          
+                    Spacer()
+                    
                     SecondChoiceComponent(itemChosen: $itemChosen, itemPicked: $itemPicked, secondItemQuantity: $secondItemQuantity, itemQuantity: $tradeItemQuantity) // Pass the binding
+                        .padding(.bottom)
+                    
+                    Spacer()
+                    
+                    TradeButtonComponent(itemQuantity: $tradeItemQuantity, secondItemQuantity: $secondItemQuantity, itemChosen: $itemChosen, itemPicked: $itemPicked)
                     
                 }
             }.navigationTitle("Inventário")

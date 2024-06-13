@@ -736,6 +736,9 @@
     "Troca de itens" : {
 
     },
+    "Trocar Item" : {
+
+    },
     "Você andou %.2f metros hoje" : {
       "extractionState" : "stale",
       "localizations" : {

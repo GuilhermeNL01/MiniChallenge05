@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct TradeItemChooseComponent: View {
+    
+    @Query private var inventory: [ModelNew]
     
     @Binding var counter: Int
     @Binding var secondItemQuantity: Int
@@ -18,9 +21,11 @@ struct TradeItemChooseComponent: View {
         HStack {
             Spacer()
             Button {
-                if counter > 0 {
-                    counter -= 1
-                    secondItemQuantity = itemMultiplier()
+                if counter > inventoryChecker() {
+                    if counter > 0 {
+                        counter -= 1
+                        secondItemQuantity = itemMultiplier()
+                    }
                 }
             } label: {
                 Image(systemName: "minus.circle.fill")
@@ -36,9 +41,11 @@ struct TradeItemChooseComponent: View {
             Spacer()
             
             Button {
-                if counter < 99 {
-                    counter += 1
-                    secondItemQuantity = itemMultiplier()
+                if counter > inventoryChecker() {
+                    if counter < 99 {
+                        counter += 1
+                        secondItemQuantity = itemMultiplier()
+                    }
                 }
             } label: {
                 Image(systemName: "plus.circle.fill")
@@ -92,6 +99,23 @@ struct TradeItemChooseComponent: View {
             else if itemPicked == "Folder" {
                 return counter * 2
             }
+        default:
+            print(0)
+        }
+
+        return 0
+    }
+    
+    public func inventoryChecker() -> Int {
+        switch itemChosen {
+        case "Binóculo":
+            return inventory.first?.itemAlpha ?? 0
+        case "Camera":
+            return inventory.first?.itemBravo ?? 0
+        case "Folder":
+            return inventory.first?.itemCharlie ?? 0
+        case "Hat":
+            return inventory.first?.itemDelta ?? 0
         default:
             print(0)
         }
