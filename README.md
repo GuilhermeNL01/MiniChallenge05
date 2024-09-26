@@ -24,22 +24,12 @@
 3. Conforme você caminha e atinge as metas de passos, missões são completadas e recompensas são desbloqueadas.
 4. Desafie-se a completar todas as missões e a descobrir todos os itens secretos disponíveis.
 
-## Instalação
-
-1. Baixe o aplicativo diretamente da App Store usando o QR code fornecido ou clicando no botão abaixo:
-
-   ![Download na App Store](file:/mnt/data/A447EC31-DCF0-4B72-841E-21CB6599497B.png)
-
-2. Após a instalação, permita que o Step Quest acesse seus dados de atividade no Apple Watch.
-
-3. Pronto! Agora você pode começar a completar suas missões diárias e se aventurar como um espião.
-
-## Capturas de Tela
-
-![Step Quest Icon](file:/mnt/data/C12F0F3D-3A05-469B-B267-0FF9DF19C4DC.png)
+Ícone do App:
+![Icon](https://github.com/user-attachments/assets/c3a441fe-4c60-471b-b98b-c6f5184a8697)
 
 QR Code de Download:  
-![QR Code](file:/mnt/data/44060FDE-EFED-47EA-84F9-212FD9EEFBB2.png)
+![Qr Code](https://github.com/user-attachments/assets/4b702368-c577-4edb-b782-923b4b877f3e)
+
 
 ## Requisitos
 
