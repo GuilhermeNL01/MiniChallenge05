@@ -1,4 +1,6 @@
-### Step Quest - Sua Jornada de Espião
+# Step Quest - Sua Jornada de Espião
+
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/49/46/2f/49462f85-df70-277f-c814-e4175f7156d7/AppIcon-0-0-1x_U007ewatch-0-0-85-220.png/340x340bb.webp" alt="Step Quest" width="150">
 
 **Step Quest** é um aplicativo gamificado para Apple Watch que transforma suas atividades diárias de movimento em missões emocionantes. Ao acompanhar seus passos, o Step Quest oferece missões para serem completadas ao longo do dia, incentivando um estilo de vida saudável e ativo.
 
@@ -52,3 +54,5 @@
 ---
 
 ### Pronto para a aventura? Baixe agora e comece a completar suas missões!
+
+![Baixar na App Store](https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1717632000)
