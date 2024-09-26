@@ -47,5 +47,4 @@ QR Code de Download:
 - iPhone com iOS 14 ou superior para integração e gerenciamento do aplicativo.
 
 
-
 Pronto para a aventura? Baixe agora e comece a completar suas missões!
