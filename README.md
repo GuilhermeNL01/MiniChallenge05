@@ -55,4 +55,4 @@
 
 ### Pronto para a aventura? Baixe agora e comece a completar suas missões!
 
-![Baixar na App Store](https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1717632000)
+![Baixar na App Store](https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1717632000) [Baixar Step Quest](https://apple.co/4eiCFn5)
